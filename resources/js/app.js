@@ -7,10 +7,3 @@ import VueAxios from "vue-axios";
 import { createApp } from "vue";
 
 createApp(App).use(router, VueAxios, axios).mount("#app");
-
-console.log("hi");
-
-// import ExampleComponent from './components/ExampleComponent.vue';
-// app.component('example-component', ExampleComponent);
-
-// app.mount('#app');
