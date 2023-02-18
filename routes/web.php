@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
 Route::get('/translate-search', function () {
-    return view('welcome');
+    return view('welcome')->with('devEnvironment', App::isLocal());
+    
 });

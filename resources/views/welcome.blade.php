@@ -6,8 +6,14 @@
 
         <title>Kevin Wheeler</title>
         @vite(['resources/js/app.js', 'resources/sass/app.scss'])
+
+        @if($devEnvironment)
+            <script src="https://cdn.tailwindcss.com"></script>
+        @endif
+
+        <link rel="stylesheet" href="http://localhost:3000/resources/sass/app.css">
     </head>
-    <body>
+    <body >
         <div id="app"></div>
     </body>
 </html>
