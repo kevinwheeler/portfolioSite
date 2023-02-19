@@ -11,15 +11,28 @@
             </div>
             <img class=" sm:w-0 rounded-3xl sm:mr-20" style="flex-grow:0.3" src="/storage/kevin-laptop-cropped.jpeg">
         </div>
-        <div class="flex gap-3">
+        <h2 class="mb-6 mt-12 text-2xl font-bold">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
+        <div class="flex flex-col sm:flex-row gap-6 mb-12">
             <Card imgSrc="/storage/nothing-but-headlines.jpg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                <template v-slot:headline> Headline </template>
+                <template v-slot:secondary-headline> Secondary Headline </template>
+                <template v-slot:paragraph>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                </template>
             </Card>
             <Card imgSrc="/storage/nothing-but-headlines.jpg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                <template v-slot:headline> Headline </template>
+                <template v-slot:secondary-headline> Secondary Headline </template>
+                <template v-slot:paragraph>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                </template>
             </Card>
             <Card imgSrc="/storage/nothing-but-headlines.jpg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                <template v-slot:headline> Headline </template>
+                <template v-slot:secondary-headline> Secondary Headline </template>
+                <template v-slot:paragraph>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                </template>
             </Card>
         </div>
     </main>
