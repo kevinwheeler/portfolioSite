@@ -35,6 +35,7 @@
                 </template>
             </Card>
         </div>
+        <ContactForm />
     </main>
 
 </template>
@@ -42,12 +43,13 @@
 <script>
 import { ref } from 'vue'
 import Card from '../components/card.vue'
+import ContactForm from '../components/contactForm.vue'
 import { onMounted } from '@vue/runtime-core'
 
 export default {
     
     components: {
-        Card
+        Card, ContactForm
     },
     setup() {
         onMounted(() => {
