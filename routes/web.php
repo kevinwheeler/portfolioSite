@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,6 @@ Route::get('/', function () {
 
 Route::get('/translate-search', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
-    
 });
+
+Route::post('/api/email', [EmailController::class, 'email']);

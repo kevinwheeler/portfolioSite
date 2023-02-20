@@ -51,6 +51,21 @@ return [
     */
 
     'channels' => [
+        // Channels I added myself
+        'debug' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/debug.log'),
+            'level' => 'debug',
+        ],
+
+        'email' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/email.log'),
+            'level' => 'info',
+        ],
+
+        // Laravel standard channels below
+  
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],
@@ -62,6 +77,7 @@ return [
             'path' => storage_path('logs/laravel.log'),
             'level' => env('LOG_LEVEL', 'debug'),
         ],
+        
 
         'daily' => [
             'driver' => 'daily',

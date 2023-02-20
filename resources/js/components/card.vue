@@ -1,3 +1,4 @@
+<!-- TODO add bounce on hover -->
 <template>
     <div class="flex flex-col flex-1 rounded-lg overflow-hidden">
         <img class="flex-1" :src="`${imgSrc}`">

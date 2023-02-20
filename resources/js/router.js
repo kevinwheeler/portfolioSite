@@ -20,9 +20,8 @@ const router = createRouter({
     routes,
 });
 
-// project route guards
 router.beforeEach( (to, from, next) => {
-    console.log("Route:", to);
+    // console.log("Route: ", to);
     next(true);
 });
 
