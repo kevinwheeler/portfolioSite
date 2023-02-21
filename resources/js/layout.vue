@@ -14,10 +14,10 @@
                 </div>
                 <ul class="flex gap-x-3 font-medium text-gray-300 pl-5">
                     <li class="hover:text-white">
-                        <a class="ml-2 mr-2" href="http://stackoverflow.com">Stack Overflow</a>
+                        <a class="ml-2 mr-2" href="https://stackoverflow.com/users/3470632/kevin-wheeler">Stack Overflow</a>
                     </li>
                     <li class="hover:text-white">
-                        <a class="ml-2 mr-2" href="http://github.com">Github</a>
+                        <a class="ml-2 mr-2" href="https://github.com/kevinwheeler">Github</a>
                     </li>
                 </ul>
             </nav>
