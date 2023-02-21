@@ -3,7 +3,7 @@
     <section class="mb-32 text-center">
         <div class="max-w-[700px] mx-auto px-3 lg:px-6">
           <h2 class="text-3xl font-bold mb-12">Contact <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Me</span></h2>
-          <form @submit.prevent="onSubmit" method="POST">
+          <form @submit.prevent="initiateRecaptcha" method="POST">
             <div class="form-group mb-6">
               <input type="text" v-model="name" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
                 placeholder="Name" required>
@@ -29,6 +29,11 @@
                 Send
               </span>
             </button>
+            <p class="mt-2 text-xs text-gray-400 text-left">
+              This site is protected by reCAPTCHA and the Google
+              <a class="underline" href="https://policies.google.com/privacy">Privacy Policy</a> and
+              <a class="underline" href="https://policies.google.com/terms">Terms of Service</a> apply.
+            </p>
           </form>
         </div>
     </section>
@@ -104,12 +109,17 @@
       </div>
     </Dialog>
   </TransitionRoot>
+
+  <vue-recaptcha size="invisible" @verify="recaptchaSuccess" @error="displayErrorModal" ref="recaptcha" sitekey="6Leg0ZwkAAAAAKgPkKjPde3eYTrNmcu5EeJm_9dj"></vue-recaptcha>
 </template>
 
+<style> .grecaptcha-badge { visibility: hidden;} </style>
+
 <script>
-import { ref } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { CheckIcon, ExclamationTriangleIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { ref } from 'vue'
+import { VueRecaptcha } from 'vue-recaptcha';
 
     
 export default {
@@ -119,17 +129,30 @@ export default {
     const name = ref('');
     const emailAddress = ref('');
     const message = ref('');
+    const recaptcha = ref(null);
     const submitLoading = ref(false);
 
-    const onSubmit = async () => {
+    const initiateRecaptcha = () => {
+      submitLoading.value = true;
+      recaptcha.value.execute();
+      // Now either recaptchaSuccess or recaptchaError will be called.
+    };
+
+    const recaptchaError = () => {
+      submitLoading.value = false;
+      displayErrorModal.value = true;
+    }
+
+    const recaptchaSuccess = async (token) => {
       const fd = new FormData()
       fd.append('name', name.value);
       fd.append('emailAddress', emailAddress.value);
       fd.append('message', message.value);
+      fd.append('g-recaptcha-response', token);
 
       try {
-        submitLoading.value = true;
         const response = await axios.post("/api/email", fd);
+        recaptcha.value.reset(); // Reset so that recaptcha can be used again.
         submitLoading.value = false;
         if (response.status == 200) {
           clearForm();
@@ -138,6 +161,7 @@ export default {
           displayErrorModal.value = true;
         }
       } catch (err) {
+        recaptcha.value.reset();
         submitLoading.value = false;
         displayErrorModal.value = true;
       }
@@ -151,19 +175,23 @@ export default {
     };
 
     return {
+        clearForm,
         displayErrorModal,
         displaySuccessModal,
-        name,
         emailAddress,
+        initiateRecaptcha,
         message,
-        onSubmit,
-        clearForm,
+        name,
+        recaptcha,
+        recaptchaError,
+        recaptchaSuccess,
         submitLoading
     }
   },
   components: {
-        Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot,
-        CheckIcon, ExclamationTriangleIcon, XMarkIcon
+        CheckIcon, Dialog, DialogPanel, DialogTitle, ExclamationTriangleIcon,
+        TransitionChild, TransitionRoot, VueRecaptcha, XMarkIcon,
+        
   },
 }
 </script>

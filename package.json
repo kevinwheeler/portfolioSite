@@ -20,6 +20,7 @@
         "@heroicons/vue": "^2.0.16",
         "lodash": "^4.17.21",
         "vue-axios": "^3.5.2",
+        "vue-recaptcha": "^2.0.3",
         "vue-router": "^4.1.6"
     }
 }
