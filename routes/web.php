@@ -22,4 +22,8 @@ Route::get('/translate-search', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
+Route::get('/nothing-but-headlines', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal());
+});
+
 Route::post('/api/email', [EmailController::class, 'email']);

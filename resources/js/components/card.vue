@@ -1,15 +1,15 @@
 <!-- TODO add bounce on hover -->
 <template>
 <div class="flex flex-col flex-1 rounded-lg overflow-hidden">
-    <a :href="`${href}`">
+    <router-link :to="`${href}`">
         <img class="flex-1" :src="`${imgSrc}`">
-    </a>
+    </router-link>
     <div class="flex flex-col p-6 items-center bg-slate-800">
-        <a :href="`${href}`">
+        <router-link :to="`${href}`">
             <h3 class="text-xl font-semibold">
                 <slot name="headline"></slot>
             </h3>
-        </a>
+        </router-link>
         <p class="mt-1 text-xs text-gray-400">
             <slot name="secondary-headline"></slot>
         </p>

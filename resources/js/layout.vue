@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col min-h-screen bg-slate-900 text-gray-100 items-center">
-        <div class="max-w-screen-lg flex flex-col mx-4">
+        <div class="w-full max-w-screen-lg flex flex-col px-8">
             <nav class="flex flex-col sm:flex-row gap-y-2 justify-between py-6 mb-14">
                 <div class="flex items-center">
                     <router-link to="/" class="flex ml-2 items-center">

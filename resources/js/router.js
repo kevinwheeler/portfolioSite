@@ -13,6 +13,11 @@ const routes = [
         name: "TranslateSearch",
         component: Pages.TranslateSearch,
     },
+    {
+        path: "/nothing-but-headlines",
+        name: "NothingButHeadlines",
+        component: Pages.NothingButHeadlines,
+    },
 ];
 
 const router = createRouter({

@@ -1,7 +1,9 @@
 <template>
-    <div>
-        In translateSearch.vue
-    </div>
+    <main>
+        <div class="flex flex-col gap-6">
+            <h1>Nothing But Headlines</h1>
+        </div>
+    </main>
 </template>
 
 <script>

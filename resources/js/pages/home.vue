@@ -13,16 +13,16 @@
         </div>
         <h2 class="mb-6 mt-12 text-2xl font-bold">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
         <div class="flex flex-col sm:flex-row gap-6 mb-12">
-            <Card imgSrc="/storage/nothing-but-headlines.jpg" href="/translate-search">
-                <template v-slot:headline> Headline </template>
-                <template v-slot:secondary-headline> Secondary Headline </template>
+            <Card imgSrc="/storage/nothing-but-headlines.jpg" href="/nothing-but-headlines">
+                <template v-slot:headline> Nothing But Headlines </template>
+                <template v-slot:secondary-headline> 2016 </template>
                 <template v-slot:paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                 </template>
             </Card>
             <Card imgSrc="/storage/nothing-but-headlines.jpg" href="/translate-search">
-                <template v-slot:headline> Headline </template>
-                <template v-slot:secondary-headline> Secondary Headline </template>
+                <template v-slot:headline> Translate Search </template>
+                <template v-slot:secondary-headline> 2023 </template>
                 <template v-slot:paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                 </template>
