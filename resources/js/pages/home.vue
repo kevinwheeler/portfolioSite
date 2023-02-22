@@ -20,7 +20,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                 </template>
             </Card>
-            <Card imgSrc="/storage/nothing-but-headlines.jpg" href="/translate-search">
+            <Card imgSrc="/storage/translate-search.jpg" href="/translate-search">
                 <template v-slot:headline> Translate Search </template>
                 <template v-slot:secondary-headline> 2023 </template>
                 <template v-slot:paragraph>

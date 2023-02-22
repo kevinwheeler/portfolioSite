@@ -1,7 +1,7 @@
 <template>
     <main>
         <div class="flex flex-col gap-6">
-            <h1>Nothing But Headlines</h1>
+            <h1>Stub page for Translate Search</h1>
         </div>
     </main>
 </template>
