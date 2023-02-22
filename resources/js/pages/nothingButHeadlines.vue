@@ -47,7 +47,7 @@
                 <li class="inline">Express, </li>
                 <li class="inline">Backbone, </li>
                 <li class="inline">S3, </li>
-                <li class="inline">FacebooAPIs, </li>
+                <li class="inline">Facebook APIs, </li>
                 <li class="inline">reCAPTCHA, </li>
                 <li class="inline">Webpack, </li>
                 <li class="inline">Passport, </li>
