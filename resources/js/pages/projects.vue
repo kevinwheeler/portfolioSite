@@ -1,20 +1,6 @@
 <template>
     <main>
-        <div class="flex flex-col sm:flex-row items-center gap-6 mb-12">
-            <div class="flex-1">
-                <h1 class="text-3xl font-bold mb-6">
-                    Hi there, I'm <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Kevin</span>  👋
-                </h1>
-                <p class="text-xl leading-9">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-                </p>
-            </div>
-            <img class=" sm:w-0 rounded-3xl sm:mr-20" style="flex-grow:0.3" src="/storage/kevin-laptop-cropped.jpeg">
-        </div>
-        <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-bold">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
-            <router-link to="/projects" class="text-lg">View All Projects →</router-link>
-        </div>
+        <h2 class="text-5xl mb-12 font-bold text-center">All <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
         <div class="flex flex-col sm:flex-row gap-6 mb-12">
             <Card imgSrc="/storage/nothing-but-headlines.jpg" href="/projects/nothing-but-headlines">
                 <template v-slot:headline> Nothing But Headlines </template>
@@ -38,7 +24,6 @@
                 </template>
             </Card>
         </div>
-        <ContactForm />
     </main>
 
 </template>

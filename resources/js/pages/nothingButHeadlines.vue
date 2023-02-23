@@ -122,7 +122,7 @@
                     of people who would create a fun and humorous vibe. 
                 </p>
 
-                <p class="mb-8">
+                <p class="mb-48">
                     All in all, during the onset, I figured this whole website would be great experience as the first website I ever made,
                     and that it would also be a great portfolio piece. I do believe it was a success in that regard. I'm glad I made
                     the website even though I was eventually to take it down.
@@ -133,7 +133,6 @@
 </template>
 
 <script>
-import { ref } from 'vue'
 import { onMounted } from '@vue/runtime-core'
 
 export default {

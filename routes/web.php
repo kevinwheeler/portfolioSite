@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
 
@@ -14,19 +15,29 @@ use App\Http\Controllers\EmailController;
 |
 */
 
+// TODO use a different title and description for each page.
+
 Route::get('/', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
-Route::get('/density-iterator', function () {
+Route::get('/projects', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
-Route::get('/translate-search', function () {
+Route::get('/projects/density-iterator', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
-Route::get('/nothing-but-headlines', function () {
+Route::get('/projects/geomesa-gui', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal());
+});
+
+Route::get('/projects/translate-search', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal());
+});
+
+Route::get('/projects/nothing-but-headlines', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 

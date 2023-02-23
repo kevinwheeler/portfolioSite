@@ -9,9 +9,19 @@ const routes = [
         meta: { authorizationRequired: false },
     },
     {
+        path: "/projects",
+        name: "Projects",
+        component: Pages.Projects,
+    },
+    {
         path: "/projects/density-iterator",
         name: "DensityIterator",
         component: Pages.DensityIterator,
+    },
+    {
+        path: "/projects/geomesa-gui",
+        name: "GeomesaGui",
+        component: Pages.GeomesaGUI,
     },
     {
         path: "/projects/translate-search",
