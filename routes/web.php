@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
+Route::get('/density-iterator', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal());
+});
+
 Route::get('/translate-search', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });

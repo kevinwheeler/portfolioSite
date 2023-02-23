@@ -9,12 +9,17 @@ const routes = [
         meta: { authorizationRequired: false },
     },
     {
-        path: "/translate-search",
+        path: "/projects/density-iterator",
+        name: "DensityIterator",
+        component: Pages.DensityIterator,
+    },
+    {
+        path: "/projects/translate-search",
         name: "TranslateSearch",
         component: Pages.TranslateSearch,
     },
     {
-        path: "/nothing-but-headlines",
+        path: "/projects/nothing-but-headlines",
         name: "NothingButHeadlines",
         component: Pages.NothingButHeadlines,
     },

@@ -50,7 +50,7 @@
             <h2 class="whitespace-none text-5xl font-bold">Refl<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">ections</span></h2>
             <div class="text-2xl">
                 <p class="mb-8">
-                    If I want to spend the time on it, I need to reimplement the search results pages such that they use client side rendering. I decided to make this website using server side rendering without using a javascript framework (although I have experience with vue.js in my kevinwheeler.net project and in contract work I've done, and backbone.js in my www.nothingbutheadlines.lol project), because
+                    If I allocate time for it it, I need to reimplement the search results pages such that they use client side rendering. I decided to make this website using server side rendering without using a javascript framework (although I have experience with vue.js in my kevinwheeler.net project and in contract work I've done, and backbone.js in my www.nothingbutheadlines.lol project), because
                     I just wanted to get something up quickly and also to gain some experience in not using a javascript framework. This became a bit problematic because I wanted to use reCAPTCHA to protect my GET routes
                     for the search results pages, so that user's could share links to the search results pages with others, but my translation api budget would still be protected from bots by reCAPTCHA. GET routes
                     must be idempotent, however, so I realized that reCAPTCHA cannot protect them when using server side rendering, because sending a recaptcha token to the server as part of the GET request would not be idempotent.

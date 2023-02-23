@@ -4,7 +4,7 @@
     <router-link :to="`${href}`">
         <img class="flex-1" :src="`${imgSrc}`">
     </router-link>
-    <div class="flex flex-col p-6 items-center bg-slate-800">
+    <div class="flex flex-col flex-1 p-6 items-center bg-slate-800">
         <router-link :to="`${href}`">
             <h3 class="text-xl font-semibold">
                 <slot name="headline"></slot>
