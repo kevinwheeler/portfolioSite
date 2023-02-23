@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
+Route::get('/baby-keyboard-smash', function () {
+    return view('baby-keyboard-smash')->with('devEnvironment', App::isLocal());
+});
+
 Route::get('/projects', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
