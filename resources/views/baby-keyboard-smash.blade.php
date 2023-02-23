@@ -13,6 +13,23 @@
   <meta name="google-site-verification" content="Y3-tHUYAJjAt6c7LPTxLIeDfd8liwzBzpe3uqvTJbco" />
 
 <!--  <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+<script>
+    // Update canvas sizes when window resizes.
+    window.addEventListener('resize', function(event) {
+        var canvases = document.querySelectorAll('canvas');
+        var canvas_array = [...canvases];
+        canvas_array.forEach(canvas => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        })
+    }, true);
+</script>
+
+<style>
+    body {
+        margin: 0;
+    }
+</style>
 
 </head>
 
@@ -173,6 +190,14 @@
       for( i=0; i<this.num_stars; i++ )  {
         this.stars.push( Math.floor( Math.random()*(width-10)+5  ) );
         this.stars.push( Math.floor( Math.random()*(height-10)+5 ) );
+      }
+
+      let self = this;
+      if (window.initializedOnceAlready !== true) {
+        window.addEventListener('resize', function(event) {
+            self.initialize(window.innerWidth, window.innerHeight, 300);
+        }, true);
+        window.initializedOnceAlready = true;
       }
     },
     
@@ -365,8 +390,6 @@ window.addEventListener(
     'load',
     init(null),
     false);
-
-
 </script>
 
 <script>
@@ -398,6 +421,14 @@ window.addEventListener(
   // set canvas dimensions
   canvas.width = cw;
   canvas.height = ch;
+
+// Update variables for drawing fireworks
+window.addEventListener('resize', function(event) {
+    cw = window.innerWidth,
+    ch = window.innerHeight,
+    canvas.width = cw;
+    canvas.height = ch;
+}, true);
 
   // now we are going to setup our function placeholders for the entire demo
 
@@ -575,18 +606,5 @@ window.addEventListener(
       'load',
       loop,
       false);
-
-//  window.addEventListener(
-//      'resize',
-//      resizeCanvases,
-//      false);
-//
-//  let resizeCanvases = function(){
-//    canvas1= document.getElementById('s');
-//    canvas2= document.getElementById('canvase');
-//  }
-
-
-
 </script>
 </body>
