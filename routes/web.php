@@ -21,11 +21,15 @@ Route::get('/', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
-Route::get('/baby-keyboard-smash', function () {
+Route::get('/baby-keyboard-smash-game', function () {
     return view('baby-keyboard-smash')->with('devEnvironment', App::isLocal());
 });
 
 Route::get('/projects', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal());
+});
+
+Route::get('/projects/baby-keyboard-smash-game', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 

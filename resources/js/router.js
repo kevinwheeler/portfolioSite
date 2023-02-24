@@ -14,6 +14,11 @@ const routes = [
         component: Pages.Projects,
     },
     {
+        path: "/projects/baby-keyboard-smash-game",
+        name: "BabyKeyboardSmashGame",
+        component: Pages.KeyboardSmash,
+    },
+    {
         path: "/projects/density-iterator",
         name: "DensityIterator",
         component: Pages.DensityIterator,

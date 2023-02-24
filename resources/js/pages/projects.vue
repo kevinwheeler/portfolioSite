@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="mb-48">
         <h2 class="text-5xl mb-12 font-bold text-center">All <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
         <div class="flex flex-col sm:flex-row gap-6 mb-12">
             <Card imgSrc="/storage/nothing-but-headlines.jpg" href="/projects/nothing-but-headlines">
@@ -21,6 +21,29 @@
                 <template v-slot:secondary-headline> GeoMesa Temporal Density Iterator </template>
                 <template v-slot:paragraph>
                     Open source contribution adding functionality to distributed database to return a histogram of where data points fall temporally.
+                </template>
+            </Card>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-6 mb-12">
+            <Card imgSrc="/storage/geomesa-card.jpeg" href="/projects/geomesa-gui">
+                <template v-slot:headline>GeoMesa GUI</template>
+                <template v-slot:secondary-headline>2015</template>
+                <template v-slot:paragraph>
+                    Open source contribution adding functionality to show data points from a GeoMesa database instance on a map, and to display their info when clicked.
+                </template>
+            </Card>
+            <Card imgSrc="/storage/keyboard-smash-card.jpg" href="/projects/baby-keyboard-smash-game">
+                <template v-slot:headline>Baby Keyboard Smash Game</template>
+                <template v-slot:secondary-headline>kevinwheeler.net/baby-keyboard-smash-game</template>
+                <template v-slot:paragraph>
+                    A simple game for a baby/toddler that displays a firework and makes a sound on keypresses and mouse clicks.
+                </template>
+            </Card>
+            <Card class="invisible" imgSrc="/storage/geomesa-card.jpeg" href="/stub" display="hidden">
+                <template v-slot:headline>stub</template>
+                <template v-slot:secondary-headline> stub </template>
+                <template v-slot:paragraph>
+                    stub
                 </template>
             </Card>
         </div>

@@ -3,8 +3,8 @@
         <div class="flex flex-col gap-6">
             <h1 class="text-6xl font-bold self-center text-center">Nothing But <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Headlines</span></h1>
             <div class="text-l text-gray-400 self-center text-center">www.nothingbutheadlines.lol (end of life)</div>
-            <div class="self-center md:px-32 w-full mb-16">
-                <iframe class="self-center aspect-video w-full" src="https://www.youtube.com/embed/mkbxh0QLh-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="md:px-32 mb-16">
+                <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/mkbxh0QLh-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <h2 class="text-5xl mb-6 font-bold text-center">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
             <div class="text-2xl">
