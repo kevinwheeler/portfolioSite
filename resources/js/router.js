@@ -43,6 +43,10 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
+    //https://stackoverflow.com/questions/50449123/vue-js-scroll-to-top-of-page-for-same-route?answertab=trending#tab-top
+    scrollBehavior() {
+        document.getElementById('app').scrollIntoView({});
+    }
 });
 
 router.beforeEach( (to, from, next) => {
