@@ -2,7 +2,7 @@
     <main>
         <div class="flex flex-col gap-6">
             <h1 class="text-6xl font-bold text-center">GeoMesa <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">GUI</span></h1>
-            <div class="text-l text-gray-400 self-center text-center"><a href="https://www.geomesa.org/">www.geomesa.org/</a></div>
+            <div class="text-l text-gray-400 self-center text-center"><a class="overflow-anywhere" href="https://www.geomesa.org/">www.geomesa.org/</a></div>
             <img src="/storage/geomesa-hero.jpeg" alt="Translate Search" class="md:px-32 sm:px-16 mb-16">
             <h2 class="text-5xl mb-6 font-bold">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
             <div class="text-2xl">
@@ -16,7 +16,7 @@
             <h2 class="whitespace-none text-5xl font-bold">Source<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent"> Code</span></h2>
             <div class="text-2xl">
                 <p class="mb-8">
-                    <a class="underline" href="https://github.com/locationtech/geomesa/pull/487">https://github.com/locationtech/geomesa/pull/487</a>
+                    <a class="underline overflow-anywhere" href="https://github.com/locationtech/geomesa/pull/487">https://github.com/locationtech/geomesa/pull/487</a>
                 </p>
             </div>
 

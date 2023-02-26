@@ -2,7 +2,7 @@
     <main>
         <div class="flex flex-col gap-6">
             <h1 class="text-6xl font-bold self-center text-center">Nothing But <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Headlines</span></h1>
-            <div class="text-l text-gray-400 self-center text-center">www.nothingbutheadlines.lol (end of life)</div>
+            <div class="text-l text-gray-400 self-center text-center overflow-anywhere">www.nothingbutheadlines.lol (end of life)</div>
             <div class="md:px-32 mb-16">
                 <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/mkbxh0QLh-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -21,7 +21,7 @@
                 <p class="mb-8">The video overview is the best introduction to the functionality of Nothing But Headlines.
                 </p>
                 <p class="mb-8">
-                    Source code: <a class="underline" href="https://github.com/kevinwheeler/Headlines"> github.com/kevinwheeler/Headlines </a>
+                    Source code: <a class="underline overflow-anywhere" href="https://github.com/kevinwheeler/Headlines"> github.com/kevinwheeler/Headlines </a>
                 </p>
             </div>
 

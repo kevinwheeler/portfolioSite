@@ -10,7 +10,7 @@
                     The very website you are looking at currently. I'm So Meta Even This Acronym.
                 </p>
                 <p class="mb-8">
-                    Source code: <a class="underline" href="https://github.com/kevinwheeler/portfolioSite">https://github.com/kevinwheeler/portfolioSite</a>
+                    Source code: <a class="underline overflow-anywhere" href="https://github.com/kevinwheeler/portfolioSite">https://github.com/kevinwheeler/portfolioSite</a>
                 </p>
             </div>
 

@@ -2,7 +2,7 @@
     <main>
         <div class="flex flex-col gap-6">
             <h1 class="text-6xl font-bold text-center">GeoMesa Temporal <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Density Iterator</span></h1>
-            <div class="text-l text-gray-400 self-center text-center"><a href="https://www.geomesa.org/">www.geomesa.org/</a></div>
+            <div class="text-l text-gray-400 self-center text-center"><a class="overflow-anywhere" href="https://www.geomesa.org/">www.geomesa.org/</a></div>
             <img src="/storage/geomesa-hero.jpeg" alt="Translate Search" class="md:px-32 sm:px-16 mb-16">
             <h2 class="text-5xl mb-6 font-bold text-center">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
             <div class="text-2xl">
@@ -18,16 +18,16 @@
 
             <div class="text-2xl">
                 <p class="mb-8">
-                    <a class="underline" href="https://github.com/locationtech/geomesa/pull/346">www.github.com/locationtech/geomesa/pull/346</a> *
+                    <a class="underline overflow-anywhere" href="https://github.com/locationtech/geomesa/pull/346">www.github.com/locationtech/geomesa/pull/346</a> *
                 </p>
                 <p class="mb-8">
-                    <a class="underline" href="https://github.com/locationtech/geomesa/pull/501">www.github.com/locationtech/geomesa/pull/501</a>
+                    <a class="underline overflow-anywhere" href="https://github.com/locationtech/geomesa/pull/501">www.github.com/locationtech/geomesa/pull/501</a>
                 </p>
                 <p class="mb-2 accent-color">
                     * Branch was squashed to one commit and committed using co-author's Github account. Non-squashed branch with my contributions can be found here: 
                 </p>
                 <p class="mb-8">
-                    <a class="underline" href="https://github.com/kevinwheeler/geomesa/commits/tdi">www.github.com/kevinwheeler/geomesa/commits/tdi</a>
+                    <a class="underline overflow-anywhere" href="https://github.com/kevinwheeler/geomesa/commits/tdi">www.github.com/kevinwheeler/geomesa/commits/tdi</a>
                 </p>
             </div>
 

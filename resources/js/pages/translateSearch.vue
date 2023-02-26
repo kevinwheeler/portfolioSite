@@ -2,7 +2,7 @@
     <main>
         <div class="flex flex-col gap-6">
             <h1 class="text-6xl font-bold text-center">Translate <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Search</span></h1>
-            <div class="text-l text-gray-400 self-center text-center"><a href="https://www.translatesearch.com">www.translatesearch.com</a></div>
+            <div class="text-l text-gray-400 self-center text-center overflow-anywhere"><a href="https://www.translatesearch.com">www.translatesearch.com</a></div>
             <img src="/storage/translate-search-16-9.jpg" alt="Translate Search" class="md:px-32 sm:px-16 mb-16">
             <h2 class="text-5xl mb-6 font-bold text-center">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
             <div class="text-2xl">
@@ -10,10 +10,10 @@
                     A web application that translates a user provided search query plus selection of languages and displays the Google image search results for each language.
                 </p>
                 <p class="mb-8">
-                    Source code: <a class="underline" href="https://github.com/kevinwheeler/translatesearch"> github.com/kevinwheeler/translatesearch </a>
+                    Source code: <a class="underline overflow-anywhere" href="https://github.com/kevinwheeler/translatesearch"> github.com/kevinwheeler/translatesearch </a>
                 </p>
                 <p class="mb-8">
-                    Live website: <a class="underline" href="https://www.translatesearch.com">www.translatesearch.com</a>
+                    Live website: <a class="underline overflow-anywhere" href="https://www.translatesearch.com">www.translatesearch.com</a>
                 </p>
             </div>
 
@@ -49,7 +49,7 @@
 
             <h2 class="whitespace-none text-5xl font-bold">Refl<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">ections</span></h2>
             <div class="text-2xl">
-                <p class="mb-48">
+                <p class="mb-48 overflow-anywhere">
                     If I allocate time for it it, I need to reimplement the search results pages such that they use client side rendering. I decided to make this website using server side rendering without using a javascript framework (although I have experience with vue.js in my kevinwheeler.net project and in contract work I've done, and backbone.js in my www.nothingbutheadlines.lol project), because
                     I just wanted to get something up quickly and also to gain some experience in not using a javascript framework. This became a bit problematic because I wanted to use reCAPTCHA to protect my GET routes
                     for the search results pages, so that user's could share links to the search results pages with others while my translation api budget would still be protected from bots by reCAPTCHA. GET routes

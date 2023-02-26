@@ -16,3 +16,10 @@
         @apply before:inline-block before:text-5xl before:relative before:top-1 before:-ml-5 before:content-['\2022'] before:bg-gradient-to-br before:from-sky-500 before:to-cyan-400 before:bg-clip-text before:text-transparent;
     }
 }
+
+@layer utilities {
+    .overflow-anywhere {
+      overflow-wrap: anywhere;
+    }
+}
+  
