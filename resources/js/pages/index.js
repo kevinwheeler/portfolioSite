@@ -1,10 +1,12 @@
 import Home from './home.vue';
 import DensityIterator from './densityIterator.vue';
 import GeomesaGUI from './geomesaGUI.vue';
+import PortfolioSite from './portfolioSite.vue';
 import KeyboardSmash from './keyboardSmash.vue';
 import NothingButHeadlines from './nothingButHeadlines.vue';
 import Projects from './projects.vue';
 import TranslateSearch from './translateSearch.vue';
+import UbuntuVPS from './ubuntuVPS.vue';
 
 export {
     DensityIterator,
@@ -12,6 +14,8 @@ export {
     Home,
     KeyboardSmash,
     NothingButHeadlines,
+    PortfolioSite,
     Projects,
-    TranslateSearch
+    TranslateSearch,
+    UbuntuVPS
 };

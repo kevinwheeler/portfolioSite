@@ -6,7 +6,7 @@
                     Hi there, I'm <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Kevin</span>  👋
                 </h1>
                 <p class="text-xl leading-9">
-                    I'm a junior full stack web developer who graduated with highest honors from The University of Texas at Austin while obtaining a B.S. in Computer Science. I have experience with a variety of technologies including Laravel, Node.js, Backbone.js, and Vue.js.
+                    I'm a junior full stack web developer who graduated with highest honors from The University of Texas at Austin while obtaining a B.S. in Computer Science. I have experience with a variety of technologies including Laravel, Node.js, Backbone.js, and Vue.js. Two of my values in life are benevolence and rationality.
                 </p>
             </div>
             <img class=" sm:w-0 rounded-3xl sm:mr-20" style="flex-grow:0.3" src="/storage/kevin-laptop-cropped.jpeg">

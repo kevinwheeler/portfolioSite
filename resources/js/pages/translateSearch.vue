@@ -44,7 +44,7 @@
             <h2 class="whitespace-none text-5xl font-bold">Server <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Features</span></h2>
 
             <ul class="mb-8">
-                <li class="text-2xl mb-4 list-style-blue-bullet">Please see the <router-link class="underline" to="/ubuntu-vps">server portfolio page</router-link> for server features.</li>
+                <li class="text-2xl mb-4 list-style-blue-bullet">Please see the <router-link class="underline" to="/ubuntu-vps">Ubuntu VPS server portfolio page</router-link> for server features.</li>
             </ul>
 
             <h2 class="whitespace-none text-5xl font-bold">Refl<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">ections</span></h2>

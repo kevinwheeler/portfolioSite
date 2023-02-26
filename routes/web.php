@@ -41,11 +41,19 @@ Route::get('/projects/geomesa-gui', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
+Route::get('/projects/nothing-but-headlines', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal());
+});
+
+Route::get('/projects/portfolio', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal());
+});
+
 Route::get('/projects/translate-search', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
-Route::get('/projects/nothing-but-headlines', function () {
+Route::get('/projects/ubuntu-vps', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 

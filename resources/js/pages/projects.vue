@@ -32,6 +32,13 @@
                     Open source contribution adding functionality to show data points from a GeoMesa database instance on a map, and to display their info when clicked.
                 </template>
             </Card>
+            <Card imgSrc="/storage/portfolio-site-card.jpg" href="/projects/portfolio">
+                <template v-slot:headline>Portfolio Website</template>
+                <template v-slot:secondary-headline>www.kevinwheeler.net</template>
+                <template v-slot:paragraph>
+                    The very website that you are currently viewing.
+                </template>
+            </Card>
             <Card imgSrc="/storage/keyboard-smash-card.jpg" href="/projects/baby-keyboard-smash-game">
                 <template v-slot:headline>Baby Keyboard Smash Game</template>
                 <template v-slot:secondary-headline>kevinwheeler.net/baby-keyboard-smash-game</template>
@@ -39,11 +46,27 @@
                     A simple game for a baby/toddler that displays a firework and makes a sound on keypresses and mouse clicks.
                 </template>
             </Card>
-            <Card class="invisible" imgSrc="/storage/geomesa-card.jpeg" href="/stub" display="hidden">
-                <template v-slot:headline>stub</template>
-                <template v-slot:secondary-headline> stub </template>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-6 mb-12">
+            <Card class="hidden sm:block sm:invisible" imgSrc="/storage/geomesa-card.jpeg" href="/projects/geomesa-gui">
+                <template v-slot:headline>GeoMesa GUI</template>
+                <template v-slot:secondary-headline>2015</template>
                 <template v-slot:paragraph>
-                    stub
+                    Open source contribution adding functionality to show data points from a GeoMesa database instance on a map, and to display their info when clicked.
+                </template>
+            </Card>
+            <Card imgSrc="/storage/ubuntu-logo-card.jpg" href="/projects/ubuntu-vps">
+                <template v-slot:headline>Ubuntu VPS</template>
+                <template v-slot:secondary-headline>2022</template>
+                <template v-slot:paragraph>
+                    Ubuntu VPS for cheaply hosting as many websites as I would want.
+                </template>
+            </Card>
+            <Card class="hidden sm:block sm:invisible" imgSrc="/storage/geomesa-card.jpeg" href="/projects/geomesa-gui">
+                <template v-slot:headline>GeoMesa GUI</template>
+                <template v-slot:secondary-headline>2015</template>
+                <template v-slot:paragraph>
+                    Open source contribution adding functionality to show data points from a GeoMesa database instance on a map, and to display their info when clicked.
                 </template>
             </Card>
         </div>

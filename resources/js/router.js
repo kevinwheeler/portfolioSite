@@ -29,14 +29,24 @@ const routes = [
         component: Pages.GeomesaGUI,
     },
     {
+        path: "/projects/nothing-but-headlines",
+        name: "NothingButHeadlines",
+        component: Pages.NothingButHeadlines,
+    },
+    {
+        path: "/projects/portfolio",
+        name: "PortfolioSite",
+        component: Pages.PortfolioSite,
+    },
+    {
         path: "/projects/translate-search",
         name: "TranslateSearch",
         component: Pages.TranslateSearch,
     },
     {
-        path: "/projects/nothing-but-headlines",
-        name: "NothingButHeadlines",
-        component: Pages.NothingButHeadlines,
+        path: "/projects/ubuntu-vps",
+        name: "UbuntuVPS",
+        component: Pages.UbuntuVPS,
     },
 ];
 
