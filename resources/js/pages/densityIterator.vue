@@ -7,10 +7,10 @@
             <h2 class="text-5xl mb-6 font-bold text-center">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
             <div class="text-2xl">
                 <p class="mb-10 font-bold text-center">
-                    Open source contribution adding functionality to distributed database to return a histogram of where data points fall temporally.
+                    Open source contribution adding functionality to a distributed database to return a histogram of where data points fall temporally.
                 </p>
                 <p class="mb-8">
-                    Utilizes the distributed nature of Accumulo to achieve scalability. In collaboration with other co-authors, we programmed each database node to process its local set of data, tallying up how many data point's timestamps fell into a variety of different time slots, and then this "temporal histogram" would be returned to the central server upstream to be reduced (combined) into a single histogram representing the time series data of the entire dataset. Thus, a user could easily see how many data points occured at different points in time for their entire dataset.
+                    Utilizes the distributed nature of Accumulo (built on Bigtable) to achieve scalability. In collaboration with other co-authors, we programmed each database node to process its local set of data, tallying up how many data point's timestamps fell into a variety of different time slots, and then this "temporal histogram" is returned to the central server upstream to be reduced (combined) into a single histogram representing the time series data of the entire dataset. Thus, a user could easily see how many data points occured at different points in time for their entire dataset.
                 </p>
             </div>
 
@@ -34,23 +34,23 @@
             <h2 class="whitespace-none text-5xl font-bold">Additional <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Features</span></h2>
             <div class="text-2xl">
                 <p class="text-3xl font-bold">
-                    In addition to the core feature implemented, my co-author and I also:
+                    In addition to the core feature implemented, my co-authors and I also:
                 </p>
             </div>
 
             <ul class="mb-8">
-                <li class="text-2xl mb-4 list-style-blue-bullet">Added a test suite of tests for our new functionality.</li>
-                <li class="text-2xl mb-4 list-style-blue-bullet accent-color">
-                    In addition to the regular programmatic interface, we later added support to access our temporal density iterator through a
-                    WPS (Web Processing Service) interface, an Open Geospatial Consortium interface standard allowing interoperability with other 
-                    GIS software, such as GeoServer.
+                <li class="text-2xl mb-4 blue-bullet">Added a test suite of tests for our new functionality.</li>
+                <li class="text-2xl mb-4 blue-bullet accent-color">
+                    In addition to the regular programmatic interface, support was later added to access our temporal density iterator through a
+                    WPS (Web Processing Service) interface: an Open Geospatial Consortium interface standard allowing interoperability with other 
+                    GIS software such as GeoServer.
                 </li>
             </ul>
 
             <h2 class="whitespace-none text-5xl font-bold">Related <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
 
             <ul class="mb-48">
-                <li class="text-2xl mb-4 list-style-blue-bullet"><router-link class="underline" to="/projects/geomesa-gui">GeoMesa GUI</router-link></li>
+                <li class="text-2xl mb-4 blue-bullet"><router-link class="underline" to="/projects/geomesa-gui">GeoMesa GUI</router-link></li>
             </ul>
         </div>
     </main> 

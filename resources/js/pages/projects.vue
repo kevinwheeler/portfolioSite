@@ -13,21 +13,21 @@
                 <template v-slot:headline> Translate Search </template>
                 <template v-slot:secondary-headline>www.translatesearch.com</template>
                 <template v-slot:paragraph>
-                    A web application that translates a user provided search query plus selection of languages and displays the Google image search results for each language.
+                    A web application that translates a user provided search query and selection of languages and displays the Google image search results for each language.
                 </template>
             </Card>
             <Card imgSrc="/storage/geomesa-card.jpeg" href="/projects/density-iterator">
                 <template v-slot:headline> Temporal Density Iterator </template>
-                <template v-slot:secondary-headline> GeoMesa Temporal Density Iterator </template>
+                <template v-slot:secondary-headline>www.geomesa.org</template>
                 <template v-slot:paragraph>
-                    Open source contribution adding functionality to distributed database to return a histogram of where data points fall temporally.
+                    Open source contribution adding functionality to a distributed database to return a histogram of where data points fall temporally.
                 </template>
             </Card>
         </div>
         <div class="flex flex-col sm:flex-row gap-6 mb-12">
             <Card imgSrc="/storage/geomesa-card.jpeg" href="/projects/geomesa-gui">
                 <template v-slot:headline>GeoMesa GUI</template>
-                <template v-slot:secondary-headline>2015</template>
+                <template v-slot:secondary-headline>www.geomesa.org</template>
                 <template v-slot:paragraph>
                     Open source contribution adding functionality to show data points from a GeoMesa database instance on a map, and to display their info when clicked.
                 </template>
@@ -41,7 +41,7 @@
             </Card>
             <Card imgSrc="/storage/keyboard-smash-card.jpg" href="/projects/baby-keyboard-smash-game">
                 <template v-slot:headline>Baby Keyboard Smash Game</template>
-                <template v-slot:secondary-headline>kevinwheeler.net/baby-keyboard-smash-game</template>
+                <template v-slot:secondary-headline>www.kevinwheeler.net/baby-keyboard-smash-game</template>
                 <template v-slot:paragraph>
                     A simple game for a baby/toddler that displays a firework and makes a sound on keypresses and mouse clicks.
                 </template>

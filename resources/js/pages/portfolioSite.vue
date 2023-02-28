@@ -17,19 +17,19 @@
             <h2 class="whitespace-none text-5xl font-bold">Tech<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">nologies</span></h2>
 
             <ul class="mb-8">
-                <li class="text-2xl mb-4 list-style-blue-bullet">Ubuntu VPS</li>
-                <li class="text-2xl mb-4 list-style-blue-bullet">Laravel</li>
-                <li class="text-2xl mb-4 list-style-blue-bullet accent-color">Vue.js</li>
-                <li class="text-2xl mb-4 list-style-blue-bullet">Tailwind</li>
-                <li class="text-2xl mb-4 list-style-blue-bullet">Laravel + Laravel UI and Included/Related Tech: Vite, Sass, Composer, GuzzleHTTP </li>
-                <li class="text-2xl mb-4 list-style-blue-bullet accent-color">MSMTP as sendmail provider for contact form</li>
-                <li class="text-2xl mb-4 list-style-blue-bullet">Google ReCAPTCHA</li>
+                <li class="text-2xl mb-4 blue-bullet-500">Ubuntu VPS</li>
+                <li class="text-2xl mb-4 blue-bullet-500">Laravel</li>
+                <li class="text-2xl mb-4 blue-bullet-500 accent-color">Vue.js</li>
+                <li class="text-2xl mb-4 blue-bullet-500">Tailwind</li>
+                <li class="text-2xl mb-4 blue-bullet-500">Laravel + Laravel UI and Included/Related Tech: Vite, Sass, Composer, GuzzleHTTP </li>
+                <li class="text-2xl mb-4 blue-bullet-500 accent-color">MSMTP as sendmail provider for contact form</li>
+                <li class="text-2xl mb-4 blue-bullet-500">Google ReCAPTCHA to protect email/contact form</li>
             </ul>
 
             <h2 class="whitespace-none text-5xl font-bold">Server <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Features</span></h2>
 
-            <ul class="mb-8">
-                <li class="text-2xl mb-4 list-style-blue-bullet">Please see the <router-link class="underline" to="/ubuntu-vps">Ubuntu VPS server portfolio page</router-link> for server features.</li>
+            <ul class="mb-48">
+                <li class="text-2xl mb-4 blue-bullet-500">Please see the <router-link class="underline" to="/ubuntu-vps">Ubuntu VPS server portfolio page</router-link> for server features.</li>
             </ul>
         </div>
     </main> 

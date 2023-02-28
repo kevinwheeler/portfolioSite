@@ -4,14 +4,14 @@
             <h1 class="text-6xl font-bold text-center">Baby Keyboard <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Smash Game</span></h1>
             <div class="text-l text-gray-400 self-center text-center"><a class="overflow-anywhere" href="/baby-keyboard-smash-game">www.kevinwheeler.net/baby-keyboard-smash-game</a></div>
             <img src="/storage/keyboard-smash-hero.jpg" alt="Keyboard Smash Screenshot" class="md:px-32 sm:px-16 mb-16">
-            <h2 class="text-5xl mb-6 font-bold">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
+            <h2 class="text-center text-5xl mb-6 font-bold">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
             <div class="text-2xl">
-                <p class="mb-8">
+                <p class="text-center mb-8">
                     A simple game I quickly made for my son by stitching
                     together free code I found online. I found the firework code
                     and changed it to fire on keypresses and clicks instead of
                     on an interval. I also added a firework sound. I found the
-                    code for the grass and sky and added it as well. Then I
+                    code for the grass and sky and added it as well. I then 
                     modified both sets of code to handle window resize events.
                     It was nothing big, and I certainly didn't take the time to
                     refactor the code and clean it up or convert it into using

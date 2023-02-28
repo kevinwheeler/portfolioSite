@@ -10,8 +10,6 @@
         @if($devEnvironment)
             <script src="https://cdn.tailwindcss.com"></script>
         @endif
-
-        <link rel="stylesheet" href="http://localhost:3000/resources/sass/app.css">
     </head>
     <body >
         <div id="app"></div>
