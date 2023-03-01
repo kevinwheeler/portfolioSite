@@ -17,7 +17,10 @@
                         <router-link class="ml-2 mr-2" to="/projects">Portfolio</router-link>
                     </li>
                     <li class="hover:text-white">
-                        <a class="ml-2 mr-2" href="https://stackoverflow.com/users/3470632/kevin-wheeler">Stack Overflow</a>
+                        <router-link class="ml-2 mr-2" to="/resume">Résumé</router-link>
+                    </li>
+                    <li class="hover:text-white">
+                        <a class="ml-2 mr-2 " href="https://stackoverflow.com/users/3470632/kevin-wheeler">Stack Overflow</a>
                     </li>
                     <li class="hover:text-white">
                         <a class="ml-2 mr-2" href="https://github.com/kevinwheeler">Github</a>

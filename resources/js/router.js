@@ -48,6 +48,11 @@ const routes = [
         name: "UbuntuVPS",
         component: Pages.UbuntuVPS,
     },
+    {
+        path: "/resume",
+        name: "Resume",
+        component: Pages.Resume,
+    },
 ];
 
 const router = createRouter({

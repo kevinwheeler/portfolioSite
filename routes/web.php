@@ -57,4 +57,8 @@ Route::get('/projects/ubuntu-vps', function () {
     return view('welcome')->with('devEnvironment', App::isLocal());
 });
 
+Route::get('/resume', function () {
+    return view('resume')->with('devEnvironment', App::isLocal());
+});
+
 Route::post('/api/email', [EmailController::class, 'email']);
