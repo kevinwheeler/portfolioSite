@@ -26,7 +26,7 @@ class EmailController extends Controller
             'https://www.google.com/recaptcha/api/siteverify',
             [
                'form_params' => [
-                   'secret' => env("RECAPTCHA_SECRET_KEY"), //TODO use config instead of env()
+                   'secret' => config("custom.recaptcha_secret_key"),
                    'response' => $request->input('g-recaptcha-response'),
                    'remoteip' => $request->ip()
                 ]

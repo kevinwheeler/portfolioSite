@@ -46,7 +46,7 @@ export default {
             if (val) {
 			    // val == true ; Adobe is loaded on page
 			    let adobeDCView = new window.AdobeDC.View({
-			    	clientId: "34e74ab26db84d84936a007c215330e8",
+			    	clientId: import.meta.env.VITE_ADOBE_PDF_EMBED_KEY,
 			    	divId: "pdfview",
 			    	});
                     adobeDCView.previewFile({
