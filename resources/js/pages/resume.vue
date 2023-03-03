@@ -29,7 +29,6 @@ export default {
         onMounted(() => {
             document.addEventListener("adobe_dc_view_sdk.ready", () => {
             	adobeApiPDFReady.value = true;
-            	console.log("Adobe created with adobe_dc_view_sdk.ready");
             });
             
             // Dynamically load Adobe SDK Viewer for this page
@@ -54,7 +53,6 @@ export default {
             			metaData:{fileName: "kevin-wheeler-resume.pdf"}
             		}, {embedMode: "IN_LINE"});
                     // adobeDCView.previewFile
-			    console.log("Adobe is mounted with Client ID");
 			}
         });
 

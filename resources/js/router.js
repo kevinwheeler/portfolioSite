@@ -6,7 +6,6 @@ const routes = [
         path: "/",
         name: "Home",
         component: Pages.Home,
-        meta: { authorizationRequired: false },
     },
     {
         path: "/projects",
@@ -48,11 +47,13 @@ const routes = [
         name: "UbuntuVPS",
         component: Pages.UbuntuVPS,
     },
-    {
-        path: "/resume",
-        name: "Resume",
-        component: Pages.Resume,
-    },
+    // Resume route is being implemented by a v-show element in App.vue, so that the
+    // PDF won't have to reload everytime the user revisits the Resume page. 
+    // {
+    //     path: "/resume",
+    //     name: "Resume",
+    // component: Pages.Resume,
+    // },
 ];
 
 const router = createRouter({
