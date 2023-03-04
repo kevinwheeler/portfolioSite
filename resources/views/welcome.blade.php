@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Kevin Wheeler</title>
+        <title>{{$title}}</title>
+        <meta name="description" content="{{$description}}">
         @vite(['resources/js/app.js', 'resources/sass/app.scss'])
 
         @if($devEnvironment)
