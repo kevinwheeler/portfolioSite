@@ -6,6 +6,8 @@
 
         <title>{{$title}}</title>
         <meta name="description" content="{{$description}}">
+        <link rel="icon" type="image/svg+xml" href="/storage/favicon.svg">
+        <link rel="icon" type="image/png" href="/storage/favicon.png">
         @vite(['resources/js/app.js', 'resources/sass/app.scss'])
 
         @if($devEnvironment)
