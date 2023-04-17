@@ -25,5 +25,37 @@
     .overflow-anywhere {
       overflow-wrap: anywhere;
     }
+
+    .from-right {
+        opacity: 0;
+        @apply translate-x-1/2;
+    }
+
+    .from-right.is-inViewport {
+        opacity: 1;
+        @apply translate-x-0;
+        
+    }
+
+    .from-left {
+        opacity: 0;
+        @apply -translate-x-1/2;
+    }
+
+    .from-left.is-inViewport {
+        opacity: 1;
+        @apply translate-x-0;
+        
+    }
+
+    .fade-in {
+        opacity: 0;
+    }
+
+    .fade-in.is-inViewport {
+        opacity: 1;
+    }
 }
+
+
   

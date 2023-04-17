@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col min-h-screen bg-slate-900 text-gray-100 items-center">
         <div class="w-full max-w-screen-lg flex flex-col px-8">
-            <nav class="flex flex-col sm:flex-row gap-y-2 justify-between py-6 mb-14">
+            <nav ref="nav" class="flex flex-col sm:flex-row gap-y-2 justify-between py-6 mb-14 duration-[2000ms] transition fade-in">
                 <div class="flex items-center">
                     <router-link to="/" class="flex ml-2 items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="mr-1 h-10 w-10 stroke-cyan-600">
@@ -34,6 +34,8 @@
 
 <script>
 import { useRoute } from 'vue-router'
+import { ref } from 'vue'
+import { onMounted, onUnmounted } from '@vue/runtime-core'
 
 export default {
     components: {
@@ -41,9 +43,30 @@ export default {
     },
     setup() {
         const route = useRoute();
+        const nav = ref(null);
+
+        //Add is-inViewport class to elements in viewport. Remove class when not in viewport.
+        const inViewport = (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting){
+                entry.target.classList.add("is-inViewport");
+            } 
+          });
+        };
+
+        const Obs = new IntersectionObserver(inViewport);
+        onMounted(() => {
+            const obsOptions = {};
+            Obs.observe(nav.value, obsOptions);
+            nav.value.classList.remove("is-inViewport");
+        })
+
+        onUnmounted(() => {
+            Obs.unobserve(nav.value);
+        })
 
         return {
-            route
+            route, nav
         }
     }
 }

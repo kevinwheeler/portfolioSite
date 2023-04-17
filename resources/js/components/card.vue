@@ -1,6 +1,6 @@
 <!-- TODO add bounce on hover -->
 <template>
-<div class="flex flex-col flex-1 rounded-lg overflow-hidden hover:translate-y-1">
+<div :class="`flex flex-col flex-1 rounded-lg overflow-hidden hover:translate-y-1 ${classes}`">
     <router-link :to="`${href}`">
         <img class="flex-1" :src="`${imgSrc}`">
     </router-link>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    props:['imgSrc', 'href'],
+    props:['imgSrc', 'href', 'classes'],
     setup(props) {
         return {}
     },
