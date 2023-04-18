@@ -58,11 +58,11 @@ export default {
         onMounted(() => {
             const obsOptions = {};
             Obs.observe(nav.value, obsOptions);
-            nav.value.classList.remove("is-inViewport");
         })
 
         onUnmounted(() => {
             Obs.unobserve(nav.value);
+            nav.value.classList.remove("is-inViewport");
         })
 
         return {

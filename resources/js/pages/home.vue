@@ -52,6 +52,8 @@ import { ref } from 'vue'
 import Card from '../components/card.vue'
 import ContactForm from '../components/contactForm.vue'
 import { onMounted, onBeforeUnmount } from '@vue/runtime-core'
+import { getObserver, observeElements, unobserveElements } from '../helpers/observerHelpers.js'
+
 
 export default {
     
@@ -60,27 +62,14 @@ export default {
     },
     setup() {
         const main = ref(null);
-            //Add is-inViewport class to elements in viewport. Remove class when not in viewport.
-            const inViewport = (entries, observer) => {
-              entries.forEach(entry => {
-                entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
-              });
-            };
-        const Obs = new IntersectionObserver(inViewport);
+        const obs = getObserver();
+
         onMounted(() => {
-            const obsOptions = {};
-            const elsToObserve = main.value.querySelectorAll('.data-inviewport');
-            elsToObserve.forEach(El => {
-              Obs.observe(El, obsOptions);
-            });
+            observeElements(obs, {}, main.value);
         })
 
         onBeforeUnmount(() => {
-            const elsToObserve = main.value.querySelectorAll('.data-inviewport');
-            elsToObserve.forEach(El => {
-              Obs.unobserve(El);
-              El.classList.remove('is-inViewport');
-            });
+            unobserveElements(obs, main.value);
         })
 
         return {
