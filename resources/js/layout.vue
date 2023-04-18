@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col min-h-screen bg-slate-900 text-gray-100 items-center">
+    <div class="flex flex-col min-h-screen bg-slate-900 text-gray-100 items-center overflow-x-hidden">
         <div class="w-full max-w-screen-lg flex flex-col px-8">
             <nav ref="nav" class="flex flex-col sm:flex-row gap-y-2 justify-between py-6 mb-14 duration-[2000ms] transition fade-in">
                 <div class="flex items-center">
@@ -12,7 +12,7 @@
                         </div>
                     </router-link>
                 </div>
-                <ul class="flex gap-x-3 font-medium text-gray-300 pl-5">
+                <ul class="flex flex-wrap gap-x-3 font-medium text-gray-300 pl-5 justify-center">
                     <li class="hover:text-white">
                         <router-link class="ml-2 mr-2" to="/projects">Portfolio</router-link>
                     </li>
