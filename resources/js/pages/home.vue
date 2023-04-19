@@ -11,7 +11,7 @@
             </div>
             <img class=" sm:w-0 rounded-3xl sm:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:0.3" src="/storage/kevin-laptop-cropped.jpeg">
         </div>
-        <div class="flex flex-col duration-1000 transition data-inviewport from-left ">
+        <div class="flex flex-col duration-1000 transition data-inviewport from-left">
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-2xl font-bold">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
                 <router-link to="/projects" class="text-lg">View All Projects →</router-link>
