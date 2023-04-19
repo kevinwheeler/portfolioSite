@@ -77,14 +77,13 @@
 <script>
 import { ref } from 'vue'
 import Card from '../components/card.vue'
-import ContactForm from '../components/contactForm.vue'
 import { getObserver, observeElements, unobserveElements } from '../helpers/observerHelpers.js'
 import { onBeforeUnmount, onMounted } from '@vue/runtime-core'
 
 export default {
     
     components: {
-        Card, ContactForm
+        Card
     },
     setup() {
         const main = ref(null);
