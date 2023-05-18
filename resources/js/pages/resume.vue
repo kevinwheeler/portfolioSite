@@ -4,9 +4,7 @@
             <h1 class="text-6xl font-bold text-center">Rés<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">umé</span></h1>
             <div class="text-l text-gray-400 self-center text-center">Last Updated March 2023</div>
             <div class="w-full mb-12" id="pdfview"></div>
-            <!-- <embed class="w-full min-h-screen" src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://www.kevinwheeler.net/storage/kevin-wheeler-resume.pdf"> -->
-            <a href="/storage/kevin-wheeler-resume.pdf" class="w-full self-center px-6 py-2.5 mb-24 text-center text-white font-medium text-xs
+            <a href="/storage/Kevin_Wheeler_Resume.pdf" class="w-full self-center px-6 py-2.5 mb-24 text-center text-white font-medium text-xs
             leading-tight uppercase rounded shadow-md bg-gradient-to-br
             from-sky-500 to-blue-800 hover:from-sky-600 hover:to-sky-900
             hover:shadow-lg focus:from-sky-600 focus:to-sky-900 focus:shadow-lg
@@ -49,8 +47,8 @@ export default {
 			    	divId: "pdfview",
 			    	});
                     adobeDCView.previewFile({
-            			content:{location: {url: "/storage/kevin-wheeler-resume.pdf"}},
-            			metaData:{fileName: "kevin-wheeler-resume.pdf"}
+            			content:{location: {url: "/storage/Kevin_Wheeler_Resume.pdf"}},
+            			metaData:{fileName: "Kevin_Wheeler_Resume.pdf"}
             		}, {embedMode: "IN_LINE"});
                     // adobeDCView.previewFile
 			}
