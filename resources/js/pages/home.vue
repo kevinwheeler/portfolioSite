@@ -1,7 +1,7 @@
 <template>
     <main ref="main">
         <div class="flex flex-col sm:flex-row items-center gap-6 mb-12">
-            <div class="flex-1 data-inviewport duration-1000 transition from-left">
+            <div class="flex-1 sm:w-0 data-inviewport duration-1000 transition from-left">
                 <h1 class="text-3xl font-bold mb-6">
                     Hi, I'm <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Kevin</span>  👋
                 </h1>
@@ -9,7 +9,7 @@
                     I'm a full stack web developer and software engineer who graduated with highest honors from The University of Texas at Austin while obtaining a B.S. in Computer Science. I am interested in software development opportunities both inside and outside of web development. I have experience with a variety of technologies including Laravel, Node.js, Backbone.js, Vue.js., Java, Python, C++, and many others. Two of my values in life are benevolence and rationality.
                 </p>
             </div>
-            <img class="w-5 max-w-xs rounded-3xl sm:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg">
+            <img class="sm:w-0 sm:py-2 rounded-3xl sm:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg">
         </div>
         <div class="flex flex-col duration-1000 transition data-inviewport from-left">
             <div class="flex justify-between items-center mb-6">
