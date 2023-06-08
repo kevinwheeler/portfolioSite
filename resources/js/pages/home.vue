@@ -9,7 +9,7 @@
                     I'm a junior full stack web developer who graduated with highest honors from The University of Texas at Austin while obtaining a B.S. in Computer Science. I am also interested in enterprise development opportunities outside of web development. I have experience with a variety of technologies including Laravel, Node.js, Backbone.js, Vue.js., Java, Python, C++, and many others. Two of my values in life are benevolence and rationality.
                 </p>
             </div>
-            <img class=" sm:w-0 rounded-3xl sm:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:0.3" src="/storage/kevin-laptop-cropped.jpeg">
+            <img class="w-5 max-w-xs rounded-3xl sm:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg">
         </div>
         <div class="flex flex-col duration-1000 transition data-inviewport from-left">
             <div class="flex justify-between items-center mb-6">
