@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from 'vue-router';
 import * as Pages from './pages';
 import { nextTick } from 'vue';
 
-// Titles and descrptions are duplicated/relied upon in web.php
+// !! TITLES AND DESCRPTIONS ARE DUPLICATED/RELIED UPON IN WEB.PHP !!
 
 const routes = [
     {
@@ -10,8 +10,8 @@ const routes = [
         name: "Home",
         component: Pages.Home,
         meta: {
-            title: 'Kevin Wheeler\'s Web Development Portfolio',
-            description: 'Kevin Wheeler is a web developer with experience in Laravel, Vue.js, and Backbone.js, among many other technologies. Kevin graduated with highest honors from UT Austin with a B.S. in Computer Science.'
+            title: 'Kevin Wheeler\'s Software/Web Development Portfolio',
+            description: 'Kevin Wheeler is a software and web developer with experience in Laravel, Node.js, Vue.js, Backbone.js, Java, PHP, Python, C++, Scala, HTML, and CSS among many other technologies listed on his resume. Kevin graduated with highest honors from UT Austin with a B.S. in Computer Science.'
         }
     },
     {

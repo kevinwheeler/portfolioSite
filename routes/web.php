@@ -15,15 +15,15 @@ use App\Http\Controllers\EmailController;
 |
 */
 
-// Titles and descrptions are duplicated/relied upon in router.js
+// !! TITLES AND DESCRPTIONS ARE DUPLICATED/RELIED UPON IN ROUTER.JS !!
 
 Route::get('/', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',
-        'Kevin Wheeler\'s Web Development Portfolio'
+        'Kevin Wheeler\'s Software/Web Development Portfolio'
     )->with(
         'description',
-        'Kevin Wheeler is a web developer with experience in Laravel, Vue.js, and Backbone.js, among many other technologies. Kevin graduated with highest honors from UT Austin with a B.S. in Computer Science.'
+        'Kevin Wheeler is a software and web developer with experience in Laravel, Node.js, Vue.js, Backbone.js, Java, PHP, Python, C++, Scala, HTML, and CSS among many other technologies listed on his resume. Kevin graduated with highest honors from UT Austin with a B.S. in Computer Science.'
     );
 });
 
