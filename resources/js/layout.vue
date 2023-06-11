@@ -20,7 +20,7 @@
                         <router-link class="ml-2 mr-2" to="/resume">Résumé</router-link>
                     </li>
                     <li class="hover:text-white">
-                        <a class="ml-2 mr-2 " href="https://www.linkedin.com/in/0/kevinwheeler0">LinkedIn</a>
+                        <a class="ml-2 mr-2 " href="https://www.linkedin.com/in/kevinwheeler0">LinkedIn</a>
                     </li>
                     <li class="hover:text-white">
                         <a class="ml-2 mr-2 " href="https://stackoverflow.com/users/3470632/kevin-wheeler">Stack Overflow</a>
