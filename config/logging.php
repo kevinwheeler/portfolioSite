@@ -58,6 +58,12 @@ return [
             'level' => 'debug',
         ],
 
+        'kevinslog' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/kevinslog.log'),
+            'level' => 'info',
+        ],
+
         'email' => [
             'driver' => 'single',
             'path' => storage_path('logs/email.log'),

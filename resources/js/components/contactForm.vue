@@ -144,7 +144,7 @@ export default {
     }
 
     const recaptchaSuccess = async (token) => {
-      const fd = new FormData()
+      const fd = new FormData();
       fd.append('name', name.value);
       fd.append('emailAddress', emailAddress.value);
       fd.append('message', message.value);

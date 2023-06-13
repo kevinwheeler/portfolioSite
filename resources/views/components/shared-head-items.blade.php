@@ -7,6 +7,7 @@
 <link rel="icon" type="image/svg+xml" href="/storage/favicon.svg">
 <link rel="icon" type="image/png" href="/storage/favicon.png">
 
+
 <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -17,13 +18,13 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '213065001127118');
+  fbq('init', '589240076689126');
   fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=213065001127118&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=589240076689126&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
 @vite(['resources/js/app.js', 'resources/sass/app.scss'])
 
