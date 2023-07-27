@@ -51,7 +51,13 @@ class HandleFbConversions
 
             $postURL = 'https://graph.facebook.com/v17.0/' . $pixelId . '/events';
 
-            Log::channel('kevinslog')->info('Sending Conversions event to Facebook. POST BODY = ' . json_encode($data) . '****postUrl = ' . $postURL);
+            #Honestly it's been months since I was working on this code before deciding it wasn't worth it. I'm not sure which of the two lines below we should use, and
+            # I'm not going to take the time to investigate. As far as I can tell, I was sending the correct information to Facebook's severs, and yet it wasn't working.
+            # Facebook never showed me any conversion events in the log, despite sending me back an HTTP 200 - OK status. I'm assuming Facebook's api is just broken
+            # My experience with Facebook is that a lot of their stuff is often broken. I would probably have to use their SDK to get it working or know what 
+            # undocumented thing I'm supposed to be doing differently.
+            #Log::channel('kevinslog')->info('Sending Conversions event to Facebook. POST BODY = ' . json_encode($data) . '****postUrl = ' . $postURL);
+            #Log::channel('kevinslog')->info('Sending Conversions event to Facebook. POST BODY = ' . json_encode($data, JSON_UNESCAPED_SLASHES) . '****postUrl = ' . $postURL);
 
              
             // http request code from https://stackoverflow.com/a/29601842/3470632
