@@ -37,10 +37,25 @@
 
 
             </ul>
+            
+            <h2 class="whitespace-none text-5xl font-bold duration-[2000ms] transition data-inviewport fade-in">Application <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Features</span></h2>
+
+            <ul class="mb-8">
+                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in">Ability to toggle between English and French.</li>
+                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in">Users can input a slug when creating a video list, and then their video list is
+                    publicly viewable from https://www.randomvideo.site/slug.
+                </li>
+                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in accent-color">Ability for users to register, receive an activation email, forgot password / password reset, change password, and login.</li>
+                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in">Ability to click through to the next and previous videos, while also indicating when there are no prevoius/next videos available</li>
+                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in">Client and server side input validation.</li>
+                <li class="text-2xl mb-4 blue-bullet-500 accent-color duration-[2000ms] transition data-inviewport fade-in">Admin panel with user managent, all sorts of metrics, health status indicators, configuration, and logging. </li>
+                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in">Display success and error toast messages when calls to the server are successful or fail.</li>
+                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in">All variations of http/https and www/blank redirect to https://www.</li>
+            </ul>
 
             <h2 class="whitespace-none text-5xl font-bold duration-[2000ms] transition data-inviewport fade-in">Server <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Features</span></h2>
 
-            <ul class="mb-8">
+            <ul class="mb-48">
                 <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in">Please see the <router-link class="underline" to="/projects/ubuntu-vps">Ubuntu VPS server portfolio page</router-link> for server features.</li>
             </ul>
         </div>
