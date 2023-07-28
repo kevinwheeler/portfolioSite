@@ -97,6 +97,16 @@ Route::get('/projects/portfolio', function () {
     );
 });
 
+Route::get('/projects/random-video', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal())->with(
+        'title',
+        'Portfolio Page for Random Video Project'
+    )->with(
+        'description',
+        'Portfolio page for Kevin Wheeler\'s Random Video project.'
+    );
+});
+
 Route::get('/projects/translate-search', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',

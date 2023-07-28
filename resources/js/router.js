@@ -69,6 +69,15 @@ const routes = [
         }
     },
     {
+        path: "/projects/random-video",
+        name: "RandomVideo",
+        component: Pages.RandomVideo,
+        meta: {
+            title: 'Random Video Portfolio Project',
+            description: 'Portfolio page for Kevin Wheeler\'s Random Video project.'
+        }
+    },
+    {
         path: "/projects/translate-search",
         name: "TranslateSearch",
         component: Pages.TranslateSearch,

@@ -49,7 +49,7 @@ export default {
         const nav = ref(null);
 
         //Add is-inViewport class to elements in viewport. Remove class when not in viewport.
-        const inViewport = (entries, observer) => {
+        const inViewport = (entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting){
                 entry.target.classList.add("is-inViewport");

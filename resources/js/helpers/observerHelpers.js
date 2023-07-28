@@ -1,7 +1,7 @@
 
     const getObserver = () => {
          //Add is-inViewport class to elements in viewport. Remove class when not in viewport.
-         const inViewport = (entries, observer) => {
+         const inViewport = (entries) => {
            entries.forEach(entry => {
              entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
            });
