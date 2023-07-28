@@ -31,7 +31,7 @@
             <h2 class="whitespace-none text-5xl font-bold duration-[2000ms] transition data-inviewport fade-in">Server <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Features</span></h2>
 
             <ul class="mb-48">
-                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in">Please see the <router-link class="underline" to="/ubuntu-vps">Ubuntu VPS server portfolio page</router-link> for server features.</li>
+                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in">Please see the <router-link class="underline" to="/projects/ubuntu-vps">Ubuntu VPS server portfolio page</router-link> for server features.</li>
             </ul>
         </div>
     </main> 

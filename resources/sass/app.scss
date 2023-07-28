@@ -48,6 +48,8 @@
     }
 
     @media (min-width: 640px) {
+        // Need this to have higer specificity than .from-left.is-inViewport and .from-right.is-inViewport
+        // So it needs to come afterwards in this file.
         .sm\:translate-x-1\/2-in-viewport.is-inViewport {
             @apply translate-x-1/2;
         }

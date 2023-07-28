@@ -29,7 +29,7 @@
                 <template v-slot:headline>Random Video</template>
                 <template v-slot:secondary-headline>www.randomvideo.site</template>
                 <template v-slot:paragraph>
-                    A simple CRUD app where users can create video lists and other people can view a random video from those lists.
+                    A simple CRUD app where users can create video lists and an associated URL, and other people can view a random video from those lists at that URL.
                 </template>
             </Card>
             <Card imgSrc="/storage/geomesa-card.jpeg" href="/projects/geomesa-gui" classes="duration-1000 transition from-right data-inviewport sm:opacity-100">
