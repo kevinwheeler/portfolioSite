@@ -17,7 +17,7 @@
                 <router-link to="/projects" class="text-lg">View All Projects →</router-link>
             </div>
             <div class="flex flex-col sm:flex-row gap-6 mb-12">
-                <Card imgSrc="/storage/nothing-but-headlines.jpg" href="/projects/nothing-but-headlines" classes="duration-1000 transition from-left data-inviewport sm:opacity-100 sm:translate-x-0">
+                <Card imgSrc="/storage/nothing-but-headlines.jpg" href="/projects/nothing-but-headlines" :tags="['Node.js','Backbone.js','MongoDB', 'S3', 'Heroku']" classes="duration-1000 transition from-left data-inviewport sm:opacity-100 sm:translate-x-0">
                     <template v-slot:headline> Nothing But Headlines </template>
                     <template v-slot:secondary-headline> www.nothingbutheadlines.lol (EOL) </template>
                     <template v-slot:paragraph>
