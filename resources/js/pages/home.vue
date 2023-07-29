@@ -11,33 +11,15 @@
             </div>
             <img class="sm:w-0 sm:py-2 rounded-3xl sm:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg">
         </div>
-        <div class="flex flex-col duration-1000 transition data-inviewport from-left">
-            <div class="flex justify-between items-center mb-6">
+        <div class="flex flex-col duration-700 transition data-inviewport sm:from-left">
+            <div class="flex justify-between items-center mb-6 transition duration-1000 data-inviewport from-left sm:from-cancel">
                 <h2 class="text-2xl font-bold">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
                 <router-link to="/projects" class="text-lg">View All Projects →</router-link>
             </div>
             <div class="flex flex-col sm:flex-row gap-6 mb-12">
-                <Card imgSrc="/storage/nothing-but-headlines.jpg" href="/projects/nothing-but-headlines" :tags="['Node.js','Backbone.js','MongoDB', 'S3', 'Heroku']" classes="duration-1000 transition from-left data-inviewport sm:opacity-100 sm:translate-x-0">
-                    <template v-slot:headline> Nothing But Headlines </template>
-                    <template v-slot:secondary-headline> www.nothingbutheadlines.lol (EOL) </template>
-                    <template v-slot:paragraph>
-                        A web application for creating fake/funny headlines to be displayed as articles on Facebook.
-                    </template>
-                </Card>
-                <Card imgSrc="/storage/translate-search.jpg" href="/projects/translate-search" classes="duration-1000 transition from-right data-inviewport sm:opacity-100 sm:translate-x-0">
-                    <template v-slot:headline> Translate Search </template>
-                    <template v-slot:secondary-headline>www.translatesearch.com</template>
-                    <template v-slot:paragraph>
-                        A web application that translates a user provided search query plus selection of languages and displays the Google image search results for each language.
-                    </template>
-                </Card>
-                <Card imgSrc="/storage/geomesa-card.jpeg" href="/projects/density-iterator" classes="duration-1000 transition from-left data-inviewport sm:opacity-100 sm:translate-x-0">
-                    <template v-slot:headline> Temporal Density Iterator </template>
-                    <template v-slot:secondary-headline> GeoMesa Temporal Density Iterator </template>
-                    <template v-slot:paragraph>
-                        Open source contribution adding functionality to distributed database to return a histogram of where data points fall temporally.
-                    </template>
-                </Card>
+                <NothingButHeadlinesCard additionalClasses="from-left sm:from-cancel hover:translate-y-1"/>
+                <TranslateSearchCard     additionalClasses="from-right sm:from-cancel hover:translate-y-1"/>
+                <DensityIteratorCard     additionalClasses="from-left sm:from-cancel hover:translate-y-1"/>
             </div>
         </div>
         <div class="duration-[2000ms] transition data-inviewport fade-in">
@@ -51,14 +33,21 @@
 import { ref } from 'vue'
 import Card from '../components/card.vue'
 import ContactForm from '../components/contactForm.vue'
+import DensityIteratorCard from '../cards/DensityIteratorCard.vue'
+import NothingButHeadlinesCard from '../cards/NothingButHeadlinesCard.vue'
+import TranslateSearchCard from '../cards/TranslateSearchCard.vue'
+
 import { onMounted, onBeforeUnmount } from '@vue/runtime-core'
 import { getObserver, observeElements, unobserveElements } from '../helpers/observerHelpers.js'
-
 
 export default {
     
     components: {
-        Card, ContactForm
+        Card, ContactForm,
+
+        DensityIteratorCard,
+        NothingButHeadlinesCard,
+        TranslateSearchCard
     },
     setup() {
         const main = ref(null);

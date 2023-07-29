@@ -1,5 +1,10 @@
 <template>
-    <div :class="`flex flex-col flex-1 rounded-lg overflow-hidden hover:translate-y-1 ${classes}`">
+    <!--    
+       Don't add hover:translate-y-1 to the class list. Almost every card uses it, but not all.
+       In particular when we have a row of two cards and we need them centered, we use 
+       .translate-y-1-and-translate-x-1\/2\+12px:hover Documentation available in scss file.
+    -->
+    <div :class="`flex flex-col flex-1 rounded-lg overflow-hidden ${classes}`">
       <router-link :to="`${href}`">
         <img class="flex-1" :src="`${imgSrc}`">
       </router-link>

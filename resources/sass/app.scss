@@ -53,6 +53,53 @@
         .sm\:translate-x-1\/2-in-viewport.is-inViewport {
             @apply translate-x-1/2;
         }
+
+        .sm\:from-right {
+          opacity: 0;
+          @apply translate-x-1/2;
+        }
+        .sm\:from-right.is-inViewport {
+            opacity: 1;
+            @apply translate-x-0;
+        }
+
+        .sm\:from-left {
+          opacity: 0;
+          @apply -translate-x-1/2;
+        }
+
+        .sm\:from-left.is-inViewport {
+            opacity: 1;
+            @apply translate-x-0;
+        }
+        .sm\:from-cancel {
+            opacity: 1;
+            @apply -translate-x-0;
+        }
+
+        .sm\:from-cancel.is-inViewport {
+            opacity: 1;
+        }
+
+        .sm\:translate-x-1\/2\+12px {
+            transform: translateX(calc(50% + 12px));
+        }
+
+        .sm\:translate-x-1\/2\+12px.is-inViewport {
+            // @apply translate-x-[calc(50%+12px)];
+            transform: translateX(calc(50% + 12px));
+        }
+
+        // The translate-y-1 and the translate-x-... classes have to be applied
+        // at the same time apparently. Otherwise they end up overriding each other
+        // because translate-x and translate-y end up in one big transform property.
+        .translate-y-1-and-translate-x-1\/2\+12px:hover {
+          @apply hover:translate-y-1 translate-x-[calc(50%+12px)];
+        }
+
+        .translate-y-1-and-translate-x-1\/2\+12px:hover.is-inViewport {
+          @apply hover:translate-y-1 translate-x-[calc(50%+12px)];
+        }
     }
 
     .fade-in {
