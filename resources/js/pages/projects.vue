@@ -2,19 +2,19 @@
     <main ref="main" class="mb-48">
         <h2 class="text-5xl mb-12 font-bold text-center">All <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
         <div class="flex flex-col sm:flex-row gap-6 mb-12 duration-1000 transition data-inviewport sm:from-left">
-            <NothingButHeadlinesCard additionalClasses="from-right sm:from-cancel hover:translate-y-1" />
-            <TranslateSearchCard     additionalClasses="from-left sm:from-cancel hover:translate-y-1" />
-            <DensityIteratorCard     additionalClasses="from-right sm:from-cancel hover:translate-y-1" />
+            <NothingButHeadlinesCard additionalClasses="from-right sm:from-cancel" />
+            <TranslateSearchCard     additionalClasses="from-left sm:from-cancel" />
+            <DensityIteratorCard     additionalClasses="from-right sm:from-cancel" />
         </div>
         <div class="flex flex-col sm:flex-row gap-6 mb-12 duration-1000 transition data-inviewport sm:from-right">
-            <RandomVideoCard   additionalClasses="from-left sm:from-cancel hover:translate-y-1" />
-            <GeomesaGuiCard    additionalClasses="from-right sm:from-cancel hover:translate-y-1" />
-            <PortfolioSiteCard additionalClasses="from-left sm:from-cancel hover:translate-y-1" />
+            <RandomVideoCard   additionalClasses="from-left sm:from-cancel" />
+            <GeomesaGuiCard    additionalClasses="from-right sm:from-cancel" />
+            <PortfolioSiteCard additionalClasses="from-left sm:from-cancel" />
         </div>
         <div class="flex flex-col sm:flex-row gap-6 mb-12 duration-1000 transition data-inviewport sm:from-left">
             <!-- <KeyboardSmashCard additionalClasses="from-right sm:from-cancel sm:translate-x-1/2 sm:translate-x-1/2-in-viewport" /> -->
-            <KeyboardSmashCard additionalClasses="from-right sm:translate-x-1/2+12px translate-y-1-and-translate-x-1/2+12px" />
-            <UbuntuVpsCard     additionalClasses="from-left  sm:translate-x-1/2+12px translate-y-1-and-translate-x-1/2+12px" />
+            <KeyboardSmashCard additionalClasses="from-right sm:translate-x-1/2+12px" />
+            <UbuntuVpsCard     additionalClasses="from-left  sm:translate-x-1/2+12px" />
             <StubCard          additionalClasses="from-right hidden sm:block sm:invisible"/>
         </div>
     </main>

@@ -17,9 +17,9 @@
                 <router-link to="/projects" class="text-lg">View All Projects →</router-link>
             </div>
             <div class="flex flex-col sm:flex-row gap-6 mb-12">
-                <NothingButHeadlinesCard additionalClasses="from-left sm:from-cancel hover:translate-y-1"/>
-                <TranslateSearchCard     additionalClasses="from-right sm:from-cancel hover:translate-y-1"/>
-                <DensityIteratorCard     additionalClasses="from-left sm:from-cancel hover:translate-y-1"/>
+                <NothingButHeadlinesCard additionalClasses="from-left sm:from-cancel"/>
+                <TranslateSearchCard     additionalClasses="from-right sm:from-cancel"/>
+                <DensityIteratorCard     additionalClasses="from-left sm:from-cancel"/>
             </div>
         </div>
         <div class="duration-[2000ms] transition data-inviewport fade-in">

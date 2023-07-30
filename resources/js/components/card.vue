@@ -4,31 +4,33 @@
        In particular when we have a row of two cards and we need them centered, we use 
        .translate-y-1-and-translate-x-1\/2\+12px:hover Documentation available in scss file.
     -->
-    <div :class="`flex flex-col flex-1 rounded-lg overflow-hidden ${classes}`">
-      <router-link :to="`${href}`">
-        <img class="flex-1" :src="`${imgSrc}`">
-      </router-link>
-      <div class="flex flex-col flex-1 p-6 items-center bg-slate-800">
+    <div :class="`flex flex-1 flex-col ${classes}`">
+      <div class="hover:translate-y-1 transition duration-300 flex flex-1 flex-col rounded-lg overflow-hidden">
         <router-link :to="`${href}`">
-          <h3 class="text-xl font-semibold text-center">
-            <slot name="headline"></slot>
-          </h3>
+          <img class="flex-1" :src="`${imgSrc}`">
         </router-link>
-        <p class="mt-1 text-xs text-gray-400 text-center">
-          <slot name="secondary-headline"></slot>
-        </p>
-        <p class="mt-2 text-sm">
-          <slot name="paragraph"></slot>
-        </p>
-        <div class="mt-6 flex justify-start flex-wrap gap-2">
-          <span
-            v-for="(tag, index) in tags"
-            :key="index"
-            class="text-xs inline-flex items-center font-bold leading-sm px-3 py-1 rounded-full"
-            :class="`${tagColors[index].background} ${tagColors[index].text}`"
-          >
-            {{ tag }}
-           </span>
+        <div class="flex flex-col flex-1 p-6 items-center bg-slate-800">
+          <router-link :to="`${href}`">
+            <h3 class="text-xl font-semibold text-center">
+              <slot name="headline"></slot>
+            </h3>
+          </router-link>
+          <p class="mt-1 text-xs text-gray-400 text-center">
+            <slot name="secondary-headline"></slot>
+          </p>
+          <p class="mt-2 text-sm">
+            <slot name="paragraph"></slot>
+          </p>
+          <div class="mt-6 flex justify-start flex-wrap gap-2">
+            <span
+              v-for="(tag, index) in tags"
+              :key="index"
+              class="text-xs inline-flex items-center font-bold leading-sm px-3 py-1 rounded-full"
+              :class="`${tagColors[index].background} ${tagColors[index].text}`"
+            >
+              {{ tag }}
+             </span>
+          </div>
         </div>
       </div>
     </div>
