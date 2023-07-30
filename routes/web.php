@@ -23,7 +23,7 @@ Route::get('/', function () {
         'Kevin Wheeler\'s Software/Web Development Portfolio'
     )->with(
         'description',
-        'Kevin Wheeler is a software and web developer with experience in Laravel, Node.js, Vue.js, Backbone.js, Java, PHP, Python, C++, Scala, HTML, and CSS among many other technologies listed on his resume. Kevin graduated with highest honors from UT Austin with a B.S. in Computer Science.'
+        'Kevin Wheeler is a software and web developer with experience in Spring, Laravel, Node.js, React, Vue.js, Backbone.js, Java, JavaScript, PHP, Python, C++, Scala, HTML, and CSS among many other technologies listed on his resume. Kevin graduated with highest honors from UT Austin with a B.S. in Computer Science.'
     );
 });
 
