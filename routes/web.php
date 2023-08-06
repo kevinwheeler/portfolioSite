@@ -77,13 +77,13 @@ Route::get('/projects/geomesa-gui', function () {
     );
 });
 
-Route::get('/projects/nothing-but-headlines', function () {
+Route::get('/projects/multiplayer-painting', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',
-        'Nothing But Headlines Portfolio Page'
+        'Multiplayer Painting Portfolio Page'
     )->with(
         'description',
-        "Portfolio page for Kevin Wheeler's Nothing But Headlines project."
+        "Portfolio page for Andrew Laboy's Multiplayer Painting project."
     );
 });
 
@@ -97,23 +97,23 @@ Route::get('/projects/portfolio', function () {
     );
 });
 
-Route::get('/projects/random-video', function () {
+Route::get('/projects/ar-graffiti', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',
-        'Portfolio Page for Random Video Project'
+        'Portfolio Page for AR Graffiti Project'
     )->with(
         'description',
-        'Portfolio page for Kevin Wheeler\'s Random Video project.'
+        'Portfolio page for Andrew Laboy\'s AR Graffiti project.'
     );
 });
 
-Route::get('/projects/translate-search', function () {
+Route::get('/projects/hologram', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',
-        'Translate Search Portfolio Page'
+        'Realtime Hologram Portfolio Page'
     )->with(
         'description',
-        'Portfolio page for Kevin Wheeler\'s Translate Search project.'
+        'Portfolio page for Andrew Laboy\'s realtime hologram project.'
     );
 });
 

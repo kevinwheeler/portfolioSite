@@ -2,13 +2,13 @@
     <main ref="main" class="mb-48">
         <h2 class="text-5xl mb-12 font-bold text-center">All <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
         <div class="flex flex-col sm:flex-row gap-6 mb-12 duration-1000 transition data-inviewport sm:from-left">
-            <NothingButHeadlinesCard additionalClasses="from-right sm:from-cancel" />
-            <TranslateSearchCard     additionalClasses="from-left sm:from-cancel" />
-            <DensityIteratorCard     additionalClasses="from-right sm:from-cancel" />
+            <MultiplayerPaintingCard additionalClasses="from-right sm:from-cancel" />
+            <HologramCard     additionalClasses="from-left sm:from-cancel" />
+            <DreamStreamCard     additionalClasses="from-right sm:from-cancel" />
         </div>
         <div class="flex flex-col sm:flex-row gap-6 mb-12 duration-1000 transition data-inviewport sm:from-right">
-            <RandomVideoCard   additionalClasses="from-left sm:from-cancel" />
-            <GeomesaGuiCard    additionalClasses="from-right sm:from-cancel" />
+            <StubCard          additionalClasses="from-right hidden sm:block sm:invisible"/>
+            <GraffitiCard   additionalClasses="from-left sm:from-cancel" />
             <PortfolioSiteCard additionalClasses="from-left sm:from-cancel" />
         </div>
         <div class="flex flex-col sm:flex-row gap-6 mb-12 duration-1000 transition data-inviewport sm:from-left">
@@ -27,29 +27,31 @@ import { getObserver, observeElements, unobserveElements } from '../helpers/obse
 import { onBeforeUnmount, onMounted } from '@vue/runtime-core'
 
 import Card from '../components/card.vue'
-import DensityIteratorCard from '../cards/DensityIteratorCard.vue'
+import DreamStreamCard from '../cards/DreamStreamCard.vue'
 import GeomesaGuiCard from '../cards/GeomesaGuiCard.vue'
+import GraffitiCard from '../cards/GraffitiCard.vue'
+import HologramCard from '../cards/HologramCard.vue'
 import KeyboardSmashCard from '../cards/KeyboardSmashCard.vue'
-import NothingButHeadlinesCard from '../cards/NothingButHeadlinesCard.vue'
+import MultiplayerPaintingCard from '../cards/MultiplayerPaintingCard.vue'
 import PortfolioSiteCard from '../cards/PortfolioSiteCard.vue'
-import RandomVideoCard from '../cards/RandomVideoCard.vue'
 import StubCard from '../cards/StubCard.vue'
-import TranslateSearchCard from '../cards/TranslateSearchCard.vue'
 import UbuntuVpsCard from '../cards/UbuntuVpsCard.vue'
+import { MultiplayerPainting } from '.'
 
 export default {
     
     components: {
     Card,
-    DensityIteratorCard,
+    DreamStreamCard,
     GeomesaGuiCard,
+    GraffitiCard,
+    HologramCard,
     KeyboardSmashCard,
-    NothingButHeadlinesCard,
+    MultiplayerPaintingCard,
     PortfolioSiteCard,
-    RandomVideoCard,
     StubCard,
-    TranslateSearchCard,
-    UbuntuVpsCard
+    UbuntuVpsCard,
+    MultiplayerPainting
 },
     setup() {
         const main = ref(null);

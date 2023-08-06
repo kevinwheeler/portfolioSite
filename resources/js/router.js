@@ -33,12 +33,12 @@ const routes = [
         }
     },
     {
-        path: "/projects/density-iterator",
-        name: "DensityIterator",
-        component: Pages.DensityIterator,
+        path: "/projects/dream-stream",
+        name: "Graffiti",
+        component: Pages.DreamStream,
         meta: {
-            title: 'All of the projects in Kevin Wheeler\'s web development portfolio.',
-            description: 'Portfolio page for Kevin Wheeler\'s Temporal Density Iterator open source contribution.'
+            title: 'Dream Stream Portfolio Project',
+            description: 'Portfolio page for Andrew Laboy\'s Dream Stream project.'
         }
     },
     {
@@ -51,9 +51,9 @@ const routes = [
         }
     },
     {
-        path: "/projects/nothing-but-headlines",
-        name: "NothingButHeadlines",
-        component: Pages.NothingButHeadlines,
+        path: "/projects/multiplayer-painting",
+        name: "MultiplayerPainting",
+        component: Pages.MultiplayerPainting,
         meta: {
             title: 'Nothing But Headlines Portfolio Page',
             description: "Portfolio page for Kevin Wheeler's Nothing But Headlines project."
@@ -69,21 +69,21 @@ const routes = [
         }
     },
     {
-        path: "/projects/random-video",
-        name: "RandomVideo",
-        component: Pages.RandomVideo,
+        path: "/projects/ar-graffiti",
+        name: "Graffiti",
+        component: Pages.Graffiti,
         meta: {
-            title: 'Random Video Portfolio Project',
-            description: 'Portfolio page for Kevin Wheeler\'s Random Video project.'
+            title: 'AR Graffiti Portfolio Project',
+            description: 'Portfolio page for Andrew Laboy\'s AR Graffiti project.'
         }
     },
     {
-        path: "/projects/translate-search",
-        name: "TranslateSearch",
-        component: Pages.TranslateSearch,
+        path: "/projects/hologram",
+        name: "Hologram",
+        component: Pages.Hologram,
         meta: {
-            title: 'Translate Search Portfolio Page',
-            description: 'Portfolio page for Kevin Wheeler\'s Translate Search project.'
+            title: 'Realtime Hologram Portfolio Page',
+            description: 'Portfolio page for Andrew Laboy\'s realtime hologram project.'
         }
     },
     {

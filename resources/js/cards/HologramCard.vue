@@ -1,13 +1,13 @@
 <template>
   <Card 
-      imgSrc="/storage/nothing-but-headlines.jpg" 
-      href="/projects/nothing-but-headlines" 
-      :tags="['Node.js','Backbone.js','MongoDB', 'AWS S3', 'Heroku', 'Bootstrap', 'Facebook APIs']" 
+      imgSrc="/storage/translate-search.jpg"
+      href="/projects/hologram"
+      :tags="['Laravel', 'Apache', 'MySQL', 'PHP', 'Google APIs']"
       :classes="cardClasses">
-      <template v-slot:headline> Nothing But Headlines </template>
-      <template v-slot:secondary-headline> www.nothingbutheadlines.lol (EOL) </template>
+      <template v-slot:headline> Realtime Hologram </template>
+      <template v-slot:secondary-headline>2069</template>
       <template v-slot:paragraph>
-          A web application for creating fake/funny headlines to be displayed as articles on Facebook.
+        Uses an IOS device camera pointed at a person and creates a hologram in VR that updates in real time.
       </template>
   </Card>
 </template>

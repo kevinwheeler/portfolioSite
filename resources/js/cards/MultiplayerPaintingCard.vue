@@ -1,13 +1,13 @@
 <template>
   <Card 
-      imgSrc="/storage/translate-search.jpg"
-      href="/projects/translate-search"
-      :tags="['Laravel', 'Apache', 'MySQL', 'PHP', 'Google APIs']"
+      imgSrc="/storage/nothing-but-headlines.jpg" 
+      href="/projects/multiplayer-painting" 
+      :tags="['Node.js','Backbone.js','MongoDB', 'AWS S3', 'Heroku', 'Bootstrap', 'Facebook APIs']" 
       :classes="cardClasses">
-      <template v-slot:headline> Translate Search </template>
-      <template v-slot:secondary-headline>www.translatesearch.com</template>
+      <template v-slot:headline> AR Multiplayer Painting </template>
+      <template v-slot:secondary-headline> 2029 </template>
       <template v-slot:paragraph>
-          A web application that translates a user provided search query and selection of languages and displays the Google image search results for each language.
+        Multiplayer painting on Quest 2 and above headsets.
       </template>
   </Card>
 </template>

@@ -2,12 +2,12 @@
   <Card 
       imgSrc="/storage/geomesa-card.jpeg"
       :tags="['Scala', 'Accumulo', 'Hadoop', 'Distributed Computing', 'GIS']"
-      href="/projects/density-iterator"
+      href="/projects/dream-stream"
       :classes="cardClasses">
-        <template v-slot:headline> Temporal Density Iterator </template>
-        <template v-slot:secondary-headline> GeoMesa Temporal Density Iterator </template>
+        <template v-slot:headline> Dream Stream </template>
+        <template v-slot:secondary-headline> 42069 </template>
         <template v-slot:paragraph>
-            Open source contribution adding functionality to distributed database to return a histogram of where data points fall temporally.
+            iOS application that utilizes realtime human segmentation to detect people and apply VFX to them.
         </template>
   </Card>
 </template>
