@@ -13,14 +13,15 @@
             <img class="sm:w-0 sm:py-2 rounded-3xl sm:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg">
         </div>
         <div class="flex flex-col duration-700 transition data-inviewport">
-            <div class="flex justify-between items-center mb-6 transition duration-1000 data-inviewport from-left">
+            <!-- <div class="flex justify-between items-center mb-6 transition duration-1000 data-inviewport from-left">
                 <h2 class="text-2xl font-bold">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
                 <router-link to="/projects" class="text-lg">View All Projects →</router-link>
-            </div>
+            </div> -->
             <div class="flex flex-col gap-6 mb-12">
                 <MultiplayerPaintingCard additionalClasses="from-left"/>
                 <HologramCard     additionalClasses="from-right"/>
                 <DreamStreamCard     additionalClasses="from-left"/>
+                <GraffitiCard   additionalClasses="from-right"/>
             </div>
         </div>
         <div class="duration-[2000ms] transition data-inviewport fade-in">
@@ -35,6 +36,7 @@ import { ref } from 'vue'
 import Card from '../components/card.vue'
 import ContactForm from '../components/contactForm.vue'
 import DreamStreamCard from '../cards/DreamStreamCard.vue'
+import GraffitiCard from '../cards/GraffitiCard.vue'
 import MultiplayerPaintingCard from '../cards/MultiplayerPaintingCard.vue'
 import HologramCard from '../cards/HologramCard.vue'
 
@@ -47,6 +49,7 @@ export default {
         Card, ContactForm,
 
         DreamStreamCard,
+        GraffitiCard,
         HologramCard,
         MultiplayerPaintingCard,
     },

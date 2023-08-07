@@ -10,8 +10,8 @@ const routes = [
         name: "Home",
         component: Pages.Home,
         meta: {
-            title: 'Kevin Wheeler\'s Software/Web Development Portfolio',
-            description: 'Kevin Wheeler is a software and web developer with experience in Spring, Laravel, Node.js, React, Vue.js, Backbone.js, Java, JavaScript, PHP, Python, C++, Scala, HTML, and CSS among many other technologies listed on his resume. Kevin graduated with highest honors from UT Austin with a B.S. in Computer Science.'
+            title: 'Andrew Laboy\'s Unity and AR / VR / XR Portfolio',
+            description: 'Andrew Laboy is a Unity developer specializing in augmented and virtual reality applications and games.'
         }
     },
     {
@@ -20,52 +20,7 @@ const routes = [
         component: Pages.Projects,
         meta: {
             title: 'All Projects',
-            description: 'All of the projects in Kevin Wheeler\'s web development portfolio.'
-        }
-    },
-    {
-        path: "/projects/baby-keyboard-smash-game",
-        name: "BabyKeyboardSmashGame",
-        component: Pages.KeyboardSmash,
-        meta: {
-            title: 'Baby Keyboard Smash Game Porfolio Page',
-            description: 'Portfolio page for Kevin Wheeler\'s Baby Keyboard Smash Game.'
-        }
-    },
-    {
-        path: "/projects/dream-stream",
-        name: "Graffiti",
-        component: Pages.DreamStream,
-        meta: {
-            title: 'Dream Stream Portfolio Project',
-            description: 'Portfolio page for Andrew Laboy\'s Dream Stream project.'
-        }
-    },
-    {
-        path: "/projects/geomesa-gui",
-        name: "GeomesaGui",
-        component: Pages.GeomesaGUI,
-        meta: {
-            title: 'GeoMesa GUI Portfolio Page',
-            description: 'Portfolio page for Kevin Wheeler\'s GeoMesa GUI open source contribution.'
-        }
-    },
-    {
-        path: "/projects/multiplayer-painting",
-        name: "MultiplayerPainting",
-        component: Pages.MultiplayerPainting,
-        meta: {
-            title: 'Nothing But Headlines Portfolio Page',
-            description: "Portfolio page for Kevin Wheeler's Nothing But Headlines project."
-        }
-    },
-    {
-        path: "/projects/portfolio",
-        name: "PortfolioSite",
-        component: Pages.PortfolioSite,
-        meta: {
-            title: 'Portfolio Page for Portfolio Project',
-            description: 'Portfolio page for Kevin Wheeler\'s Portfolio project.'
+            description: 'All of the projects in Andrew Laboy\'s portfolio.'
         }
     },
     {
@@ -78,6 +33,15 @@ const routes = [
         }
     },
     {
+        path: "/projects/dream-stream",
+        name: "Graffiti",
+        component: Pages.DreamStream,
+        meta: {
+            title: 'Dream Stream Portfolio Project',
+            description: 'Portfolio page for Andrew Laboy\'s Dream Stream project.'
+        }
+    },
+    {
         path: "/projects/hologram",
         name: "Hologram",
         component: Pages.Hologram,
@@ -87,12 +51,12 @@ const routes = [
         }
     },
     {
-        path: "/projects/ubuntu-vps",
-        name: "UbuntuVPS",
-        component: Pages.UbuntuVPS,
+        path: "/projects/multiplayer-painting",
+        name: "MultiplayerPainting",
+        component: Pages.MultiplayerPainting,
         meta: {
-            title: 'Ubuntu VPS Portfolio Page',
-            description: 'Portfolio page for Kevin Wheeler\'s Ubuntu VPS project.'
+            title: 'Nothing But Headlines Portfolio Page',
+            description: "Portfolio page for Kevin Wheeler's Nothing But Headlines project."
         }
     },
     // Resume route is being implemented by a v-show element in App.vue, so that the
@@ -103,8 +67,8 @@ const routes = [
         // Suppress the warning: [Vue Router warn]: Record with path "/resume" is either missing a "component(s)" or "children" property.
         component: {template: `<span style="display: none;"></span>`},
         meta: {
-            title: "Kevin Wheeler's Resume",
-            description: "Kevin Wheeler's Resume"
+            title: "Andrew Laboy's Resume",
+            description: "Andrew Laboy's Resume"
         }
     },
 ];

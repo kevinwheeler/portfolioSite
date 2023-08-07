@@ -20,20 +20,10 @@ use App\Http\Controllers\EmailController;
 Route::get('/', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',
-        'Kevin Wheeler\'s Software/Web Development Portfolio'
+        'Andrew LaBoy\'s Unity and AR / VR / XR Portfolio'
     )->with(
         'description',
-        'Kevin Wheeler is a software and web developer with experience in Spring, Laravel, Node.js, React, Vue.js, Backbone.js, Java, JavaScript, PHP, Python, C++, Scala, HTML, and CSS among many other technologies listed on his resume. Kevin graduated with highest honors from UT Austin with a B.S. in Computer Science.'
-    );
-});
-
-Route::get('/baby-keyboard-smash-game', function () {
-    return view('baby-keyboard-smash')->with('devEnvironment', App::isLocal())->with(
-        'title',
-        'Baby Keyboard Smash Game'
-    )->with(
-        'description',
-        'A fun game for babies and toddlers. A firework visual and sound is triggered on keypresses and clicks or taps.'
+        'Andrew LaBoy is a Unity developer specializing in augmented and virtual reality applications and games.'
     );
 });
 
@@ -43,57 +33,7 @@ Route::get('/projects', function () {
         'All Projects'
     )->with(
         'description',
-        'All of the projects in Kevin Wheeler\'s web development portfolio.'
-    );
-});
-
-Route::get('/projects/baby-keyboard-smash-game', function () {
-    return view('welcome')->with('devEnvironment', App::isLocal())->with(
-        'title',
-        'Baby Keyboard Smash Game Porfolio Page'
-    )->with(
-        'description',
-        'Portfolio page for Kevin Wheeler\'s Baby Keyboard Smash Game.'
-    );
-});
-
-Route::get('/projects/density-iterator', function () {
-    return view('welcome')->with('devEnvironment', App::isLocal())->with(
-        'title',
-        'Temporal Density Iterator Portfolio Page'
-    )->with(
-        'description',
-        'Portfolio page for Kevin Wheeler\'s Temporal Density Iterator open source contribution.'
-    );
-});
-
-Route::get('/projects/geomesa-gui', function () {
-    return view('welcome')->with('devEnvironment', App::isLocal())->with(
-        'title',
-        'GeoMesa GUI Portfolio Page'
-    )->with(
-        'description',
-        'Portfolio page for Kevin Wheeler\'s GeoMesa GUI open source contribution.'
-    );
-});
-
-Route::get('/projects/multiplayer-painting', function () {
-    return view('welcome')->with('devEnvironment', App::isLocal())->with(
-        'title',
-        'Multiplayer Painting Portfolio Page'
-    )->with(
-        'description',
-        "Portfolio page for Andrew Laboy's Multiplayer Painting project."
-    );
-});
-
-Route::get('/projects/portfolio', function () {
-    return view('welcome')->with('devEnvironment', App::isLocal())->with(
-        'title',
-        'Portfolio Page for Portfolio Project'
-    )->with(
-        'description',
-        'Portfolio page for Kevin Wheeler\'s Portfolio project.'
+        'All of the projects in Andrew LaBoy\'s portfolio.'
     );
 });
 
@@ -103,7 +43,17 @@ Route::get('/projects/ar-graffiti', function () {
         'Portfolio Page for AR Graffiti Project'
     )->with(
         'description',
-        'Portfolio page for Andrew Laboy\'s AR Graffiti project.'
+        'Portfolio page for Andrew LaBoy\'s AR Graffiti project.'
+    );
+});
+
+Route::get('/projects/dream-stream', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal())->with(
+        'title',
+        'Portfolio Page for Dream Stream Project'
+    )->with(
+        'description',
+        'Portfolio page for Andrew LaBoy\'s Dream Stream project.'
     );
 });
 
@@ -113,27 +63,27 @@ Route::get('/projects/hologram', function () {
         'Realtime Hologram Portfolio Page'
     )->with(
         'description',
-        'Portfolio page for Andrew Laboy\'s realtime hologram project.'
+        'Portfolio page for Andrew LaBoy\'s realtime hologram project.'
     );
 });
 
-Route::get('/projects/ubuntu-vps', function () {
+Route::get('/projects/multiplayer-painting', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',
-        'Ubuntu VPS Portfolio Page'
+        'Multiplayer Painting Portfolio Page'
     )->with(
         'description',
-        'Portfolio page for Kevin Wheeler\'s Ubuntu VPS project.'
+        "Portfolio page for Andrew LaBoy's Multiplayer Painting project."
     );
 });
 
 Route::get('/resume', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',
-        'Kevin Wheeler\'s Resume'
+        'Andrew LaBoy\'s Resume'
     )->with(
         'description',
-        'Kevin Wheeler\'s resume.'
+        'Andrew LaBoy\'s resume.'
     );
 });
 

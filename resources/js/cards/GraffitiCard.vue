@@ -4,10 +4,10 @@
       href="/projects/random-video"
       :tags="['Spring Framework', 'Hibernate', 'React', 'Redux', 'Java', 'Bootstrap']" 
       :classes="cardClasses">
-      <template v-slot:headline>Random Video</template>
-      <template v-slot:secondary-headline>www.randomvideo.site</template>
+      <template v-slot:headline>AR Graffiti</template>
+      <template v-slot:secondary-headline>Fill me in</template>
       <template v-slot:paragraph>
-          A simple CRUD app where users can create video lists and an associated URL, and other people can view a random video from those lists at that URL.
+        An AR application that reocgnizes and animates various and street art in Red Bank, NJ.
       </template>
   </Card>
 </template>
