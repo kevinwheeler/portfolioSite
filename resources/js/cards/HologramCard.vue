@@ -1,9 +1,11 @@
 <template>
   <Card 
-      vidSrc="/storage/hologram.mp4"
+      :classes="cardClasses"
       href="/projects/hologram"
       :tags="['Laravel', 'Apache', 'MySQL', 'PHP', 'Google APIs']"
-      :classes="cardClasses">
+      :videoAspectRatio="1920/888"
+      vidSrc="/storage/hologram.mp4"
+      >
       <template v-slot:headline> Realtime Hologram </template>
       <template v-slot:secondary-headline>2069</template>
       <template v-slot:paragraph>
