@@ -8,13 +8,13 @@
       <div class="flex flex-1 flex-col overflow-hidden">
         <!-- <router-link :to="`${href}`"> -->
           <!-- <img class="flex-1" :src="`${imgSrc}`"> -->
-          <video autoplay loop muted class="shadow-none">
+          <video autoplay loop muted playsinline class="shadow-none">
             <source :src="`${vidSrc}`" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
         <!-- </router-link> -->
-        <div class="flex flex-col flex-1 p-6 items-center bg-slate-800">
+        <div class="flex flex-col flex-1 p-6 items-center">
           <router-link :to="`${href}`">
             <h3 class="text-xl font-semibold text-center">
               <slot name="headline"></slot>
