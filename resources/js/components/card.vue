@@ -5,10 +5,10 @@
        .translate-y-1-and-translate-x-1\/2\+12px:hover Documentation available in scss file.
     -->
     <div :class="`flex flex-1 flex-col ${classes}`">
-      <div class="hover:translate-y-1 transition duration-300 flex flex-1 flex-col rounded-lg overflow-hidden">
+      <div class="flex flex-1 flex-col overflow-hidden">
         <!-- <router-link :to="`${href}`"> -->
           <!-- <img class="flex-1" :src="`${imgSrc}`"> -->
-          <video autoplay loop muted>
+          <video autoplay loop muted class="shadow-none">
             <source :src="`${vidSrc}`" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

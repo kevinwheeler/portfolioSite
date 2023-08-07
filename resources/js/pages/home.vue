@@ -1,6 +1,6 @@
 <template>
     <main ref="main">
-        <div class="flex flex-col sm:flex-row items-center gap-6 mb-12">
+        <div class="flex flex-col sm:flex-row items-center gap-6 mx-8">
             <div class="flex-1 sm:w-0 data-inviewport duration-1000 transition from-left">
                 <h1 class="text-3xl font-bold mb-6">
                     Hi, I'm <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Andrew</span>  👋
@@ -10,14 +10,14 @@
 
                 </p>
             </div>
-            <img class="sm:w-0 sm:py-2 rounded-3xl sm:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg">
+            <img class="sm:w-0 sm:py-2 rounded-3xl from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg">
         </div>
         <div class="flex flex-col duration-700 transition data-inviewport">
             <!-- <div class="flex justify-between items-center mb-6 transition duration-1000 data-inviewport from-left">
                 <h2 class="text-2xl font-bold">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
                 <router-link to="/projects" class="text-lg">View All Projects →</router-link>
             </div> -->
-            <div class="flex flex-col gap-6 mb-12">
+            <div class="flex flex-col mb-12">
                 <DreamStreamCard     additionalClasses="from-left"/>
                 <MultiplayerPaintingCard additionalClasses="from-left"/>
                 <HologramCard     additionalClasses="from-right"/>
