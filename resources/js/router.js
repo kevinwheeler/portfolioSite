@@ -10,8 +10,8 @@ const routes = [
         name: "Home",
         component: Pages.Home,
         meta: {
-            title: 'Andrew Laboy\'s Unity and AR / VR / XR Portfolio',
-            description: 'Andrew Laboy is a Unity developer specializing in augmented and virtual reality applications and games.'
+            title: 'Andrew LaBoy\'s Unity and AR / VR / XR Portfolio',
+            description: 'Andrew LaBoy is a Unity developer specializing in augmented and virtual reality applications and games.'
         }
     },
     {
@@ -20,7 +20,7 @@ const routes = [
         component: Pages.Projects,
         meta: {
             title: 'All Projects',
-            description: 'All of the projects in Andrew Laboy\'s portfolio.'
+            description: 'All of the projects in Andrew LaBoy\'s portfolio.'
         }
     },
     {
@@ -29,7 +29,7 @@ const routes = [
         component: Pages.Graffiti,
         meta: {
             title: 'AR Graffiti Portfolio Project',
-            description: 'Portfolio page for Andrew Laboy\'s AR Graffiti project.'
+            description: 'Portfolio page for Andrew LaBoy\'s AR Graffiti project.'
         }
     },
     {
@@ -38,7 +38,7 @@ const routes = [
         component: Pages.DreamStream,
         meta: {
             title: 'Dream Stream Portfolio Project',
-            description: 'Portfolio page for Andrew Laboy\'s Dream Stream project.'
+            description: 'Portfolio page for Andrew LaBoy\'s Dream Stream project.'
         }
     },
     {
@@ -47,7 +47,7 @@ const routes = [
         component: Pages.Hologram,
         meta: {
             title: 'Realtime Hologram Portfolio Page',
-            description: 'Portfolio page for Andrew Laboy\'s realtime hologram project.'
+            description: 'Portfolio page for Andrew LaBoy\'s realtime hologram project.'
         }
     },
     {
@@ -67,8 +67,8 @@ const routes = [
         // Suppress the warning: [Vue Router warn]: Record with path "/resume" is either missing a "component(s)" or "children" property.
         component: {template: `<span style="display: none;"></span>`},
         meta: {
-            title: "Andrew Laboy's Resume",
-            description: "Andrew Laboy's Resume"
+            title: "Andrew LaBoy's Resume",
+            description: "Andrew LaBoy's Resume"
         }
     },
 ];

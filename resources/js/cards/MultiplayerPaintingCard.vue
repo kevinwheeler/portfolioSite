@@ -1,6 +1,6 @@
 <template>
   <Card 
-      imgSrc="/storage/nothing-but-headlines.jpg" 
+      vidSrc="/storage/multiplayer-painting.mp4" 
       href="/projects/multiplayer-painting" 
       :tags="['Node.js','Backbone.js','MongoDB', 'AWS S3', 'Heroku', 'Bootstrap', 'Facebook APIs']" 
       :classes="cardClasses">

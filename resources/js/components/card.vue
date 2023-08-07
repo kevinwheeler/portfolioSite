@@ -6,9 +6,14 @@
     -->
     <div :class="`flex flex-1 flex-col ${classes}`">
       <div class="hover:translate-y-1 transition duration-300 flex flex-1 flex-col rounded-lg overflow-hidden">
-        <router-link :to="`${href}`">
-          <img class="flex-1" :src="`${imgSrc}`">
-        </router-link>
+        <!-- <router-link :to="`${href}`"> -->
+          <!-- <img class="flex-1" :src="`${imgSrc}`"> -->
+          <video autoplay loop muted>
+            <source :src="`${vidSrc}`" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+        <!-- </router-link> -->
         <div class="flex flex-col flex-1 p-6 items-center bg-slate-800">
           <router-link :to="`${href}`">
             <h3 class="text-xl font-semibold text-center">
@@ -49,7 +54,7 @@
         type: String,
         required: true,
       },
-      'imgSrc': {
+      'vidSrc': {
         type: String,
         required: true,
       },

@@ -1,6 +1,6 @@
 <template>
   <Card 
-      imgSrc="/storage/geomesa-card.jpeg"
+      vidSrc="/storage/water-girl.mp4"
       :tags="['Scala', 'Accumulo', 'Hadoop', 'Distributed Computing', 'GIS']"
       href="/projects/dream-stream"
       :classes="cardClasses">

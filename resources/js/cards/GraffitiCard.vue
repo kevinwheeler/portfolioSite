@@ -1,6 +1,6 @@
 <template>
   <Card 
-      imgSrc="/storage/random-video-card.jpg"
+      vidSrc="/storage/ar-graffiti.mp4"
       href="/projects/random-video"
       :tags="['Spring Framework', 'Hibernate', 'React', 'Redux', 'Java', 'Bootstrap']" 
       :classes="cardClasses">

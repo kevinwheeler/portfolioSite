@@ -18,9 +18,9 @@
                 <router-link to="/projects" class="text-lg">View All Projects →</router-link>
             </div> -->
             <div class="flex flex-col gap-6 mb-12">
+                <DreamStreamCard     additionalClasses="from-left"/>
                 <MultiplayerPaintingCard additionalClasses="from-left"/>
                 <HologramCard     additionalClasses="from-right"/>
-                <DreamStreamCard     additionalClasses="from-left"/>
                 <GraffitiCard   additionalClasses="from-right"/>
             </div>
         </div>

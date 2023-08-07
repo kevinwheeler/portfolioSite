@@ -1,6 +1,6 @@
 <template>
   <Card 
-      imgSrc="/storage/translate-search.jpg"
+      vidSrc="/storage/hologram.mp4"
       href="/projects/hologram"
       :tags="['Laravel', 'Apache', 'MySQL', 'PHP', 'Google APIs']"
       :classes="cardClasses">
