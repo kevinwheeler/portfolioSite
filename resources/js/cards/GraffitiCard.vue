@@ -1,9 +1,10 @@
 <template>
   <Card 
-      vidSrc="/storage/ar-graffiti.mp4"
+      :classes="cardClasses"
       href="/projects/random-video"
       :tags="['Spring Framework', 'Hibernate', 'React', 'Redux', 'Java', 'Bootstrap']" 
-      :classes="cardClasses">
+      vidSrc="/storage/ar-graffiti.mp4"
+      >
       <template v-slot:headline>AR Graffiti</template>
       <template v-slot:secondary-headline>Fill me in</template>
       <template v-slot:paragraph>

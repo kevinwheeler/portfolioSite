@@ -100,7 +100,37 @@
     .fade-in.is-inViewport {
         opacity: 1;
     }
+
+    .hero {
+        position: relative;
+        // width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    
+    .hero__video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 100;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
+    }
+    
+    .hero__content {
+        position: relative;
+        z-index: 101;
+    }
+
+    .text-shadow {
+        text-shadow: 1px 1px 2px black;
+    }
 }
+
 
 
   
