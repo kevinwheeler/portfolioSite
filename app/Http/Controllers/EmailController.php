@@ -46,6 +46,6 @@ class EmailController extends Controller
             ' $message= ' . $request->message . "\n" .
             "----------------------------------------\n\n");
         
-        Mail::to("andrewwilliamlaboy@gmail.com")->send(new Contact($request->name, $request->emailAddress, $request->message));
+        Mail::to("andrewwilliamlaboy@icloud.com")->send(new Contact($request->name, $request->emailAddress, $request->message));
     }
 }

@@ -1,10 +1,8 @@
 <template>
-  <div class="flex flex-col flex-1 p-6 items-center">
-    <router-link :to="`${href}`">
-      <h3 class="text-xl font-semibold text-center">
-        <slot name="headline"></slot>
-      </h3>
-    </router-link>
+  <div :class="['flex flex-col flex-1 p-6 items-center', additionalClasses]">
+    <h3 class="text-xl font-semibold text-center accent-color">
+      <slot name="headline"></slot>
+    </h3>
     <p class="mt-1 text-xs text-gray-400 text-center">
       <slot name="secondary-headline"></slot>
     </p>
@@ -51,14 +49,15 @@
     },
 
     props: {
-      'href': {
-        type: String,
-        required: true,
-      },
       tags: {
         type: Array,
         default: () => [],
       },
+      additionalClasses: {
+        type: String,
+        default: ''
+      }
+
     },
   };
   </script>

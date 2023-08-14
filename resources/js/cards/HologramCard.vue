@@ -7,9 +7,9 @@
       vidSrc="/storage/hologram.mp4"
       >
       <template v-slot:headline> Realtime Hologram </template>
-      <template v-slot:secondary-headline>2069</template>
+      <template v-slot:secondary-headline>2021</template>
       <template v-slot:paragraph>
-        Uses an IOS device camera pointed at a person and creates a hologram in VR that updates in real time.
+        Developed an interactive VR/AR experience for Meta Quest 2, where users can instantly transform anyone captured by their iOS or Android device's camera into a live-updating stencil hologram within the virtual space, seamlessly transmitted over Wi-Fi
       </template>
   </Card>
 </template>

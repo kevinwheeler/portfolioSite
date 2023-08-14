@@ -5,7 +5,7 @@
       </video>
       <div class="hero__content">
           <Nav />
-          <div>
+          <div class="text-shadow">
             <p class="ml-1 sm:ml-9 mb-3 text-lg md:text-xl lg:text-2xl font-[Montserrat] font-[400] uppercase">AR/VR Unity Developer</p>
             <div class="sm:ml-8 relative leading-none">
               <h1 class="text-[10vw] sm:text-[calc(10vw-10px)] mb-8 font-bold uppercase italic inline-block">
@@ -16,11 +16,12 @@
           </div>
       </div>
     </div>
-    <CardBottom href="/TODO" :tags="['Spring Framework', 'Hibernate', 'React', 'Redux', 'Java', 'Bootstrap']">
+    <CardBottom :tags="['C#', 'ARFoundation', 'VFXGraph']" additionalClasses="mt-1 duration-1000 transition data-inviewport from-right"><!-- mt-1 added because otherwise the element was considered to be on the screen at the start, which 
+      prevented any animation when the element was scrolled into view.-->
       <template v-slot:headline> Dream Stream AR </template>
-      <template v-slot:secondary-headline> 42069 </template>
+      <template v-slot:secondary-headline> Late 2019 - Early 2022 </template>
       <template v-slot:paragraph>
-        iOS application that utilizes realtime human segmentation to detect people and apply VFX to them.
+        Pictured above (best viewed on desktop), an iOS application that utilizes realtime human segmentation to detect people and apply VFX to them. VFX were made in VFXGraph and HLSL (shaders).  Used in many concerts and music festivals in Austin, Texas and surrounding areas, as well as livestreams and videos.
       </template>
     </CardBottom>
   </template>
