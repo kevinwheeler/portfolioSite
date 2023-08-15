@@ -103,20 +103,17 @@
 
     .hero {
         position: relative;
-        // width: 100%;
-        min-height: 100vh;
-        overflow: hidden;
+        min-height: 100lvh;
     }
     
     .hero__video {
+        // absolute to position video outside of parent's padding.
         position: absolute;
-        top: 50%;
-        left: 50%;
-        min-height: 100%;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: auto;
+        height: 100%;
         z-index: 100;
-        transform: translateX(-50%) translateY(-50%);
         object-fit: cover;
         object-position: center;
     }

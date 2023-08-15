@@ -4,7 +4,7 @@
           <source :src="currentVideo" type="video/mp4">
       </video>
       <div class="hero__content">
-          <Nav />
+          <Nav additionalClasses="" />
           <div class="text-shadow">
             <p class="ml-1 sm:ml-9 mb-3 text-lg md:text-xl lg:text-2xl font-[Montserrat] font-[400] uppercase">AR/VR Unity Developer</p>
             <div class="sm:ml-8 relative leading-none">
@@ -57,6 +57,7 @@
     let currentAspectRatioBucket = null;
     const currentVideo = ref('');
     const currentVideoPoster = ref('');
+    let initialLoad = true;
 
     const videosAndPosters = {
       '9:19 aka .477': ['/storage/water-girl-9-by-19.mp4', '/storage/water-girl-9-by-19.jpg'],
@@ -66,59 +67,61 @@
     };
 
     const determineAspectRatioBucket = () => {
-        const ratio = window.innerWidth / window.innerHeight;
+        // Important to not use window.innerWidth|Height here, as URL bar interferes with that measurement.
+        const ratio = videoRef.value.offsetWidth / videoRef.value.offsetHeight;
         if      (ratio < .548) return '9:19 aka .477';
         else if (ratio < .854)     return '.625';
         else if (ratio < 1.16)     return '.98';
         else return '2880:1800 aka 1.6';
     };
 
-    const updateVideoSource = () => {
-            const newAspectRatioBucket = determineAspectRatioBucket();
+    const updateVideoSource = _.debounce(() => {
+      const newAspectRatioBucket = determineAspectRatioBucket();
 
-            // If it's the initial load or if the aspect ratio bucket has changed
-            if (!currentAspectRatioBucket || newAspectRatioBucket !== currentAspectRatioBucket) {
-                currentAspectRatioBucket = newAspectRatioBucket;
+      // If it's the initial load or if the aspect ratio bucket has changed
+      if (!currentAspectRatioBucket || newAspectRatioBucket !== currentAspectRatioBucket) {
+          currentAspectRatioBucket = newAspectRatioBucket;
 
-                if (videoRef.value) {
-                    if (!currentAspectRatioBucket) {
-                      // Initial load. Set poster
-                      currentVideoPoster.value = videosAndPosters[currentAspectRatioBucket][1];
-                    } else {
-                      // Aspect ratio bucket changed. Remove poster. It's better to have a blank video flash than
-                      // a poster that isn't gfrom the same time in the video.
-                      currentVideoPoster.value = '';
-                    }
-                    if (currentAspectRatioBucket == '2880:1800 aka 1.6') {
-                      videoRef.value.classList.add('hero__video--right');
-                    } else {
-                      videoRef.value.classList.remove('hero__video--right');
-                    }
-                    playbackPosition = videoRef.value.currentTime;
-                }
+          if (initialLoad) {
+            currentVideoPoster.value = videosAndPosters[currentAspectRatioBucket][1];
+          } else {
+            // Aspect ratio bucket changed. Remove poster. It's better to have a blank video flash than
+            // a poster that isn't from the same time in the video as we left off.
+            currentVideoPoster.value = '';
+          }
 
-                // Set the video source based on the new aspect ratio bucket
-                currentVideo.value = videosAndPosters[currentAspectRatioBucket][0];
+          if (currentAspectRatioBucket == '2880:1800 aka 1.6') {
+            videoRef.value.classList.add('hero__video--right');
+          } else {
+            videoRef.value.classList.remove('hero__video--right');
+          }
 
-                // Load and play the video after updating the source
-                if (videoRef.value) {
-                    videoRef.value.load();
-                    videoRef.value.play().catch(e => {
-                        console.error("Video play failed:", e);
-                    });
-                    videoRef.value.currentTime = playbackPosition;
-                }
-            }
-        };
+          playbackPosition = videoRef.value.currentTime;
 
-        onMounted(() => {
-            updateVideoSource();
-            window.addEventListener('resize', updateVideoSource);
+          // Set the video source based on the user's new aspect ratio
+          currentVideo.value = videosAndPosters[currentAspectRatioBucket][0];
+          videoRef.value.load();
+          videoRef.value.play().catch(e => {
+              console.error("Video play failed:", e);
+          });
+          videoRef.value.currentTime = playbackPosition;
+
+          initialLoad = false;
+      }
+    }, 300);
+
+    onMounted(() => {
+        videoRef.value.addEventListener('load', () => {
         });
-
-        onBeforeUnmount(() => {
-            window.removeEventListener('resize', updateVideoSource);
+        videoRef.value.addEventListener('error', (e) => {
         });
+        updateVideoSource();
+        window.addEventListener('resize', updateVideoSource);
+    });
+
+    onBeforeUnmount(() => {
+        window.removeEventListener('resize', updateVideoSource);
+    });
 
     return {
       currentVideo,
