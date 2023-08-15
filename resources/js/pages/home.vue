@@ -2,6 +2,7 @@
     <main ref="main">
         <Hero />
         <div class="flex flex-col mb-12">
+            <DreamStreamCard />
             <div class="border-b-2 border-gray-600"/>
             <MultiplayerPaintingCard additionalClasses="from-left"/>
             <div class="border-b-2 border-gray-600"/>
@@ -20,6 +21,7 @@
 import { ref } from 'vue'
 import Card from '../components/card.vue'
 import ContactForm from '../components/contactForm.vue'
+import DreamStreamCard from '../cards/DreamStreamCard.vue'
 import GraffitiCard from '../cards/GraffitiCard.vue'
 import Hero from '../components/hero.vue'
 import MultiplayerPaintingCard from '../cards/MultiplayerPaintingCard.vue'
@@ -31,7 +33,9 @@ import { getObserver, observeElements, unobserveElements } from '../helpers/obse
 export default {
     
     components: {
-        Card, ContactForm,
+        Card,
+        ContactForm,
+        DreamStreamCard,
         GraffitiCard,
         Hero,
         HologramCard,

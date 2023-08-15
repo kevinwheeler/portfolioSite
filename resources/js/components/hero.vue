@@ -1,6 +1,6 @@
 <template>
     <div class="hero p-6 transition duration-[2000ms] data-inviewport fade-in">
-      <video ref="videoRef" class="hero__video" :poster="currentVideoPoster" playsinline autoplay muted loop>
+      <video style="display:none" ref="videoRef" class="hero__video" :poster="currentVideoPoster" playsinline autoplay muted loop>
           <source :src="currentVideo" type="video/mp4">
       </video>
       <div class="hero__content">
