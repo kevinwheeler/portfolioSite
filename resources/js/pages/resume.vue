@@ -2,15 +2,10 @@
     <main>
         <Nav additionalClasses="mt-6 mx-6" />
         <div class="flex flex-col gap-6">
-            <h1 class="text-6xl font-bold text-center">Rés<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">umé</span></h1>
+            <h1 class="text-6xl font-bold text-center">Rés<span class="bg-gradient-to-br from-neutral-400 to-neutral-600 bg-clip-text text-transparent">umé</span></h1>
             <!-- <div class="text-l text-gray-400 self-center text-center">Last Updated March 2023</div> -->
             <div class="w-full mb-12" id="pdfview"></div>
-            <a href="/storage/Andrew_LaBoy_Resume.pdf" class="w-full self-center px-6 py-2.5 mb-24 text-center text-white font-medium text-xs
-            leading-tight uppercase rounded shadow-md bg-gradient-to-br
-            from-sky-500 to-blue-800 hover:from-sky-600 hover:to-sky-900
-            hover:shadow-lg focus:from-sky-600 focus:to-sky-900 focus:shadow-lg
-            focus:outline-none focus:ring-0 active:from-sky-700
-            active:to-sky-900 active:shadow-lg transition duration-150
+            <a href="/storage/Andrew_LaBoy_Resume.pdf" class="w-full self-center px-6 py-2.5 mb-24 text-center  text-white font-medium text-xs leading-tight uppercase rounded shadow-md bg-gradient-to-br from-neutral-400 to-neutral-600 hover:from-neutral-500 hover:to-neutral-400 hover:shadow-lg focus:from-neutral-500 focus:to-neutral-400 focus:shadow-lg focus:outline-none focus:ring-0 active:from-neutral-600 active:to-neutral-500 active:shadow-lg transition duration-150
             ease-in-out">Download</a>
         </div>
     </main> 
