@@ -2,6 +2,7 @@
   <Card 
       :classes="cardClasses"
       href="/projects/random-video"
+      paragraphClasses="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-xl 2xl:max-w-xl"
       :tags="['C#', 'Unity', 'ARCore', 'Photoshop', 'Image Recognition']" 
       vidSrc="/storage/ar-graffiti.mp4"
       >

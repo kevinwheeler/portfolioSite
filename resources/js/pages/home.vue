@@ -2,11 +2,11 @@
     <main ref="main">
         <Hero />
         <div class="flex flex-col mb-12">
-            <div class="border-b-2 border-gray-600"/>
+            <!-- <div class="border-b-2 border-gray-600"/> -->
             <MultiplayerPaintingCard additionalClasses="from-left"/>
-            <div class="border-b-2 border-gray-600"/>
+            <!-- <div class="border-b-2 border-gray-600"/> -->
             <HologramCard     additionalClasses="from-right"/>
-            <div class="border-b-2 border-gray-600"/>
+            <!-- <div class="border-b-2 border-gray-600"/> -->
             <GraffitiCard   additionalClasses="from-left"/>
         </div>
         <div class="duration-[2000ms] transition data-inviewport fade-in">

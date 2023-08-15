@@ -16,14 +16,17 @@
           </div>
       </div>
     </div>
-    <CardBottom :tags="['C#', 'Unity', 'ARFoundation', 'VFXGraph']" additionalClasses="mt-1 duration-1000 transition data-inviewport from-right"><!-- mt-1 added because otherwise the element was considered to be on the screen at the start, which 
-      prevented any animation when the element was scrolled into view.-->
-      <template v-slot:headline> Dream Stream AR </template>
-      <template v-slot:secondary-headline><a class="underline" href="https://apps.apple.com/bs/app/dream-stream-ar/id1588851059">View On App Store</a></template>
-      <template v-slot:paragraph>
-        Pictured above (best viewed on desktop), an iOS application that utilizes realtime human segmentation to detect people and apply VFX to them. VFX were made in VFXGraph and HLSL (shaders).  Used in many concerts and music festivals in Austin, Texas and surrounding areas, as well as livestreams and videos.
-      </template>
-    </CardBottom>
+    <div class="bg-slate-800 bg-slate-800 p-10 mb-10 flow-root">
+      <CardBottom :tags="['C#', 'Unity', 'ARFoundation', 'VFXGraph']" additionalClasses="mt-10 duration-1000 transition data-inviewport from-right"><!-- mt-1 added because otherwise the element was considered to be on the screen at the start, which 
+
+        prevented any animation when the element was scrolled into view.-->
+        <template v-slot:headline> Dream Stream AR </template>
+        <template v-slot:secondary-headline><a class="underline" href="https://apps.apple.com/bs/app/dream-stream-ar/id1588851059">View On App Store</a></template>
+        <template v-slot:paragraph>
+          Displayed above (best viewed on desktop) - An iOS application that utilizes realtime human segmentation to detect people and apply VFX to them. VFX were made in VFXGraph and HLSL (shaders).  Used in many concerts and music festivals in Austin, Texas and surrounding areas, as well as livestreams and videos.
+        </template >
+      </CardBottom>
+    </div>
   </template>
   
   <script>

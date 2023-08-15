@@ -1,5 +1,5 @@
 <template>
-   <video :style="videoStyles" autoplay loop muted playsinline class="shadow-none -mt-2 py-2">
+   <video :style="videoStyles" autoplay loop muted playsinline class="shadow-none">
      <source :src="`${src}`" :type="`${type}`"/>
      Your browser does not support the video tag.
    </video>

@@ -1,7 +1,7 @@
 <template>
-  <div :class="`flex flex-1 flex-col ${classes}`"> <!-- removed overflow-hidden. I don't think it was necessary. Delete this comment if no bugs turn up-->
+  <div :class="`flex flex-1 flex-col bg-slate-800 p-10 mb-10 ${classes}`"> <!-- removed overflow-hidden. I don't think it was necessary. Delete this comment if no bugs turn up-->
     <ResizingVideo :aspectRatio="videoAspectRatio" :src="`${vidSrc}`" type="video/mp4"/>
-    <CardBottom :href="href" :tags="tags">
+    <CardBottom :href="href" :tags="tags" :paragraphClasses="paragraphClasses">
       <!-- transitively pass our input/received slot parameters to be input as slot parameters to the CardBottom component-->
       <template v-slot:headline>
         <slot name="headline"></slot>
@@ -43,6 +43,10 @@
       'href': {
         type: String,
         required: true,
+      },
+      'paragraphClasses': {
+        type: String,
+        default: () => '',
       },
       'videoAspectRatio': {
         type: Number,
