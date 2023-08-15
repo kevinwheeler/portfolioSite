@@ -9,7 +9,8 @@
 @layer components {
     // I know the tailwind docs say not use composite classes if at all possible, but whatever.
     .accent-color {
-        @apply bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent;
+        // @apply bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent;
+    @apply text-white
     }
 
     // .blue-bullet {
@@ -46,6 +47,49 @@
         opacity: 1;
         @apply translate-x-0;
     }
+
+    .fade-in {
+        opacity: 0;
+    }
+
+    .fade-in.is-inViewport {
+        opacity: 1;
+    }
+
+    .hero {
+        position: relative;
+        min-height: 100lvh;
+    }
+    
+    .hero__video {
+        // absolute to position video outside of parent's padding.
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero__video--right {
+        object-position: right center;
+    }
+    
+    .hero__content {
+        position: relative;
+        z-index: 101;
+    }
+
+    .text-shadow {
+        text-shadow: 0 1px 3px rgb(0 0 0 / 1);
+    }
+    
+    .after-line-shadow::after {
+        box-shadow: 0 1px 3px rgb(0 0 0 / 1);
+    }
+
 
     @media (min-width: 640px) {
         // Need this to have higer specificity than .from-left.is-inViewport and .from-right.is-inViewport
@@ -92,52 +136,12 @@
             transform: translateX(calc(50% + 12px));
         }
     }
-
-    .fade-in {
-        opacity: 0;
-    }
-
-    .fade-in.is-inViewport {
-        opacity: 1;
-    }
-
-    .hero {
-        position: relative;
-        min-height: 100lvh;
-    }
-    
-    .hero__video {
-        // absolute to position video outside of parent's padding.
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 100;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .hero__video--right {
-        object-position: right center;
-    }
-    
-    .hero__content {
-        position: relative;
-        z-index: 101;
-    }
-
-    .text-shadow {
-        text-shadow: 0 1px 3px rgb(0 0 0 / 1);
-    }
-    
-    .after-line-shadow::after {
-        box-shadow: 0 1px 3px rgb(0 0 0 / 1);
-    }
-
-
 }
 
+    .router-link-exact-active {
+        @apply text-white visited:text-white;
+    }
 
-
-  
+    .router-link-active {
+        @apply text-white visited:text-white;
+    }

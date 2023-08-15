@@ -3,10 +3,10 @@
     <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-center accent-color">
       <slot name="headline"></slot>
     </h3>
-    <p class="mb-2 text-s sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-400 text-center">
+    <p class="mb-2 text-s sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-center">
       <slot name="secondary-headline"></slot>
     </p>
-    <p :class="['lg:mt-1 xl:mt-2 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-center max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl', paragraphClasses]">
+    <p :class="['lg:mt-1 xl:mt-2 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-center max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl text-white', paragraphClasses]">
       <slot name="paragraph"></slot>
     </p>
     <div class="mt-6 flex justify-center flex-wrap gap-2">

@@ -2,7 +2,7 @@
 <template>
     <section class="mb-32 text-center">
         <div class="max-w-[700px] mx-auto px-3 lg:px-6">
-          <h2 class="text-3xl font-bold mb-12">Contact <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Me</span></h2>
+          <h2 class="text-3xl font-bold mb-12">Contact <span class="bg-gradient-to-br from-neutral-400 to-neutral-300 bg-clip-text text-transparent">Me</span></h2>
           <form @submit.prevent="initiateRecaptcha" method="POST">
             <div class="form-group mb-6">
               <input type="text" v-model="name" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
@@ -19,7 +19,7 @@
                  hover:bg-blue-700 hover:shadow-lg
               focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
               active:bg-blue-800 active:shadow-lg -->
-            <button type="submit" :disabled="submitLoading" class="w-full px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md bg-gradient-to-br from-sky-500 to-blue-800 hover:from-sky-600 hover:to-sky-900 hover:shadow-lg focus:from-sky-600 focus:to-sky-900 focus:shadow-lg focus:outline-none focus:ring-0 active:from-sky-700 active:to-sky-900 active:shadow-lg transition duration-150 ease-in-out">
+            <button type="submit" :disabled="submitLoading" class="w-full px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md bg-gradient-to-br from-neutral-400 to-neutral-600 hover:from-neutral-500 hover:to-neutral-400 hover:shadow-lg focus:from-neutral-500 focus:to-neutral-400 focus:shadow-lg focus:outline-none focus:ring-0 active:from-neutral-600 active:to-neutral-500 active:shadow-lg transition duration-150 ease-in-out">
               <div v-show="submitLoading" class="inline-block h-4 w-4 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" role="status">
                 <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
                   Loading...
