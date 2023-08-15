@@ -23,16 +23,19 @@ export default {
       type: String,
       required: true,
     },
+    'containerWidth': {
+      type: Number,
+      default: () => 0,
+    },
   },
-  setup() {
-    const videoAspectRatio = ref(16/9);
+  setup(props) {
     const videoStyles = ref({});
 
     const adjustVideoSize = () => {
       const viewportAspectRatio = window.innerWidth / window.innerHeight;
 
       // viewport is wider than video
-      if (viewportAspectRatio > videoAspectRatio.value) {
+      if (viewportAspectRatio > props.aspectRatio) {
         videoStyles.value = {
           height: '100vh',
           width: 'auto',

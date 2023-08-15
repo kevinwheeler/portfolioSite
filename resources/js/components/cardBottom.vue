@@ -24,7 +24,6 @@
   
   <script>
   import _ from 'lodash';
-  // import ResizingVideo from './resizingVideo.vue';
 
   export default {
 

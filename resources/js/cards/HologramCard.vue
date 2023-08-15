@@ -4,7 +4,7 @@
       href="/projects/hologram"
       paragraphClasses="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-xl 2xl:max-w-xl"
       :tags="['C#', 'Unity', 'ARFoundation', 'XR Interaction Toolkit']"
-      :videoAspectRatio="1920/888"
+      :aspectRatio="1"
       vidSrc="/storage/hologram.mp4"
       >
       <template v-slot:headline> Realtime Hologram </template>
