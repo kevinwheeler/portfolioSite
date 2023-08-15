@@ -1,5 +1,6 @@
 <template>
     <main>
+        <Nav additionalClasses="mt-6 mx-6" />
         <div class="flex flex-col gap-6">
             <h1 class="text-6xl font-bold text-center">Rés<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">umé</span></h1>
             <!-- <div class="text-l text-gray-400 self-center text-center">Last Updated March 2023</div> -->
@@ -17,10 +18,12 @@
 
 <script>
 import { onMounted, ref, watch } from '@vue/runtime-core'
+import Nav from '../components/nav.vue'
 
 export default {
     
     components: {
+        Nav,
     },
     setup() {
         const adobeApiPDFReady = ref(false);
