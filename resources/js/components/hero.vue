@@ -16,7 +16,7 @@
           </div>
       </div>
     </div>
-    <div class="bg-slate-800 bg-slate-800 p-10 mb-10 flow-root">
+    <div class="bg-neutral-900  p-10 mb-10 flow-root">
       <CardBottom :tags="['C#', 'Unity', 'ARFoundation', 'VFXGraph']" additionalClasses="mt-10 duration-1000 transition data-inviewport from-right"><!-- mt-1 added because otherwise the element was considered to be on the screen at the start, which 
 
         prevented any animation when the element was scrolled into view.-->
