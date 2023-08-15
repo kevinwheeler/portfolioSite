@@ -1,4 +1,6 @@
 <template>
+  <!-- If you change the horizontal padding here, make sure to adjust the
+  calculations in resizingVideo.vue accordingly. -->
   <div :class="`flex flex-1 flex-col p-10 mb-10 ${classes}`">
     <ResizingVideo :aspectRatio="aspectRatio" :src="vidSrc" type="video/mp4"/>
     <CardBottom :href="href" :tags="tags" :paragraphClasses="paragraphClasses">

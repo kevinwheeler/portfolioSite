@@ -32,12 +32,13 @@ export default {
     const videoStyles = ref({});
 
     const adjustVideoSize = () => {
-      const viewportAspectRatio = window.innerWidth / window.innerHeight;
+      // -80 to account for padding on parent. Could improve this by passing in the parent's width as a prop, but it's not worth the time for a personal project. I'm not going to need it.
+      const viewportAspectRatio = (window.innerWidth - 80) / window.innerHeight;
 
       // viewport is wider than video
       if (viewportAspectRatio > props.aspectRatio) {
         videoStyles.value = {
-          height: '100vh',
+          height: 'calc(100vh - 40px)',
           width: 'auto',
         };
       // viewport is taller than video
@@ -45,14 +46,13 @@ export default {
         videoStyles.value = {
           width: '100vw',
           height: 'auto',
+          "max-height": 'calc(100vh - 40px)',
         };
       }
     };
 
-    const resizeListener = () => adjustVideoSize();
-
     onMounted(() => {
-      window.addEventListener('resize', resizeListener);
+      window.addEventListener('resize', adjustVideoSize);
       adjustVideoSize();
     });
 
