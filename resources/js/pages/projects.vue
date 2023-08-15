@@ -4,7 +4,7 @@
         <div class="flex flex-col gap-6 mb-12 duration-1000 transition data-inviewport">
             <MultiplayerPaintingCard additionalClasses="from-right sm:from-cancel" />
             <HologramCard     additionalClasses="from-left" />
-            <DreamStreamCard     additionalClasses="from-right" />
+            <!-- <DreamStreamCard     additionalClasses="from-right" /> -->
         </div>
     </main>
 
@@ -16,7 +16,7 @@ import { getObserver, observeElements, unobserveElements } from '../helpers/obse
 import { onBeforeUnmount, onMounted } from '@vue/runtime-core'
 
 import Card from '../components/card.vue'
-import DreamStreamCard from '../cards/DreamStreamCard.vue'
+// import DreamStreamCard from '../cards/DreamStreamCard.vue'
 import GraffitiCard from '../cards/GraffitiCard.vue'
 import HologramCard from '../cards/HologramCard.vue'
 import MultiplayerPaintingCard from '../cards/MultiplayerPaintingCard.vue'
@@ -26,7 +26,7 @@ export default {
     
     components: {
     Card,
-    DreamStreamCard,
+    // DreamStreamCard,
     GraffitiCard,
     HologramCard,
     MultiplayerPaintingCard,
