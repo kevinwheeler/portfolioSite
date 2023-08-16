@@ -1,13 +1,11 @@
 <template>
     <main ref="main">
         <Hero />
-        <div class="flex flex-col mb-12">
-            <!-- <div class="border-b-2 border-gray-600"/> -->
+        <div class="flex flex-col justify-center mb-12">
             <MultiplayerPaintingCard additionalClasses="from-left"/>
-            <!-- <div class="border-b-2 border-gray-600"/> -->
             <HologramCard     additionalClasses="from-right"/>
-            <!-- <div class="border-b-2 border-gray-600"/> -->
             <GraffitiCard   additionalClasses="from-left"/>
+            <AboutMe additionalClasses="from-right"/>
         </div>
         <div class="duration-[2000ms] transition data-inviewport fade-in">
             <ContactForm/>
@@ -18,6 +16,7 @@
 
 <script>
 import { ref } from 'vue'
+import AboutMe from '../components/aboutMe.vue'
 import Card from '../components/card.vue'
 import ContactForm from '../components/contactForm.vue'
 import GraffitiCard from '../cards/GraffitiCard.vue'
@@ -31,7 +30,9 @@ import { getObserver, observeElements, unobserveElements } from '../helpers/obse
 export default {
     
     components: {
-        Card, ContactForm,
+        AboutMe,
+        Card,
+        ContactForm,
         GraffitiCard,
         Hero,
         HologramCard,

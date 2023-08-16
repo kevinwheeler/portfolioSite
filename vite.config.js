@@ -23,8 +23,8 @@ export default defineConfig({
 
     server: {
       hmr: {
-        host: 'kevinwheeler.test',
-      }
+        host: 'andrewportvite.test',
+      },
     },
 
     resolve: {

@@ -30,7 +30,6 @@
   </template>
   
   <script>
-  import {  } from 'vue';
   import { onMounted, onBeforeUnmount, ref} from 'vue';
   import _ from 'lodash';
   import CardBottom from './cardBottom.vue';
