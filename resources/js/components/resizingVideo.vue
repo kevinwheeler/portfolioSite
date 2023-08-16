@@ -57,7 +57,7 @@ export default {
     });
 
     onUnmounted(() => {
-      window.removeEventListener('resize', resizeListener);
+      window.removeEventListener('resize', adjustVideoSize);
     });
 
     return {

@@ -1,8 +1,8 @@
 <template>
 <nav ref="nav" :class="['navbar z-[101] flex flex-col sm:flex-row gap-y-2 mb-16 justify-between duration-[2000ms]', additionalClasses]">
      <div class="flex items-center">
-         <router-link to="/" class="flex ml-2 items-center">
-             <div class="text-shadow ml-2 text-gray-400 text-xl font-bold"><!-- text-sky-400 -->
+         <router-link to="/" class="flex ml-2 text-gray-400 items-center">
+             <div class="text-shadow ml-2 text-xl font-bold"><!-- text-sky-400 -->
                 A.L. 
              </div>
          </router-link>

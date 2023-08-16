@@ -1,11 +1,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 <title>{{$title}}</title>
 <meta name="description" content="{{$description}}">
 
 <link rel="icon" type="image/svg+xml" href="/storage/favicon.svg">
 <link rel="icon" type="image/png" href="/storage/favicon.png">
+
 
 
 <!-- Meta Pixel Code -->
