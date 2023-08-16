@@ -1,6 +1,6 @@
 <template>
 <!-- gap-8 mx-8 md:gap-16 md:mx-16 lg:gap-32 lg:mx-32 xl:gap-40 xl:mx-40 2xl:gap-52 2xl:mx-52 -->
-  <div class="flex flex-col sm:flex-row items-center justify-center gap-8 mx-8 md:mx-16 lg:gap-16 lg:mx-32 xl:gap-24 xl:mx-40 2xl:mx-52">
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-8 mx-8 md:max-w-[826px] md:px-8 md:gap-16 lg:gap-20 lg:max-w[842px] xl:gap-24 xl:max-w-[858px] 2xl:gap-28 2xl:max-w-[874px] md:mx-auto md:w-full">
     <div class="flex-1 sm:w-0 data-inviewport duration-1000 transition from-left">
         <h1 class="text-3xl font-bold mb-6">
             Hi, I'm <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Andrew</span>  👋
