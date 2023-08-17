@@ -18,7 +18,6 @@
     </div>
     <div class="p-10 mb-10 flow-root">
       <CardBottom :tags="['C#', 'Unity', 'ARFoundation', 'VFXGraph', 'HLSL']" additionalClasses="mt-10 duration-1000 transition data-inviewport from-right"><!-- mt-1 added because otherwise the element was considered to be on the screen at the start, which 
-
         prevented any animation when the element was scrolled into view.-->
         <template v-slot:headline> Dream Stream AR </template>
         <template v-slot:secondary-headline><a class="underline text-gray-400 visited:text-gray-400" href="https://apps.apple.com/bs/app/dream-stream-ar/id1588851059">View On App Store</a></template>
@@ -34,6 +33,7 @@
   import _ from 'lodash';
   import CardBottom from './cardBottom.vue';
   import Nav from './nav.vue';
+  import dashjs from 'dashjs';
 
   export default {
 
@@ -61,11 +61,17 @@
     const currentVideoPoster = ref('');
     let initialLoad = true;
 
+    // const videosAndPosters = {
+    //   '9:19 aka .477': ['/storage/water-girl-9-by-19.mp4', '/storage/water-girl-9-by-19.jpg'],
+    //   '.625': ['/storage/water-girl-0point625.mp4', '/storage/water-girl-0point625.jpg'],
+    //   '.98': ['/storage/water-girl-0point98.mp4', '/storage/water-girl-0point98.jpg'],
+    //   '2880:1800 aka 1.6': ['/storage/water-girl.mp4', '/storage/water-girl.jpg']
+    // };
     const videosAndPosters = {
-      '9:19 aka .477': ['/storage/water-girl-9-by-19.mp4', '/storage/water-girl-9-by-19.jpg'],
-      '.625': ['/storage/water-girl-0point625.mp4', '/storage/water-girl-0point625.jpg'],
-      '.98': ['/storage/water-girl-0point98.mp4', '/storage/water-girl-0point98.jpg'],
-      '2880:1800 aka 1.6': ['/storage/water-girl.mp4', '/storage/water-girl.jpg']
+      '9:19 aka .477': ['/storage/water-girl-9-19.mpd', '/storage/water-girl-9-by-19.jpg'],
+      '.625': ['/storage/water-girl-0625.mpd', '/storage/water-girl-0point625.jpg'],
+      '.98': ['/storage/water-girl-098.mpd', '/storage/water-girl-0point98.jpg'],
+      '2880:1800 aka 1.6': ['/storage/water-girl-full.mpd', '/storage/water-girl.jpg']
     };
 
     const determineAspectRatioBucket = () => {
@@ -112,13 +118,29 @@
       }
     }, 300);
 
+    // onMounted(() => {
+    //     videoRef.value.addEventListener('load', () => {
+    //     });
+    //     videoRef.value.addEventListener('error', (e) => {
+    //     });
+    //     updateVideoSource();
+    //     window.addEventListener('resize', updateVideoSource);
+    // });
+
     onMounted(() => {
-        videoRef.value.addEventListener('load', () => {
-        });
-        videoRef.value.addEventListener('error', (e) => {
-        });
-        updateVideoSource();
-        window.addEventListener('resize', updateVideoSource);
+      // Create a new MediaPlayer instance
+      const player = dashjs.MediaPlayer().create();
+
+      // Initialize the player with the video element
+      player.initialize(videoRef.value, null, true);
+
+      // Set the video source based on the user's aspect ratio
+      player.attachSource(videosAndPosters[determineAspectRatioBucket()][0]);
+
+      window.addEventListener('resize', () => {
+        // Update video source based on new aspect ratio
+        player.attachSource(videosAndPosters[determineAspectRatioBucket()][0]);
+      });
     });
 
     onBeforeUnmount(() => {
