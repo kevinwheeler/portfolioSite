@@ -15,7 +15,7 @@
              <a class="text-shadow ml-2 mr-2 " href="https://www.linkedin.com/in/andrew-laboy-b4a169138/">LinkedIn</a>
          </li>
          <li class="hover:text-white">
-             <a class="text-shadow ml-2 mr-2" href="https://github.com/Metahertzlabs">Github</a>
+             <a class="text-shadow ml-2 mr-2" href="https://github.com/Metahertzlabs">GitHub</a>
          </li>
      </ul>
  </nav>

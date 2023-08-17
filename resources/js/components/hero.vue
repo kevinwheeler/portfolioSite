@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="p-10 mb-10 flow-root">
-      <CardBottom :tags="['C#', 'Unity', 'ARFoundation', 'VFXGraph']" additionalClasses="mt-10 duration-1000 transition data-inviewport from-right"><!-- mt-1 added because otherwise the element was considered to be on the screen at the start, which 
+      <CardBottom :tags="['C#', 'Unity', 'ARFoundation', 'VFXGraph', 'HLSL']" additionalClasses="mt-10 duration-1000 transition data-inviewport from-right"><!-- mt-1 added because otherwise the element was considered to be on the screen at the start, which 
 
         prevented any animation when the element was scrolled into view.-->
         <template v-slot:headline> Dream Stream AR </template>
