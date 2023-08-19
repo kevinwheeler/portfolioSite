@@ -1,7 +1,6 @@
 <template>
     <div class="hero p-6 transition duration-[2000ms] data-inviewport fade-in">
-      <video ref="videoRef" class="hero__video" :poster="currentVideoPoster" playsinline autoplay muted loop>
-          <source :src="currentVideo" type="video/mp4">
+      <video ref="videoRef" class="hero__video" :poster="currentVideoPoster" playsinline muted loop>
       </video>
       <div class="hero__content">
           <Nav additionalClasses="" />
@@ -58,7 +57,6 @@
     let player = null;
     let playbackPosition = 0;
     let currentAspectRatioBucket = null;
-    const currentVideo = ref('');
     const currentVideoPoster = ref('');
     let initialLoad = true;
 
@@ -125,7 +123,6 @@
     });
 
     return {
-      currentVideo,
       currentVideoPoster,
       tagColors,
       videoRef,

@@ -5,7 +5,7 @@
             <MultiplayerPaintingCard additionalClasses="from-left"/>
             <HologramCard     additionalClasses="from-right"/>
             <GraffitiCard   additionalClasses="from-left"/>
-            <AboutMe additionalClasses="from-right"/>
+            <AboutMe/>
         </div>
         <div class="duration-[2000ms] transition data-inviewport fade-in">
             <ContactForm/>
