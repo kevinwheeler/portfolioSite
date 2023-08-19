@@ -55,23 +55,18 @@
 
     const tagColors = ref(_.concat(shuffledColors, _.cloneDeep(shuffledColors)));
     const videoRef = ref(null);
+    let player = null;
     let playbackPosition = 0;
     let currentAspectRatioBucket = null;
     const currentVideo = ref('');
     const currentVideoPoster = ref('');
     let initialLoad = true;
 
-    // const videosAndPosters = {
-    //   '9:19 aka .477': ['/storage/water-girl-9-by-19.mp4', '/storage/water-girl-9-by-19.jpg'],
-    //   '.625': ['/storage/water-girl-0point625.mp4', '/storage/water-girl-0point625.jpg'],
-    //   '.98': ['/storage/water-girl-0point98.mp4', '/storage/water-girl-0point98.jpg'],
-    //   '2880:1800 aka 1.6': ['/storage/water-girl.mp4', '/storage/water-girl.jpg']
-    // };
     const videosAndPosters = {
-      '9:19 aka .477': ['/storage/water-girl-9-19.mpd', '/storage/water-girl-9-by-19.jpg'],
-      '.625': ['/storage/water-girl-0625.mpd', '/storage/water-girl-0point625.jpg'],
-      '.98': ['/storage/water-girl-098.mpd', '/storage/water-girl-0point98.jpg'],
-      '2880:1800 aka 1.6': ['/storage/water-girl-full.mpd', '/storage/water-girl.jpg']
+      '9:19 aka .477': ['/storage/water-girl-9-by-19/manifest.mpd', '/storage/water-girl-9-by-19.jpg'],
+      '.625': ['/storage/water-girl-0625/manifest.mpd', '/storage/water-girl-0point625.jpg'],
+      '.98': ['/storage/water-girl-098/manifest.mpd', '/storage/water-girl-0point98.jpg'],
+      '2880:1800 aka 1.6': ['/storage/water-girl-full/manifest.mpd', '/storage/water-girl.jpg']
     };
 
     const determineAspectRatioBucket = () => {
@@ -99,6 +94,8 @@
           }
 
           if (currentAspectRatioBucket == '2880:1800 aka 1.6') {
+            // align video to the right since this video isn't centered.
+            // we want to cut off the left side of the video, not the right.
             videoRef.value.classList.add('hero__video--right');
           } else {
             videoRef.value.classList.remove('hero__video--right');
@@ -106,41 +103,21 @@
 
           playbackPosition = videoRef.value.currentTime;
 
-          // Set the video source based on the user's new aspect ratio
-          currentVideo.value = videosAndPosters[currentAspectRatioBucket][0];
-          videoRef.value.load();
-          videoRef.value.play().catch(e => {
-              console.error("Video play failed:", e);
-          });
-          videoRef.value.currentTime = playbackPosition;
+          player.attachSource(videosAndPosters[determineAspectRatioBucket()][0] +`#t=${playbackPosition}`);
 
           initialLoad = false;
       }
     }, 300);
 
-    // onMounted(() => {
-    //     videoRef.value.addEventListener('load', () => {
-    //     });
-    //     videoRef.value.addEventListener('error', (e) => {
-    //     });
-    //     updateVideoSource();
-    //     window.addEventListener('resize', updateVideoSource);
-    // });
-
     onMounted(() => {
       // Create a new MediaPlayer instance
-      const player = dashjs.MediaPlayer().create();
+      player = dashjs.MediaPlayer().create();
 
       // Initialize the player with the video element
       player.initialize(videoRef.value, null, true);
 
-      // Set the video source based on the user's aspect ratio
-      player.attachSource(videosAndPosters[determineAspectRatioBucket()][0]);
-
-      window.addEventListener('resize', () => {
-        // Update video source based on new aspect ratio
-        player.attachSource(videosAndPosters[determineAspectRatioBucket()][0]);
-      });
+      updateVideoSource();
+      window.addEventListener('resize', updateVideoSource);
     });
 
     onBeforeUnmount(() => {
