@@ -63,10 +63,10 @@
     let initialLoad = true;
 
     const videosAndPosters = {
-      '9:19 aka .477': ['/storage/water-girl-9-by-19/manifest.mpd', '/storage/water-girl-9-by-19.jpg'],
-      '.625': ['/storage/water-girl-0625/manifest.mpd', '/storage/water-girl-0point625.jpg'],
-      '.98': ['/storage/water-girl-098/manifest.mpd', '/storage/water-girl-0point98.jpg'],
-      '2880:1800 aka 1.6': ['/storage/water-girl-full/manifest.mpd', '/storage/water-girl.jpg']
+      '9:19 aka .477': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-9-by-19-final/manifest.mpd', '/storage/water-girl-9-by-19.jpg'],
+      '.625': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-0625-final/manifest.mpd', '/storage/water-girl-0point625.jpg'],
+      '.98': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-098-final/manifest.mpd', '/storage/water-girl-0point98.jpg'],
+      '2880:1800 aka 1.6': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-full-final/manifest.mpd', '/storage/water-girl.jpg']
     };
 
     const determineAspectRatioBucket = () => {
