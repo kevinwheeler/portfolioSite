@@ -19,6 +19,7 @@
         "@headlessui/vue": "^1.7.10",
         "@heroicons/vue": "^2.0.16",
         "dashjs": "^4.7.1",
+        "hls.js": "^1.4.10",
         "lodash": "^4.17.21",
         "vue-axios": "^3.5.2",
         "vue-recaptcha": "^2.0.3",
