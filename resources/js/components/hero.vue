@@ -1,10 +1,7 @@
-<!-- Probably need to make sure we don't have an re-renders, since video.js is managing the DOM manually. I don't want its
-     DOM manipulations to get clobbered when the DOM is diffed, etc. -->
 <template>
     <div class="hero p-6 transition duration-[2000ms] data-inviewport fade-in">
-      <!-- video.js takes over this element and puts move any classes from it to a
-           container element. So we add classes via JavaScript instead. -->
-      <video ref="videoRef" class="hero__video"></video>
+      <video ref="videoRef" class="hero__video" :poster="currentVideoPoster" autoplay playsinline muted loop>
+      </video>
       <div class="hero__content">
           <Nav additionalClasses="" />
           <div class="text-shadow">
@@ -28,15 +25,14 @@
         </template >
       </CardBottom>
     </div>
-</template>
-
-<script>
-import { onMounted, onBeforeUnmount, ref } from 'vue';
-import _ from 'lodash';
-import CardBottom from './cardBottom.vue';
-import Nav from './nav.vue';
-import videojs from 'video.js';
-import 'video.js/dist/video-js.css';
+  </template>
+  
+  <script>
+  import { onMounted, onBeforeUnmount, ref} from 'vue';
+  import _ from 'lodash';
+  import CardBottom from './cardBottom.vue';
+  import Nav from './nav.vue';
+  import Hls from 'hls.js';
 
   export default {
 
@@ -46,93 +42,95 @@ import 'video.js/dist/video-js.css';
     },
 
     setup() {
-    // Shuffle tag colors so that adjacent cards won't all have the same order of tag colors.
-    const shuffledColors = _.shuffle([
-      { background: 'bg-blue-200', text: 'text-blue-700' },
-      { background: 'bg-teal-200', text: 'text-teal-700' },
-      { background: 'bg-yellow-200', text: 'text-yellow-700' },
-      { background: 'bg-purple-200', text: 'text-purple-700' },
-      { background: 'bg-green-200', text: 'text-green-700' },
-      { background: 'bg-pink-200', text: 'text-pink-700' },
-    ]);
+      let currentAspectRatioBucket = null;
+      const currentVideoPoster = ref('');
+      let hls = null;
+      let initialLoad = true;
+      let playbackPosition = 0;
+      const videoRef = ref(null);
 
-    const tagColors = ref(_.concat(shuffledColors, _.cloneDeep(shuffledColors)));
-    const videoRef = ref(null);
-    let player = null;
-    let playbackPosition = 0;
-    let currentAspectRatioBucket = null;
-    let initialLoad = true;
+      const videosAndPosters = {
+        '9:19 aka .477': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-9-by-19-final/manifest.m3u8', '/storage/water-girl-9-by-19.jpg'],
+        '.625': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-0625-final/manifest.m3u8', '/storage/water-girl-0point625.jpg'],
+        '.98': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-098-final/manifest.m3u8', '/storage/water-girl-0point98.jpg'],
+        '2880:1800 aka 1.6': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-full-final/manifest.m3u8', '/storage/water-girl.jpg']
+      };
 
-    const videosAndPosters = {
-      '9:19 aka .477': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-9-by-19-final/manifest.m3u8', '/storage/water-girl-9-by-19.jpg'],
-      '.625': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-0625-final/manifest.m3u8', '/storage/water-girl-0point625.jpg'],
-      '.98': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-098-final/manifest.m3u8', '/storage/water-girl-0point98.jpg'],
-      '2880:1800 aka 1.6': ['https://s3.amazonaws.com/kmw-bitmovin/water-girl-full-final/manifest.m3u8', '/storage/water-girl.jpg'],
-    };
+      const determineAspectRatioBucket = () => {
+          // Important to not use window.innerWidth|Height here, as URL bar interferes with that measurement.
+          const ratio = videoRef.value.offsetWidth / videoRef.value.offsetHeight;
+          if      (ratio < .548) return '9:19 aka .477';
+          else if (ratio < .854)     return '.625';
+          else if (ratio < 1.16)     return '.98';
+          else return '2880:1800 aka 1.6';
+      };
 
-    const determineAspectRatioBucket = () => {
-        // Important to not use window.innerWidth|Height here, as URL bar interferes with that measurement.
-        const ratio = videoRef.value.offsetWidth / videoRef.value.offsetHeight;
-        if      (ratio < .548) return '9:19 aka .477';
-        else if (ratio < .854)     return '.625';
-        else if (ratio < 1.16)     return '.98';
-        else return '2880:1800 aka 1.6';
-    };
+      const updateVideoSource = _.debounce(() => {
+        const newAspectRatioBucket = determineAspectRatioBucket();
 
-    const updateVideoSource = _.debounce(() => {
-      const newAspectRatioBucket = determineAspectRatioBucket();
+        // If it's the initial load or if the aspect ratio bucket has changed
+        if (!currentAspectRatioBucket || newAspectRatioBucket !== currentAspectRatioBucket) {
+            currentAspectRatioBucket = newAspectRatioBucket;
 
-      // If it's the initial load or if the aspect ratio bucket has changed
-      if (!currentAspectRatioBucket || newAspectRatioBucket !== currentAspectRatioBucket) {
-          currentAspectRatioBucket = newAspectRatioBucket;
+            if (initialLoad) {
+              currentVideoPoster.value = videosAndPosters[currentAspectRatioBucket][1];
+            } else {
+              // Aspect ratio bucket changed. Remove poster. It's better to have a blank video flash than
+              // a poster that isn't from the same time in the video as we left off.
+              currentVideoPoster.value = '';
+            }
 
-          if (initialLoad) {
-            player.poster(videosAndPosters[currentAspectRatioBucket][1]);
-          } else {
-            // Aspect ratio bucket changed. Remove poster. It's better to have a blank video flash than
-            // a poster that isn't from the same time in the video as we left off.
-            player.poster(null);
-          }
+            if (currentAspectRatioBucket == '2880:1800 aka 1.6') {
+              // align video to the right since this video isn't centered.
+              // we want to cut off the left side of the video, not the right.
+              videoRef.value.classList.add('hero__video--right');
+            } else {
+              videoRef.value.classList.remove('hero__video--right');
+            }
 
-          if (currentAspectRatioBucket == '2880:1800 aka 1.6') {
-            // align video to the right since this video isn't centered.
-            // we want to cut off the left side of the video, not the right.
-            videoRef.value.classList.add('hero__video','hero__video--right');
-          } else {
-            videoRef.value.classList.remove('hero__video--right');
-          }
+            playbackPosition = videoRef.value.currentTime;
 
-          playbackPosition = videoRef.value.currentTime;
-          const videoURL = videosAndPosters[determineAspectRatioBucket()][0];
-          player.src({
-            src: videoURL,
-            type: 'application/x-mpegURL',
-          });
-          player.currentTime(playbackPosition);
+            if (Hls.isSupported()) {
+               if (!hls) {
+                 hls = new Hls();
+                 hls.attachMedia(videoRef.value);
+               }
+               hls.loadSource(videosAndPosters[currentAspectRatioBucket][0]);
+               hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                 videoRef.value.currentTime = playbackPosition;
+                 videoRef.value.play();
+               });
+            } 
+            else if (videoRef.value.canPlayType('application/vnd.apple.mpegurl')) {
+                videoRef.value.src = videosAndPosters[currentAspectRatioBucket][0];
+                videoRef.value.currentTime = playbackPosition;
+                videoRef.value.addEventListener('loadedmetadata', function() {
+                  videoRef.value.play();
+                });
+            }
+             else {
+              //TODO
+              alert("Your browser does not support HLS streaming.");
+            }
+            initialLoad = false;
+        }
+      }, 300);
 
-          initialLoad = false;
-      }
-    }, 300);
-
-    onMounted(() => {
-      // Initialize Video.js player
-      player = videojs(videoRef.value, {
-        autoplay: true,
-        muted: true,
-        loop: true,
+      onMounted(() => {
+        updateVideoSource();
+        window.addEventListener('resize', updateVideoSource);
       });
-      updateVideoSource();
-      window.addEventListener('resize', updateVideoSource);
-    });
 
-    onBeforeUnmount(() => {
+      onBeforeUnmount(() => {
+        hls.detachMedia()
         window.removeEventListener('resize', updateVideoSource);
-    });
+      });
 
-    return {
-      tagColors,
-      videoRef,
-    };
-  },
-};
-</script>
+      return {
+        currentVideoPoster,
+        videoRef,
+      };
+    },
+  };
+
+  </script>
