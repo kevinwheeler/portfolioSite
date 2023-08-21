@@ -6,6 +6,8 @@
 
 <title>{{$title}}</title>
 <meta name="description" content="{{$description}}">
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/storage/andrew-main.jpg" />
 
 <link rel="icon" type="image/svg+xml" href="/storage/favicon.svg">
 <link rel="icon" type="image/png" href="/storage/favicon.png">
@@ -13,7 +15,7 @@
 
 
 <!-- Meta Pixel Code -->
-<script>
+{{-- <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -24,10 +26,10 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '589240076689126');
   fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
+</script> --}}
+{{-- <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=589240076689126&ev=PageView&noscript=1"
-/></noscript>
+/></noscript> --}}
 <!-- End Meta Pixel Code -->
 
 @vite(['resources/js/app.js', 'resources/sass/app.scss'])
