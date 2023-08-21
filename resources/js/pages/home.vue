@@ -1,7 +1,7 @@
 <template>
     <main ref="main">
-        <div class="flex flex-col sm:flex-row items-center gap-6 mb-12">
-            <div class="flex-1 sm:w-0 data-inviewport duration-1000 transition from-left">
+        <div class="flex flex-col md:flex-row items-center gap-6 mb-12">
+            <div class="flex-1 md:w-0 data-inviewport duration-1000 transition from-left">
                 <h1 class="text-3xl font-bold mb-6">
                     Hi, I'm <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Kevin</span>  👋
                 </h1>
@@ -9,17 +9,17 @@
                     I'm a full stack web developer and software engineer who graduated with highest honors from The University of Texas at Austin while obtaining a B.S. in Computer Science. I am interested in software development opportunities both inside and outside of web development. I have experience with a variety of technologies including Spring, Laravel, Node.js, React, Backbone.js, Vue.js., Java, JavaScript, Python, C++, Scala, and many others. Two of my values in life are benevolence and rationality.
                 </p>
             </div>
-            <img class="sm:w-0 sm:py-2 rounded-3xl sm:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg">
+            <img class="md:w-0 md:py-2 rounded-3xl md:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg">
         </div>
-        <div class="flex flex-col duration-700 transition data-inviewport sm:from-left">
-            <div class="flex justify-between items-center mb-6 transition duration-1000 data-inviewport from-left sm:from-cancel">
+        <div class="flex flex-col duration-700 transition data-inviewport md:from-left">
+            <div class="flex justify-between items-center mb-6 transition duration-1000 data-inviewport from-left md:from-cancel">
                 <h2 class="text-2xl font-bold">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
                 <router-link to="/projects" class="text-lg">View All Projects →</router-link>
             </div>
-            <div class="flex flex-col sm:flex-row gap-6 mb-12">
-                <NothingButHeadlinesCard additionalClasses="from-left sm:from-cancel"/>
-                <TranslateSearchCard     additionalClasses="from-right sm:from-cancel"/>
-                <DensityIteratorCard     additionalClasses="from-left sm:from-cancel"/>
+            <div class="flex flex-col md:flex-row gap-6 mb-12">
+                <NothingButHeadlinesCard additionalClasses="from-left md:from-cancel"/>
+                <TranslateSearchCard     additionalClasses="from-right md:from-cancel"/>
+                <DensityIteratorCard     additionalClasses="from-left md:from-cancel"/>
             </div>
         </div>
         <div class="duration-[2000ms] transition data-inviewport fade-in">

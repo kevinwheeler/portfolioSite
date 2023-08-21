@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col min-h-screen bg-slate-900 text-gray-100 items-center overflow-x-hidden">
+    <div class="flex flex-col min-h-screen bg-slate-900 text-gray-100 items-center overflow-x-hidden antialiased">
         <div class="w-full max-w-screen-lg flex flex-col px-8">
-            <nav ref="nav" class="flex flex-col sm:flex-row gap-y-2 justify-between py-6 mb-14 duration-[2000ms] transition fade-in">
+            <nav ref="nav" class="flex flex-col sm:flex-row gap-y-2 justify-between nav-padding mb-14 duration-[2000ms] transition fade-in">
                 <div class="flex items-center">
                     <router-link to="/" class="flex ml-2 items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="mr-1 h-10 w-10 stroke-cyan-600">
@@ -26,7 +26,7 @@
                         <a class="ml-2 mr-2 " href="https://stackoverflow.com/users/3470632/kevin-wheeler">Stack Overflow</a>
                     </li>
                     <li class="hover:text-white">
-                        <a class="ml-2 mr-2" href="https://github.com/kevinwheeler">Github</a>
+                        <a class="ml-2 mr-2" href="https://github.com/kevinwheeler">GitHub</a>
                     </li>
                 </ul>
             </nav>

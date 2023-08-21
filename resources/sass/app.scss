@@ -46,51 +46,50 @@
         opacity: 1;
         @apply translate-x-0;
     }
+//******
+    
+    // Need this to have higer specificity than .from-left.is-inViewport and .from-right.is-inViewport
+    // So it needs to come afterwards in this file.
+    .translate-x-1\/2-in-viewport.is-inViewport {
+        @apply translate-x-1/2;
+    }
 
-    @media (min-width: 640px) {
-        // Need this to have higer specificity than .from-left.is-inViewport and .from-right.is-inViewport
-        // So it needs to come afterwards in this file.
-        .sm\:translate-x-1\/2-in-viewport.is-inViewport {
-            @apply translate-x-1/2;
-        }
+    .from-right {
+      opacity: 0;
+      @apply translate-x-1/2;
+    }
+    .from-right.is-inViewport {
+        opacity: 1;
+        @apply translate-x-0;
+    }
 
-        .sm\:from-right {
-          opacity: 0;
-          @apply translate-x-1/2;
-        }
-        .sm\:from-right.is-inViewport {
-            opacity: 1;
-            @apply translate-x-0;
-        }
+    .from-left {
+      opacity: 0;
+      @apply -translate-x-1/2;
+    }
 
-        .sm\:from-left {
-          opacity: 0;
-          @apply -translate-x-1/2;
-        }
+    .from-left.is-inViewport {
+        opacity: 1;
+        @apply translate-x-0;
+    }
+    .from-cancel {
+        opacity: 1;
+        @apply -translate-x-0;
+    }
 
-        .sm\:from-left.is-inViewport {
-            opacity: 1;
-            @apply translate-x-0;
-        }
-        .sm\:from-cancel {
-            opacity: 1;
-            @apply -translate-x-0;
-        }
+    .from-cancel.is-inViewport {
+        opacity: 1;
+    }
 
-        .sm\:from-cancel.is-inViewport {
-            opacity: 1;
-        }
+    // need this to have higher precedence than from-left and from-right. So order is important.
+    .translate-x-1\/2\+12px {
+        transform: translateX(calc(50% + 12px));
+    }
 
-        // need this to have higher precedence than from-left and from-right.
-        .sm\:translate-x-1\/2\+12px {
-            transform: translateX(calc(50% + 12px));
-        }
-
-        // need this to have higher precedence than from-left.is-inViewport and from-right.is-inViewport.
-        .sm\:translate-x-1\/2\+12px.is-inViewport {
-            // @apply translate-x-[calc(50%+12px)];
-            transform: translateX(calc(50% + 12px));
-        }
+    // need this to have higher precedence than from-left.is-inViewport and from-right.is-inViewport. So order is important.
+    .translate-x-1\/2\+12px.is-inViewport {
+        // @apply translate-x-[calc(50%+12px)];
+        transform: translateX(calc(50% + 12px));
     }
 
     .fade-in {
@@ -103,4 +102,17 @@
 }
 
 
+.router-link-exact-active {
+    @apply text-white visited:text-white;
+}
   
+.nav-padding {
+     // If there is a safe area, be safe-area + 1 rem (or 1.5 rem if bigger), otherwise be 1.5rem.
+     // We don't want to be right up against the safe area, so add extra padding on top of safe area.
+     padding-top: max(calc(env(safe-area-inset-top) + 1rem), 1.5rem);
+
+     // Make these the same so everything is symetrical.
+     // Our ancestor already has horizontal padding, so we won't be right up against the safe area.
+     padding-right: max(env(safe-area-inset-right), env(safe-area-inset-left));
+     padding-left: max(env(safe-area-inset-right), env(safe-area-inset-left));
+}

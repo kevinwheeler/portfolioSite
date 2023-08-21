@@ -1,21 +1,21 @@
 <template>
     <main ref="main" class="mb-48">
         <h2 class="text-5xl mb-12 font-bold text-center">All <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
-        <div class="flex flex-col sm:flex-row gap-6 mb-12 duration-1000 transition data-inviewport sm:from-left">
-            <NothingButHeadlinesCard additionalClasses="from-right sm:from-cancel" />
-            <TranslateSearchCard     additionalClasses="from-left sm:from-cancel" />
-            <DensityIteratorCard     additionalClasses="from-right sm:from-cancel" />
+        <div class="flex flex-col md:flex-row gap-6 mb-12 duration-1000 transition data-inviewport md:from-left">
+            <NothingButHeadlinesCard additionalClasses="from-right md:from-cancel" />
+            <TranslateSearchCard     additionalClasses="from-left md:from-cancel" />
+            <DensityIteratorCard     additionalClasses="from-right md:from-cancel" />
         </div>
-        <div class="flex flex-col sm:flex-row gap-6 mb-12 duration-1000 transition data-inviewport sm:from-right">
-            <RandomVideoCard   additionalClasses="from-left sm:from-cancel" />
-            <GeomesaGuiCard    additionalClasses="from-right sm:from-cancel" />
-            <PortfolioSiteCard additionalClasses="from-left sm:from-cancel" />
+        <div class="flex flex-col md:flex-row gap-6 mb-12 duration-1000 transition data-inviewport md:from-right">
+            <RandomVideoCard   additionalClasses="from-left md:from-cancel" />
+            <GeomesaGuiCard    additionalClasses="from-right md:from-cancel" />
+            <PortfolioSiteCard additionalClasses="from-left md:from-cancel" />
         </div>
-        <div class="flex flex-col sm:flex-row gap-6 mb-12 duration-1000 transition data-inviewport sm:from-left">
-            <!-- <KeyboardSmashCard additionalClasses="from-right sm:from-cancel sm:translate-x-1/2 sm:translate-x-1/2-in-viewport" /> -->
-            <KeyboardSmashCard additionalClasses="from-right sm:translate-x-1/2+12px" />
-            <UbuntuVpsCard     additionalClasses="from-left  sm:translate-x-1/2+12px" />
-            <StubCard          additionalClasses="from-right hidden sm:block sm:invisible"/>
+        <div class="flex flex-col md:flex-row gap-6 mb-12 duration-1000 transition data-inviewport md:from-left">
+            <!-- <KeyboardSmashCard additionalClasses="from-right md:from-cancel md:translate-x-1/2 md:translate-x-1/2-in-viewport" /> -->
+            <KeyboardSmashCard additionalClasses="from-right md:translate-x-1/2+12px md:from-cancel" />
+            <UbuntuVpsCard     additionalClasses="from-left  md:translate-x-1/2+12px md:from-cancel" />
+            <StubCard          additionalClasses="from-right hidden md:block md:invisible"/>
         </div>
     </main>
 
