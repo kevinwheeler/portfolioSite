@@ -20,10 +20,11 @@ export default defineConfig({
             },
         }),
     ],
-
     server: {
+//      host: '0.0.0.0',
       hmr: {
         host: 'andrewportvite.test',
+//          host: '10.100.121.187',
       },
     },
 
