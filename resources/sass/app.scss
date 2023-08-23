@@ -141,3 +141,12 @@
     .router-link-exact-active {
         @apply text-white visited:text-white;
     }
+
+    .safe-area-padding {
+        padding-top: env(safe-area-inset-top);
+   
+        // Make these the same so everything is symetrical.
+        // Our ancestor already has horizontal padding, so we won't be right up against the safe area.
+        padding-right: max(env(safe-area-inset-right), env(safe-area-inset-left));
+        padding-left: max(env(safe-area-inset-right), env(safe-area-inset-left));
+   }

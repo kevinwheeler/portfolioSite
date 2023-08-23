@@ -146,9 +146,6 @@ export default {
     const message = ref('');
     const recaptcha = ref(null);
     const submitLoading = ref(false);
-    setTimeout(() => {
-      displayErrorModal.value = true;
-    }, 3000);
 
     const initiateRecaptcha = () => {
       submitLoading.value = true;
