@@ -2,8 +2,8 @@
   <!-- If you change the horizontal padding here, make sure to adjust the
   calculations in resizingVideo.vue accordingly. -->
   <div :class="`flex flex-1 flex-col p-10 mb-10 ${classes}`">
-    <ResizingVideo :aspectRatio="aspectRatio" :src="vidSrc" type="video/mp4"/>
-    <CardBottom :href="href" :tags="tags" :paragraphClasses="paragraphClasses">
+    <ResizingVideo :aspectRatio="aspectRatio" :src="vidSrc" :poster="poster" type="video/mp4"/>
+    <CardBottom :tags="tags" :paragraphClasses="paragraphClasses">
       <template v-slot:headline>
         <slot name="headline"></slot>
       </template>
@@ -28,21 +28,21 @@ export default {
     ResizingVideo,
   },
   props: {
+    aspectRatio: {
+      type: Number,
+      default: 16 / 9
+    },
     classes: {
       type: String,
       default: ''
-    },
-    href: {
-      type: String,
-      required: true
     },
     paragraphClasses: {
       type: String,
       default: ''
     },
-    aspectRatio: {
-      type: Number,
-      default: 16 / 9
+    poster: {
+      type: String,
+      default: () => ''
     },
     vidSrc: {
       type: String,

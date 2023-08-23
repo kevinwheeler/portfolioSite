@@ -1,9 +1,9 @@
 <template>
   <Card 
-      vidSrc="/storage/multiplayer-painting.mp4" 
-      href="/projects/multiplayer-painting" 
+      :classes="cardClasses"
+      poster="/storage/multiplayer-painting-poster.jpg"
       :tags="['C#', 'Unity', 'Networked Multiplayer', 'XR Interaction Toolkit', 'Photon PUN2']" 
-      :classes="cardClasses">
+      vidSrc="https://kmw-bitmovin.s3.amazonaws.com/multiplayer-painting-final/manifest.m3u8">
       <template v-slot:headline> AR Multiplayer Painting </template>
       <template v-slot:secondary-headline></template>
       <template v-slot:paragraph>
