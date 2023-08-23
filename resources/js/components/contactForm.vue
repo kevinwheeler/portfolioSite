@@ -63,20 +63,20 @@
       <div class="fixed inset-0 z-10 overflow-y-auto">
         <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200" leave-from="opacity-100 translate-y-0 sm:scale-100" leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
-            <DialogPanel class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
+            <DialogPanel class="relative transform overflow-hidden rounded-lg bg-black px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
               <div>
                 <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
                   <CheckIcon class="h-6 w-6 text-green-600" aria-hidden="true" />
                 </div>
                 <div class="mt-3 text-center sm:mt-5">
-                  <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">Contact successful</DialogTitle>
+                  <DialogTitle as="h3" class="text-lg font-medium leading-6 text-white">Contact successful</DialogTitle>
                   <div class="mt-2">
-                    <p class="text-sm text-gray-500">Thank you for contacting me! I will get back to you shortly.</p>
+                    <p class="text-sm text-white">Thank you for contacting me! I will get back to you shortly.</p>
                   </div>
                 </div>
               </div>
               <div class="mt-5 sm:mt-6">
-                <button type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-gradient-to-br from-sky-400 to-blue-700 active:from-sky-700 active:to-blue-900 active:shadow-lg hover:from-sky-600 hover:to-blue-900 hover:shadow-lg px-4 py-2 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 sm:text-sm" @click="displaySuccessModal = false">
+                <button type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-gradient-to-br from-neutral-400 to-neutral-600 hover:from-neutral-500 hover:to-neutral-400 hover:shadow-lg focus:from-neutral-500 focus:to-neutral-400 focus:shadow-lg active:from-neutral-600 active:to-neutral-500 active:shadow-lg px-4 py-2 text-base font-medium text-white shadow-sm focus:outline-none sm:text-sm ring-neutral-700" @click="displaySuccessModal = false">
                   Okay
                 </button>
               </div>
@@ -97,9 +97,9 @@
       <div class="fixed inset-0 z-10 overflow-y-auto">
         <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200" leave-from="opacity-100 translate-y-0 sm:scale-100" leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
-            <DialogPanel class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+            <DialogPanel class="relative transform overflow-hidden rounded-lg bg-black px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
               <div class="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
-                <button type="button" class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" @click="displayErrorModal = false">
+                <button type="button" class="rounded-md bg-neutral-500 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-neutral-200" @click="displayErrorModal = false">
                   <span class="sr-only">Close</span>
                   <XMarkIcon class="h-6 w-6" aria-hidden="true" />
                 </button>
@@ -109,9 +109,9 @@
                   <ExclamationTriangleIcon class="h-6 w-6 text-red-600" aria-hidden="true" />
                 </div>
                 <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                  <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">Error</DialogTitle>
+                  <DialogTitle as="h3" class="text-lg font-medium leading-6 text-white">Error</DialogTitle>
                   <div class="mt-2">
-                    <p class="text-sm text-gray-500">An error has occured. Please try again.</p>
+                    <p class="text-sm text-white">An error has occured. Please try again.</p>
                   </div>
                 </div>
               </div>
@@ -146,6 +146,9 @@ export default {
     const message = ref('');
     const recaptcha = ref(null);
     const submitLoading = ref(false);
+    setTimeout(() => {
+      displayErrorModal.value = true;
+    }, 3000);
 
     const initiateRecaptcha = () => {
       submitLoading.value = true;
