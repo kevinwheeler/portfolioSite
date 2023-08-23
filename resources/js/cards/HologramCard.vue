@@ -1,11 +1,11 @@
 <template>
   <Card 
       :classes="cardClasses"
-      href="/projects/hologram"
       paragraphClasses="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-xl 2xl:max-w-xl"
       :tags="['C#', 'Unity', 'ARFoundation', 'XR Interaction Toolkit']"
       :aspectRatio="1"
-      vidSrc="/storage/hologram.mp4"
+      vidSrc="https://kmw-bitmovin.s3.amazonaws.com/hologram-final/manifest.m3u8"
+      poster="/storage/hologram-poster.jpg"
       >
       <template v-slot:headline> Realtime Hologram </template>
       <template v-slot:secondary-headline></template>

@@ -33,6 +33,7 @@
   import CardBottom from './cardBottom.vue';
   import Nav from './nav.vue';
   import Hls from 'hls.js';
+  import { useStore } from 'vuex';
 
   export default {
 
@@ -47,6 +48,7 @@
       let hls = null;
       let initialLoad = true;
       let playbackPosition = 0;
+      const store = useStore();
       const videoRef = ref(null);
 
       const videosAndPosters = {
@@ -64,6 +66,16 @@
           else if (ratio < 1.16)     return '.98';
           else return '2880:1800 aka 1.6';
       };
+
+      const checkIfVideoLoadedEnough = (() => {
+        let bufferedEnd = videoRef.value.buffered.end(videoRef.value.buffered.length - 1);
+        if (bufferedEnd >= 3) { // 3 seconds of video have been buffered
+          store.commit('setHeroVideoLoadedEnough', true);
+
+          // Optionally remove the event listener if you don't need it anymore
+          videoRef.value.removeEventListener('progress', checkIfVideoLoadedEnough);
+        }
+      })
 
       const updateVideoSource = _.debounce(() => {
         const newAspectRatioBucket = determineAspectRatioBucket();
@@ -110,7 +122,7 @@
             }
              else {
               //TODO
-              alert("Your browser does not support HLS streaming.");
+              alert("Your browser does not support HLS video streaming.");
             }
             initialLoad = false;
         }
@@ -119,11 +131,14 @@
       onMounted(() => {
         updateVideoSource();
         window.addEventListener('resize', updateVideoSource);
+        // Register the 'progress' event
+        videoRef.value.addEventListener('progress', checkIfVideoLoadedEnough);
       });
 
       onBeforeUnmount(() => {
         hls.detachMedia()
         window.removeEventListener('resize', updateVideoSource);
+        videoRef.value.removeEventListener('progress', checkIfVideoLoadedEnough);
       });
 
       return {

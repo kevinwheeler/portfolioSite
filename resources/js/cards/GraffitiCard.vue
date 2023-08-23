@@ -2,10 +2,10 @@
   <Card 
       :aspectRatio="1148/1104"
       :classes="cardClasses"
-      href="/projects/random-video"
       paragraphClasses="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-xl 2xl:max-w-xl"
+      poster="/storage/ar-graffiti-poster.jpg"
       :tags="['C#', 'Unity', 'ARCore', 'Photoshop', 'Image Recognition']" 
-      vidSrc="/storage/ar-graffiti.mp4"
+      vidSrc="https://kmw-bitmovin.s3.amazonaws.com/ar-graffiti-final/manifest.m3u8"
       >
       <template v-slot:headline>AR Graffiti</template>
       <template v-slot:secondary-headline></template>

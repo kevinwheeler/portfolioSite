@@ -1,6 +1,6 @@
 <template>
     <main ref="main">
-        <Hero />
+        <Hero/>
         <div class="flex flex-col justify-center mb-12">
             <MultiplayerPaintingCard additionalClasses="from-left"/>
             <HologramCard     additionalClasses="from-right"/>
@@ -38,6 +38,8 @@ export default {
         HologramCard,
         MultiplayerPaintingCard,
     },
+
+
     setup() {
         const main = ref(null);
         const obs = getObserver();
@@ -54,7 +56,5 @@ export default {
             main,
         }
     },
-    methods: {
-    }
 }
 </script>
