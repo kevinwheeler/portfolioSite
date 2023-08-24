@@ -1,21 +1,21 @@
 <!-- Based off of: https://tailwind-elements.com/docs/standard/designblocks/contact/ -->
 <template>
   <section class="mb-32 text-center mx-10">
-    <h2 class="text-3xl font-bold mb-12">Contact <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Me</span></h2>
+    <h2 class="text-5xl font-bold mb-12">Contact <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Me</span></h2>
     <div class="flex flex-col gap-8 md:flex-row max-w-6xl mx-auto">
       <section class="md:w-0 flex-1 flex items-center justify-center md:justify-end">
         <address class="flex flex-col items-begin gap-5 md:gap-10 md:-translate-y-4">
-        <div class="flex flex-row items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-10 lg:h-20"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"></path></svg>
-          <span class="text-lg"><a href="tel:+18067875985">+1 806.787.5985</a></span>
-        </div>
-        <div class="flex flex-row items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-10 lg:h-20"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"></path></svg>
-          <span class="text-lg"><a href="mailto:kevin.wheeler@utexas.edu">kevin.wheeler@utexas.edu</a></span>
-        </div>
-      </address>
+          <div aria-label="Phone number" class="flex flex-row items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-10 lg:h-20"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"></path></svg>
+            <span class="text-lg"><a href="tel:+18067875985">+1 806.787.5985</a></span>
+          </div>
+          <div aria-label="Email address" class="flex flex-row items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-10 lg:h-20"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"></path></svg>
+            <span class="text-lg"><a href="mailto:kevin.wheeler@utexas.edu">kevin.wheeler@utexas.edu</a></span>
+          </div>
+        </address>
       </section>
-      <section class="md:w-0 flex-1 max-w-[700px] mx-auto px-3 lg:px-6">
+      <section aria-label="Contact form" class="md:w-0 flex-1 max-w-[700px] mx-auto px-3 lg:px-6">
         <!-- <h2 class="text-3xl font-bold mb-12">Contact <span class="bg-gradient-to-br from-neutral-400 to-neutral-300 bg-clip-text text-transparent">Me</span></h2> -->
         <form @submit.prevent="initiateRecaptcha" method="POST">
           <div class="form-group mb-6">
@@ -54,7 +54,7 @@
   </section>
 
 <!-- Success Modal -->
-<TransitionRoot as="template" :show="displaySuccessModal">
+<TransitionRoot aria-label="Success modal" as="template" :show="displaySuccessModal">
   <Dialog as="div" class="relative z-10" @close="displaySuccessModal = false">
     <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
       <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -88,7 +88,7 @@
 </TransitionRoot>
 
 <!-- Error Modal -->
-<TransitionRoot as="template" :show="displayErrorModal">
+<TransitionRoot aria-label="Error modal" as="template" :show="displayErrorModal">
   <Dialog as="div" class="relative z-10" @close="displayErrorModal = false">
     <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
       <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />

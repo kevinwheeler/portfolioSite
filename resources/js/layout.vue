@@ -14,9 +14,6 @@
                 </div>
                 <ul class="flex flex-wrap gap-x-3 font-medium text-gray-300 pl-5 justify-left">
                     <li class="hover:text-white">
-                        <router-link class="ml-2 mr-2" to="/projects">Portfolio</router-link>
-                    </li>
-                    <li class="hover:text-white">
                         <router-link class="ml-2 mr-2" to="/resume">Résumé</router-link>
                     </li>
                     <li class="hover:text-white">

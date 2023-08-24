@@ -4,7 +4,7 @@
        In particular when we have a row of two cards and we need them centered, we use 
        .translate-y-1-and-translate-x-1\/2\+12px:hover Documentation available in scss file.
     -->
-    <div :class="`flex flex-1 flex-col ${classes}`">
+    <article :class="`flex flex-1 flex-col ${classes}`">
       <div class="hover:translate-y-1 transition duration-300 flex flex-1 flex-col rounded-lg overflow-hidden">
         <router-link :to="`${href}`">
           <img class="flex-1" :src="`${imgSrc}`">
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </article>
   </template>
   
   <script>
