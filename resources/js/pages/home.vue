@@ -12,7 +12,7 @@
             <img class="md:w-0 md:py-2 rounded-3xl md:mr-20 from-right duration-1000 transition data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg" alt="Kevin Wheeler smiling.">
         </section>
         <section aria-label="Portfolio projects" class="mb-20">
-            <h2 class="text-5xl text-center font-bold pt-12 mb-6 md:mb-10 transition duration-1000 data-inviewport from-left md:from-cancel">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
+            <h2 id="featured-projects" class="text-5xl text-center font-bold pt-12 mb-6 md:mb-10 transition duration-1000 data-inviewport from-left md:from-cancel">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
           <div role="presentation" class="flex flex-col md:flex-row gap-6 mb-24 duration-1000 transition data-inviewport md:from-left">
               <NothingButHeadlinesCard additionalClasses="from-right md:from-cancel" alt="Screenshot of Nothing But Headlines app" />
               <TranslateSearchCard     additionalClasses="from-left md:from-cancel" alt="Screenshot of Translate Search app"/>
