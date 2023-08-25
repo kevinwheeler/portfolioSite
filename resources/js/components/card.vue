@@ -6,12 +6,12 @@
     -->
     <article :class="`flex flex-1 flex-col ${classes}`">
       <div class="hover:translate-y-1 transition duration-300 flex flex-1 flex-col rounded-lg overflow-hidden">
-        <router-link :to="`${href}`">
-          <img class="flex-1" :src="`${imgSrc}`">
+        <router-link role="presentation" :to="`${href}`">
+          <img role="presentation" class="flex-1" :src="imgSrc" :alt="alt">
         </router-link>
         <div class="flex flex-col flex-1 p-6 items-center bg-slate-800">
           <router-link :to="`${href}`">
-            <h3 class="text-xl font-semibold text-center">
+            <h3 class="text-xl font-semibold underline text-center">
               <slot name="headline"></slot>
             </h3>
           </router-link>
@@ -21,7 +21,7 @@
           <p class="mt-2 text-sm">
             <slot name="paragraph"></slot>
           </p>
-          <div class="mt-6 flex justify-start flex-wrap gap-2">
+          <div aria-label="tags" class="mt-6 flex justify-start flex-wrap gap-2">
             <span
               v-for="(tag, index) in tags"
               :key="index"
@@ -41,6 +41,10 @@
 
   export default {
     props: {
+      'alt': {
+        type: String,
+        // required: true,
+      },
       'classes': {
         type: String,
         default: () => '',

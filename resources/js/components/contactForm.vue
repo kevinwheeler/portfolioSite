@@ -54,7 +54,7 @@
   </section>
 
 <!-- Success Modal -->
-<TransitionRoot aria-label="Success modal" as="template" :show="displaySuccessModal">
+<TransitionRoot role="alertdialog" aria-label="Success modal" as="template" :show="displaySuccessModal">
   <Dialog as="div" class="relative z-10" @close="displaySuccessModal = false">
     <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
       <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -88,7 +88,7 @@
 </TransitionRoot>
 
 <!-- Error Modal -->
-<TransitionRoot aria-label="Error modal" as="template" :show="displayErrorModal">
+<TransitionRoot role="alertdialog" aria-label="Error modal" as="template" :show="displayErrorModal">
   <Dialog as="div" class="relative z-10" @close="displayErrorModal = false">
     <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
       <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
