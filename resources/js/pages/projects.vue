@@ -1,3 +1,4 @@
+<!-- TODO if we ever use this page again, implement motion-reduced:cancel-stuff -->
 <template>
     <main ref="main" class="mb-48">
         <h2 class="text-5xl mb-12 font-bold text-center">All <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>

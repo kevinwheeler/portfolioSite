@@ -5,7 +5,7 @@
        .translate-y-1-and-translate-x-1\/2\+12px:hover Documentation available in scss file.
     -->
     <article :class="`flex flex-1 flex-col ${classes}`">
-      <div class="hover:translate-y-1 transition duration-300 flex flex-1 flex-col rounded-lg overflow-hidden">
+      <div class="hover:translate-y-1 hover:motion-reduce:translate-y-0 transition duration-300 flex flex-1 flex-col rounded-lg overflow-hidden">
         <router-link aria-hidden="true" :to="`${href}`">
           <img class="flex-1" :src="imgSrc" :alt="alt">
         </router-link>
