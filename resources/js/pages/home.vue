@@ -13,17 +13,17 @@
         </section>
         <section aria-label="Portfolio projects" class="mb-20">
             <h2 id="featured-projects" class="text-5xl text-center font-bold pt-12 mb-6 md:mb-10 transition duration-1000 data-inviewport from-left md:from-cancel">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
-          <div role="presentation" class="flex flex-col md:flex-row gap-6 mb-24 duration-1000 transition data-inviewport md:from-left">
+          <div class="flex flex-col md:flex-row gap-6 mb-24 duration-1000 transition data-inviewport md:from-left">
               <NothingButHeadlinesCard additionalClasses="from-right md:from-cancel" alt="Screenshot of Nothing But Headlines app" />
               <TranslateSearchCard     additionalClasses="from-left md:from-cancel" alt="Screenshot of Translate Search app"/>
               <DensityIteratorCard     additionalClasses="from-right md:from-cancel" alt="GeoMesa logo"/>
           </div>
-          <div role="presentation" class="flex flex-col md:flex-row gap-6 mb-12 duration-1000 transition data-inviewport md:from-right">
+          <div class="flex flex-col md:flex-row gap-6 mb-12 duration-1000 transition data-inviewport md:from-right">
               <RandomVideoCard   additionalClasses="from-left md:from-cancel" alt="Screenshot of Random Video app" />
               <GeomesaGuiCard    additionalClasses="from-right md:from-cancel" alt="GeoMesa logo"/>
               <PortfolioSiteCard additionalClasses="from-left md:from-cancel" alt="Screenshot of portfolio website"/>
           </div>
-          <div role="presentation" class="flex flex-col md:flex-row gap-6 mb-12 duration-1000 transition data-inviewport md:from-left">
+          <div class="flex flex-col md:flex-row gap-6 mb-12 duration-1000 transition data-inviewport md:from-left">
               <!-- <KeyboardSmashCard additionalClasses="from-right md:from-cancel md:translate-x-1/2 md:translate-x-1/2-in-viewport" /> -->
               <KeyboardSmashCard additionalClasses="from-right md:translate-x-1/2+12px md:from-cancel" alt="Screnshot of Baby Keyboard Smash game"/>
               <UbuntuVpsCard     additionalClasses="from-left  md:translate-x-1/2+12px md:from-cancel" alt="Ubuntu logo"/>

@@ -5,6 +5,6 @@
         </x-shared-head-items>
     </head>
     <body >
-        <div id="app" role="presentation"></div>
+        <div id="app"></div>
     </body>
 </html>

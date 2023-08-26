@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col min-h-screen bg-slate-900 text-gray-100 items-center overflow-x-hidden antialiased" role="presentation">
+    <div class="flex flex-col min-h-screen bg-slate-900 text-gray-100 items-center overflow-x-hidden antialiased">
         <div class="w-full max-w-screen-lg flex flex-col px-8">
             <nav ref="nav" class="flex flex-col sm:flex-row gap-y-2 justify-between nav-padding mb-14 duration-[2000ms] transition fade-in">
                 <div class="flex items-center">

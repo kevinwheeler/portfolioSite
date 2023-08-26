@@ -6,26 +6,31 @@
     -->
     <article :class="`flex flex-1 flex-col ${classes}`">
       <div class="hover:translate-y-1 transition duration-300 flex flex-1 flex-col rounded-lg overflow-hidden">
-        <router-link role="presentation" :to="`${href}`">
-          <img role="presentation" class="flex-1" :src="imgSrc" :alt="alt">
+        <router-link aria-hidden="true" :to="`${href}`">
+          <img class="flex-1" :src="imgSrc" :alt="alt">
         </router-link>
         <div class="flex flex-col flex-1 p-6 items-center bg-slate-800">
           <router-link :to="`${href}`">
-            <h3 class="text-xl font-semibold underline text-center">
+            <h3 class="text-3xl font-bold text-center">
               <slot name="headline"></slot>
             </h3>
           </router-link>
-          <p class="mt-1 text-xs text-gray-400 text-center">
+          <p class="mt-1 text-md text-gray-400 font-bold text-center">
             <slot name="secondary-headline"></slot>
           </p>
-          <p class="mt-2 text-sm">
+          <p class="mt-2 text-lg font-bold">
             <slot name="paragraph"></slot>
           </p>
-          <div aria-label="tags" class="mt-6 flex justify-start flex-wrap gap-2">
+          <router-link :to="`${href}`">
+          <p class="mt-2 text-lg font-bold underline">
+            Learn More
+          </p>
+        </router-link>
+          <div aria-label="tags" class="mt-6 flex-1 flex justify-start content-end flex-wrap gap-2">
             <span
               v-for="(tag, index) in tags"
               :key="index"
-              class="text-xs inline-flex items-center font-bold leading-sm px-3 py-1 rounded-full"
+              class="text-md items-center font-bold leading-sm px-3 py-1 rounded-full"
               :class="`${tagColors[index].background} ${tagColors[index].text}`"
             >
               {{ tag }}
