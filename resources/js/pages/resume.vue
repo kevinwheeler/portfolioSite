@@ -1,8 +1,7 @@
 <template>
     <main>
         <div class="flex flex-col gap-6">
-            <h1 class="text-6xl font-bold text-center">Rés<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">umé</span></h1>
-            <div class="text-l text-gray-400 self-center text-center">Last Updated March 2023</div>
+            <h1 class="text-6xl mb-6 font-bold text-center">Rés<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">umé</span></h1>
             <div class="w-full mb-12" id="pdfview"></div>
             <a href="/storage/Kevin_Wheeler_Resume.pdf" class="w-full self-center px-6 py-2.5 mb-24 text-center text-white font-medium text-xs
             leading-tight uppercase rounded shadow-md bg-gradient-to-br
