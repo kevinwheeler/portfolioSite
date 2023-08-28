@@ -20,7 +20,7 @@ use App\Http\Controllers\EmailController;
 Route::get('/', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',
-        'Andrew LaBoy\'s Unity and AR / VR / XR Portfolio'
+        'Unity AR/VR Developer Portfolio'
     )->with(
         'description',
         'Andrew LaBoy is a Unity developer specializing in augmented and virtual reality applications and games.'
