@@ -47,6 +47,16 @@ Route::get('/projects', function () {
     );
 });
 
+Route::get('/projects/andrew-portfolio', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal())->with(
+        'title',
+        'Porfolio Page for Andrew\'s Portfolio Project'
+    )->with(
+        'description',
+        'Porfolio Page for Andrew\'s Portfolio Project'
+    );
+});
+
 Route::get('/projects/baby-keyboard-smash-game', function () {
     return view('welcome')->with('devEnvironment', App::isLocal())->with(
         'title',

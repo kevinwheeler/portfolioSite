@@ -24,6 +24,15 @@ const routes = [
         }
     },
     {
+        path: "/projects/andrew-portfolio",
+        name: "AndrewPortfolio",
+        component: Pages.AndrewPortfolio,
+        meta: {
+            title: 'Porfolio Page for Andrew\'s Portfolio Project',
+            description: 'Porfolio Page for Andrew\'s Portfolio Project'
+        }
+    },
+    {
         path: "/projects/baby-keyboard-smash-game",
         name: "BabyKeyboardSmashGame",
         component: Pages.KeyboardSmash,

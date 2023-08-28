@@ -1,13 +1,13 @@
 <template>
   <Card 
-      imgSrc="/storage/random-video-card.jpg"
-      href="/projects/random-video"
-      :tags="['Spring Framework', 'Hibernate', 'React', 'Redux', 'Java', 'Bootstrap']" 
+      imgSrc="/storage/andrew-portfolio-card.jpg"
+      href="/projects/andrew-portfolio"
+      :tags="['Adaptive Bitrate Streaming', 'Video encoding', 'Video transcoding', 'Video editing', 'HLS.js']" 
       :classes="cardClasses">
-      <template v-slot:headline>Random Video</template>
-      <template v-slot:secondary-headline>www.randomvideo.site</template>
+      <template v-slot:headline>Andrew LaBoy's Portfolio</template>
+      <template v-slot:secondary-headline>www.andrewlaboyxr.com</template>
       <template v-slot:paragraph>
-          A simple Spring+React CRUD app where users can create video lists and an associated URL, and other people can view a random video from those lists at that URL.
+        Andrew LaBoy's AR/VR Unity Developer Portfolio. 
       </template>
   </Card>
 </template>

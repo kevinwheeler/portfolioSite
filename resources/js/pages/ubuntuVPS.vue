@@ -9,7 +9,7 @@
             <h2 class="text-5xl mb-6 font-bold text-center duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
             <div class="text-2xl">
                 <p class="mb-10 font-bold text-center duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">
-                    An Ubuntu VPS hosted by Digital Ocean for cheaply hosting personal projects.
+                    An Ubuntu VPS hosted by Digital Ocean for cheaply hosting projects.
                 </p>
                 <p class="mb-8">
                     <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">In a text file, I recorded all </span>

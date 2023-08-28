@@ -7,7 +7,7 @@
       <template v-slot:headline> Nothing But Headlines </template>
       <template v-slot:secondary-headline> www.nothingbutheadlines.lol (EOL) </template>
       <template v-slot:paragraph>
-          A web application for creating fake/funny headlines to be displayed as articles on Facebook.
+          A web application for creating funny headlines to be displayed as articles on Facebook.
       </template>
   </Card>
 </template>

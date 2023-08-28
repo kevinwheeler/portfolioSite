@@ -7,7 +7,7 @@
       <template v-slot:headline>Ubuntu VPS</template>
       <template v-slot:secondary-headline>2022</template>
       <template v-slot:paragraph>
-          Ubuntu VPS for cheaply hosting personal projects.
+          Ubuntu VPS for cheaply hosting projects.
       </template>
   </Card>
 </template>

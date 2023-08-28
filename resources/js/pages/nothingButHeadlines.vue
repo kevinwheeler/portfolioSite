@@ -11,12 +11,12 @@
             <h2 class="text-5xl mb-6 font-bold text-center duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Description</span></h2>
             <div class="text-2xl">
                 <p class="mb-8 font-bold text-center duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">
-                    <span>A web application for creating fake/funny headlines to be displayed as articles on Facebook.</span>
+                    <span>A web application for creating funny headlines to be displayed as articles on Facebook.</span>
                 </p>
                 <p class="mb-8">
                     <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">The inspiration for this website came from the fact that </span>
                     <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">satire news organizations like The Onion, for instance, post </span>
-                    <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">fake, funny articles on their Facebook page all the time. My </span>
+                    <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">funny articles on their Facebook page all the time. My </span>
                     <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">view was and is that people generally don't care about the </span>
                     <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">articles, however. Generally, people really only read the </span>
                     <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">headlines and comment about them. After researching this, I </span>
