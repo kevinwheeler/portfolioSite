@@ -9,7 +9,7 @@
             <h2 class="text-5xl mb-6 font-bold text-center duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
             <div class="text-2xl">
                 <p class="mb-10 font-bold text-center duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">
-                    A simple CRUD app where users can create video lists and an associated URL, and other people can view a random video from those lists at that URL. Created so that I could learn Spring Framework / Spring Boot (Java) and React in addition to Hibernate and Redux.
+                    A simple Spring + React CRUD app where users can create video lists and an associated URL, and other people can view a random video from those lists at that URL. Created so that I could learn Spring Framework / Spring Boot (Java) and React in addition to Hibernate and Redux.
                 </p>
                 <p class="mb-8 duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">
                     Source code: <a class="underline overflow-anywhere" href="https://github.com/kevinwheeler/randomvideo"> github.com/kevinwheeler/randomvideo</a>
@@ -33,7 +33,7 @@
                 <li class="inline duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Liquibase, </li>
                 <li class="inline duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Maven, </li>
                 <li class="inline duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Webpack, </li>
-                <li class="inline duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none"> and many others as found in my pom.xml and package.json files.</li>
+                <li class="inline duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none"> and many others as can be found in my pom.xml and package.json files.</li>
 
 
             </ul>

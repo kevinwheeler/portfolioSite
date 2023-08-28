@@ -11,14 +11,6 @@
                 <p class="mb-10 font-bold text-center duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">
                     An Ubuntu VPS hosted by Digital Ocean for cheaply hosting projects.
                 </p>
-                <p class="mb-8">
-                    <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">In a text file, I recorded all </span>
-                    <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">commands I used such that I can quickly recreate a </span>
-                    <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">similar server in the future. I also used shell variables </span>
-                    <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">for all the values that I would need to change if I were to </span>
-                    <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">create an additional Laravel website, such that I can create </span>
-                    <span class="duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">a new Laravel website with https in a matter of minutes. </span>
-                </p>
             </div>
 
             <h2 class="text-5xl mb-6 font-bold duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Feat<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">ures</span></h2>
@@ -34,7 +26,8 @@
                 <li class="text-2xl mb-4 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Configuration changes versioned by etckeeper</li>
                 <li class="text-2xl mb-4 blue-bullet accent-color duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Used Lynis for security audit</li>
                 <li class="text-2xl mb-4 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Followed Apache and MySQL hardening guides</li>
-                <li class="text-2xl mb-48 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Automatic security certificate renewals using certbot & Let's Encrypt.</li>
+                <li class="text-2xl mb-4 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Automatic security certificate renewals using certbot & Let's Encrypt.</li>
+                <li class="text-2xl mb-48 blue-bullet accent-color duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">In a text file, I recorded all commands I used such that I can quickly recreate a similar server in the future. I also used shell variables for all the values that I would need to change if I were to create an additional Laravel website, such that I can create a new Laravel website with https in a matter of minutes.</li>
             </ul>
         </div>
     </main> 
