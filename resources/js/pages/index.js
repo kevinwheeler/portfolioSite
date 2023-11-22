@@ -3,6 +3,7 @@ import DensityIterator from './densityIterator.vue';
 import GeomesaGUI from './geomesaGUI.vue';
 import Home from './home.vue';
 import KeyboardSmash from './keyboardSmash.vue';
+import NotesApp from './notesApp.vue';
 import NothingButHeadlines from './nothingButHeadlines.vue';
 import PortfolioSite from './portfolioSite.vue';
 import Projects from './projects.vue';
@@ -17,6 +18,7 @@ export {
     GeomesaGUI,
     Home,
     KeyboardSmash,
+    NotesApp,
     NothingButHeadlines,
     PortfolioSite,
     Projects,

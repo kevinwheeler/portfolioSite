@@ -19,19 +19,19 @@
             <h2 class="whitespace-none text-5xl font-bold duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Tech<span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">nologies</span></h2>
 
             <ul class="mb-8">
-                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Ubuntu VPS</li>
-                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Laravel</li>
-                <li class="text-2xl mb-4 blue-bullet-500 accent-color duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Vue.js</li>
-                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Tailwind</li>
-                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Laravel + Laravel UI and Included/Related Tech: Vite, Sass, Composer, GuzzleHTTP </li>
-                <li class="text-2xl mb-4 blue-bullet-500 accent-color duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">MSMTP as sendmail provider for contact form</li>
-                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Google ReCAPTCHA to protect email/contact form</li>
+                <li class="text-2xl mb-4 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Ubuntu VPS</li>
+                <li class="text-2xl mb-4 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Laravel</li>
+                <li class="text-2xl mb-4 blue-bullet accent-color duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Vue.js</li>
+                <li class="text-2xl mb-4 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Tailwind</li>
+                <li class="text-2xl mb-4 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Laravel + Laravel UI and Included/Related Tech: Vite, Sass, Composer, GuzzleHTTP </li>
+                <li class="text-2xl mb-4 blue-bullet accent-color duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">MSMTP as sendmail provider for contact form</li>
+                <li class="text-2xl mb-4 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Google ReCAPTCHA to protect email/contact form</li>
             </ul>
 
             <h2 class="whitespace-none text-5xl font-bold duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Server <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Features</span></h2>
 
             <ul class="mb-48">
-                <li class="text-2xl mb-4 blue-bullet-500 duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Please see the <router-link class="underline" to="/projects/ubuntu-vps">Ubuntu VPS server portfolio page</router-link> for server features.</li>
+                <li class="text-2xl mb-4 blue-bullet duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Please see the <router-link class="underline" to="/projects/ubuntu-vps">Ubuntu VPS server portfolio page</router-link> for server features.</li>
             </ul>
         </div>
     </main> 

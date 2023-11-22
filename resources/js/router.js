@@ -60,6 +60,15 @@ const routes = [
         }
     },
     {
+        path: "/projects/notes-app",
+        name: "NotesApp",
+        component: Pages.NotesApp,
+        meta: {
+            title: 'Notes App Portfolio Page',
+            description: "Portfolio page for Kevin Wheeler's Notes App project."
+        }
+    },
+    {
         path: "/projects/nothing-but-headlines",
         name: "NothingButHeadlines",
         component: Pages.NothingButHeadlines,

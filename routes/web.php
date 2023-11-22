@@ -54,6 +54,9 @@ Route::get('/projects/andrew-portfolio', function () {
     )->with(
         'description',
         'Porfolio Page for Andrew\'s Portfolio Project'
+    )->with(
+        'noIndex',
+        true
     );
 });
 
@@ -84,6 +87,16 @@ Route::get('/projects/geomesa-gui', function () {
     )->with(
         'description',
         'Portfolio page for Kevin Wheeler\'s GeoMesa GUI open source contribution.'
+    );
+});
+
+Route::get('/projects/notes-app', function () {
+    return view('welcome')->with('devEnvironment', App::isLocal())->with(
+        'title',
+        'Notes App Portfolio Page'
+    )->with(
+        'description',
+        'Portfolio page for Kevin Wheeler\'s Notes App project.'
     );
 });
 
