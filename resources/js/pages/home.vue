@@ -1,18 +1,32 @@
 <template>
     <main ref="main">
-        <section aria-label="About me" class="flex flex-col md:flex-row items-center gap-6 md:mb-8">
+        <section aria-label="About me" class="flex flex-col md:flex-row items-center gap-6 mb-8 md:mb-16">
             <div class="flex-1 md:w-0 data-inviewport duration-1000 transition from-left motion-reduce:from-cancel">
-                <h1 class="text-5xl md:text-3xl font-bold mb-6">
+                <h1 class="text-5xl md:text-3xl font-bold mb-6 text-center md:text-left">
                     Hi, I'm <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Kevin</span>
                 </h1>
                 <div class="text-xl leading-9">
                     I'm a full stack web developer and software engineer who graduated with highest honors from The University of Texas at Austin while obtaining a B.S. in Computer Science. I am interested in software development opportunities both inside and outside of web development. I have experience with a variety of technologies including Spring, Laravel, Node.js, React, Backbone.js, Vue.js, Java, JavaScript, Python, C++, Scala, and many others. Two of my values in life are benevolence and rationality.
                 </div>
             </div>
-            <img class="md:w-0 md:py-2 rounded-3xl md:mr-20 from-right duration-1000 transition motion-reduce:from-cancel data-inviewport" style="flex-grow:1" src="/storage/kevin-main.jpg" alt="Kevin Wheeler smiling.">
+            <img class="md:w-0 md:py-2 rounded-3xl md:mr-20 from-right duration-1000 transition motion-reduce:from-cancel data-inviewport hidden md:inline" style="flex-grow:1" src="/storage/kevin-main.jpg" alt="Kevin Wheeler smiling.">
+        </section>
+        <section aria-label="About Me Video" class="mb-4 md:mb-12">
+          <h2 id="featured-projects" class="text-5xl text-center font-bold pt-12 mb-6 md:mb-10 transition motion-reduce:from-cancel duration-1000 data-inviewport from-right hidden md:block">Intro <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Video</span></h2>
+            <div class="md:px-16 lg:px-32">
+                <iframe class="aspect-video w-full duration-1000 transition data-inviewport from-right motion-reduce:from-cancel" 
+                    src="https://www.youtube.com/embed/uIhnc5dkIjU?modestbranding=1&rel=0&autoplay=1&mute=1&loop=1&controls=1&showinfo=0&fs=0" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen
+                    autoplay="1"
+                    muted="1">
+                </iframe>
+            </div>
         </section>
         <section aria-label="Portfolio projects" class="mb-20">
-          <h2 id="featured-projects" class="text-5xl text-center font-bold pt-12 mb-6 md:mb-10 transition motion-reduce:from-cancel duration-1000 data-inviewport from-left md:from-cancel">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
+          <h2 id="featured-projects" class="text-5xl text-center font-bold pt-12 mb-6 md:mb-10 transition motion-reduce:from-cancel duration-1000 data-inviewport from-left">Featured <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></h2>
           <div class="flex flex-col md:flex-row gap-6 mb-24 duration-1000 transition md:motion-reduce:from-cancel data-inviewport md:from-left">
               <DensityIteratorCard     additionalClasses="from-right md:from-cancel motion-reduce:from-cancel" alt="GeoMesa logo"/>
               <NothingButHeadlinesCard additionalClasses="from-left md:from-cancel motion-reduce:from-cancel" alt="Screenshot of Nothing But Headlines app" />
