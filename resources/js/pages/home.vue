@@ -11,7 +11,7 @@
             </div>
             <img class="md:w-0 md:py-2 rounded-3xl md:mr-20 from-right duration-1000 transition motion-reduce:from-cancel data-inviewport hidden md:inline" style="flex-grow:1" src="/storage/kevin-main.jpg" alt="Kevin Wheeler smiling.">
         </section>
-        <section aria-label="About Me Video" class="mb-4 md:mb-12">
+        <section aria-label="About Me Video" class="mb-4 md:mb-12 hidden">
           <h2 id="featured-projects" class="text-5xl text-center font-bold pt-12 mb-6 md:mb-10 transition motion-reduce:from-cancel duration-1000 data-inviewport from-right hidden md:block">Intro <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Video</span></h2>
             <div class="md:px-16 lg:px-32">
                 <iframe class="aspect-video w-full duration-1000 transition data-inviewport from-right motion-reduce:from-cancel" 
