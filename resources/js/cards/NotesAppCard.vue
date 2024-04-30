@@ -5,7 +5,7 @@
       :tags="['NestJS', 'Next.js', 'Docker', 'AWS ECS', 'SSR', 'GraphQL']" 
       :classes="cardClasses">
       <template v-slot:headline>Notes App</template>
-      <template v-slot:secondary-headline>notes-app.kevinwheeler.net</template>
+      <template v-slot:secondary-headline>notes-app.kevinwheeler.net (EOL)</template>
       <template v-slot:paragraph>
         A simple notes app created in three weeks as part of a job interview process.
       </template>

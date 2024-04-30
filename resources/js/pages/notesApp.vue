@@ -3,9 +3,11 @@
         <div class="flex flex-col gap-6">
             <div class="duration-1000 transition data-inviewport from-left motion-reduce:from-cancel">
                 <h1 class="text-6xl font-bold text-center">Notes <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">App</span></h1>
-                <div class="text-l text-gray-400 self-center text-center"><a href="https://notes-app.kevinwheeler.net">notes-app.kevinwheeler.net</a></div>
+                <div class="text-l text-gray-400 self-center text-center mt-2">notes-app.kevinwheeler.net (EOL)</div>
             </div>
-            <img src="/storage/notes-app-hero.webp" alt="Portfolio Site Hero" class="md:px-32 sm:px-16 mb-16 duration-1000 transition data-inviewport from-right motion-reduce:from-cancel">
+            <div class="md:px-32 mb-16">
+              <iframe class="aspect-video w-full duration-1000 transition data-inviewport from-right motion-reduce:from-cancel" src="https://www.youtube.com/embed/YoXS9eUMc_k?si=RMDv2pvzxYXVdyNr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
             <h2 class="text-5xl mb-6 font-bold text-center duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">Project <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Description</span></h2>
             <div class="text-2xl">
                 <p class="mb-10 font-bold text-center duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">
@@ -14,9 +16,6 @@
                 </p>
                 <p class="mb-8 duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">
                     Source code: <a class="underline overflow-anywhere" href="https://github.com/kevinwheeler/notes-app">https://github.com/kevinwheeler/notes-app</a>
-                </p>
-                <p class="mb-8 duration-[2000ms] transition data-inviewport fade-in motion-reduce:transition-none">
-                    Live website: <a class="underline overflow-anywhere" href="https://notes-app.kevinwheeler.net">https://notes-app.kevinwheeler.net</a>
                 </p>
             </div>
 
@@ -81,9 +80,14 @@
                 <p class="mb-3">
                     ^ I actually made an open source contribution (found here: <a class="underline" href="https://github.com/kevinwheeler/primevue-datatables">https://github.com/kevinwheeler/primevue-datatables</a>) to the Savannabits/primevue-datatables library that does server-side pagination, filtering, and sorting in Laravel for the PrimeVue DataTable library (which I have of course also used), so I am familiar with using data table libraries.
                 </p>
-                <p class="mb-40">
+                <p class="mb-3">
                     During the follow-up interview, in regards to the application I submitted, the interviewer said "the team was impressed.. real impressed, actually."
                 </p>
+
+                <p class="mb-40">
+                    This project was sunsetted to save on AWS costs.
+                </p>
+
             </div>
         </div>
     </main> 
